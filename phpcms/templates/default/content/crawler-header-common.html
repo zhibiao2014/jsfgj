@@ -1,0 +1,23 @@
+<h1>中国城市-中国城市网</h1>
+<div>
+  {pc:content action="category" catid="0" num="14" siteid="$siteid" order="listorder ASC"}
+  <ul>
+    {loop $data $r}
+    <li>
+      <a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}</a>
+    </li>
+    {/loop}
+  </ul>
+  {/pc}
+</div>
+<div>
+  <ul>
+    {pc:content  action="position" posid="20" order="id desc" num="10"}
+    {loop $data $k $v}
+    <li>
+      <a href="{$v[url]}" title="{$v[title]}">{$v[title]}</a>
+    </li>
+    {/loop}
+    {/pc}
+  </ul>
+</div>

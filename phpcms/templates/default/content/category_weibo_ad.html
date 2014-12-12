@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title> 
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #PCMSAD_17 li{
+        list-style-type: none;
+        float: left;
+        padding: 10px 18px;
+      }
+      #PCMSAD_17 li img{
+        height: 160px;
+        width: 160px;
+        float: left;
+      }
+    </style>  
+    {template "content","header_one"} 
+    <div class="hr_6"></div>
+    <div class="sub_nav">
+      <ul>
+        <li class="first"><a href="{siteurl($siteid)}">城市</a><b class="dichan">微博</b></li>
+      </ul>
+    </div>
+    <div class="hr_6"></div>
+    <div class="weibo clear">
+      <div class="weibo_img">         
+        <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=17"></script>
+      </div>
+    <div class="hr_6"></div>
+    </div>
+{template "content","footer_my"}

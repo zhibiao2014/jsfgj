@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta name="keywords" content="{$SEO['keyword']}"/>
+  <meta name="description" content="{$SEO['description']}"/>
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <link href="{CSS_PATH}all.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+</head>
+<body>
+  {template "content","header_common"}
+  <!--信息公开整块-->
+  <div class="w1000 t10 clearfix">
+    <!--left-->
+    <div class="w210 left">
+     {if $catid !=11}
+     <p class="title_blue">{$CATEGORYS[$catid]['catname']}</p>
+     <ul class="list_zwgk">
+      {pc:content  action="category" siteid="$siteid" catid="$catid" num="10"}
+      {loop $data $r}
+      <li><a href="{$r[url]}">{$r[catname]}</a></li>
+      {/loop}
+      {/pc}
+    </ul>
+    {/if}
+    <p class="title_blue">信息公开</p>
+    <ul class="list_zwgk">
+     {pc:content  action="category" siteid="$siteid" catid="11" num="10"}
+     {loop $data $r}
+     <li><a href="{$r[url]}">{$r[catname]}</a></li>
+     {/loop}
+     {/pc}
+   </ul>
+ </div>
+ <!--left end-->
+ <!--right-->
+ <div class="right w770">
+  <div class="detail_title">
+    <p>房地产企业查询</p>
+  </div>
+  <div class="detail">
+   {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+   <ul class="listnews">
+    <li>
+      <span class="data_w1 title">新闻标题</span>
+      <span class="data_w6 title">日期</span>
+    </li>
+    {loop $data $r}
+    {if $n%2==0} 
+    <li class="bg">
+      {else}
+      <li>
+        {/if}
+        <a href="{$r[url]}" class="data_w1">{$r[title]}</a>
+        <span class="data_w6">{date('[Y-m-d] H:i:s')}</span>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+</div>
+<!--right end-->
+</div>
+<!--ad-->
+<!--ad end-->
+<!--cr-->
+{template "content","footer-common"}
+</body>
+</html>

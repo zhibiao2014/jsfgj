@@ -1,0 +1,192 @@
+#select_strip {
+	border: 1px solid #e6e7e7;
+}
+#select_strip .item {
+	padding: 10px 0 8px 0;
+	width: 980px;
+	line-height: 22px;
+	font-size: 12px;
+}
+#select_strip .title{
+	padding: 0 20px;
+	color: #277ad1;
+}
+#select_strip .item ul li{
+	list-style: none;
+	float: left;
+	padding: 0 10px;
+	height: 22px;
+	line-height: 22px;
+	white-space: nowrap;
+	background: url("../../images/line.jpg") no-repeat right center;
+}
+#select_strip .item ul li a{
+	cursor: pointer;
+	display: inline-block;
+	color: #777;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 2px;
+}
+#select_strip .item ul li a.all{
+	color: #333;
+}
+#select_strip .item ul li a#all{
+	color: #333;
+	background: none;
+}
+#select_strip .item ul li a:hover{
+	text-decoration: underline;
+}
+#select_strip .item ul li a.selected{
+	background-color: #73b2ff;
+	color: #FFF;
+}
+#ranks {
+	width: 1000px;
+}
+#ranks .rank a{
+	text-decoration: none;
+}
+#ranks .rank {
+	border: 4px solid #e6e7e7;
+	position: relative;
+	width: 220px;
+	padding: 15px 5px;
+	margin: 0 10px 11px 0;
+}
+#ranks .rank:hover {
+	border-color: #b0020e;
+}
+#ranks .thumb {
+	width: 200px;
+	margin: 0 auto;
+	padding-bottom: 12px;
+}
+#ranks .thumb img{
+	width: 200px;
+}
+#ranks .product_from {
+	position: absolute;
+	width: 81px;
+	height: 28px;
+	padding-top: 5px;
+	background: url("../../images/images/product_bg.png") 10px top no-repeat;
+	right: -6px;
+	top: 8px;
+	line-height: 23px;
+	text-align: center;
+}
+#ranks .product_from a{
+	color: #FFF;
+	font-size: 12px;
+	padding-left: 8px;
+	font-family: 宋体;
+}
+#ranks .rank h3.title{
+	padding-left: 5px;
+	font-size: 12px;
+	color: #277ad1;
+	line-height: 22px;
+}
+#ranks .rank p.list_description{
+	font-size: 12px;
+	line-height: 22px;
+	padding: 12px 5px 20px 5px;
+	height: auto;
+	color: #777;
+}
+.rank .operate .like{
+	padding: 0 10px 0 5px;
+	font-size: 12px;
+	display: block;
+	float: left;
+}
+
+.rank .operate .read_more {
+	background: url("../../images/images/read_more.png") left center no-repeat;
+	width: 58px;
+	height: 20px;
+	display: block;
+	float: right;
+}
+.rank .operate span {
+	cursor: pointer;
+}
+.rank .operate .good {
+	padding-top: 3px;
+	background: url("../../images/images/good.png") left 3px no-repeat;
+}
+.rank .operate .bad {
+	padding-top: 3px;
+	background: url("../../images/images/bad.png") left 3px no-repeat;
+}
+#ranks .rank .operate .good:hover {
+	background: url("../../images/images/good_selected.png") left 3px no-repeat;
+}
+#ranks .rank:hover  .operate .bad:hover {
+	background: url("../../images/images/bad_selected.png") left 3px no-repeat;
+}
+#ranks .rank:hover  .operate .read_more:hover {
+	background: url("../../images/images/read_more_selected.png") left center no-repeat;
+}
+#infscr-loading {
+	position: absolute;
+	bottom: 0;
+	left: 450px;
+	width: 100px;
+	height: 30px;
+}
+.loading {
+	display: none;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.galleria{
+	height: 420px;
+	overflow-y: hidden;
+}
+
+#galleria_text h3.title, #galleria_text div.operate {
+	text-align: center;
+}
+
+#galleria_text h3 {
+	font-size: 18px;
+	height: 33px;
+	line-height: 33px;
+	padding: 10px 0;
+}
+
+#galleria_text p.description {
+	text-indent: 28px;
+	font-size: 14px;
+	line-height: 22px;
+	margin-top: 10px;
+}
+
+#galleria_text .operate .like{
+	padding: 0 10px 0 35px;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+}
+#galleria_text .operate span {
+	cursor: pointer;
+}
+#galleria_text .operate .good {
+	background: url("../../images/images/favour.png") left top no-repeat;
+}
+#galleria_text .operate .bad {
+	background: url("../../images/images/oppose.png") left top no-repeat;
+}
+.company {
+	position: absolute;
+	right: 10px;
+	bottom: 25px;
+}
+.company img {
+	width: 100px;
+}

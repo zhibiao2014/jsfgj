@@ -1,0 +1,77 @@
+<link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+<script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="content"> 
+      <!--头部 -->
+      <div id="header">      
+        <div class="row dingbu">
+          <div class="logo">
+            <a href="{siteurl($siteid)}" class="active" title="中国城市-中国城市网"><img src="{IMG_PATH}images/logo.jpg" alt="中国城市-中国城市网"/></a>
+          </div>
+          <div class="header-middle">
+            <div class="sign">
+              <div class="log">
+                <a href="http://www.china.com.cn/fuwu/guanyuwomen.htm" target="_blank">关于中国网</a><span>&nbsp;|&nbsp;</span> 
+                <a href="{siteurl($siteid)}/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=2&amp;pc_hash=MnLwI3" target="_blank">关于中国城市</a>
+              </div>  
+            </div>
+            <div class="sokuang">
+              <form action="http://www.so.com/s" target="_blank" id="so360form">
+                <input type="text" autocomplete="off" name="q" id="so360_keyword">
+                <input type="submit" id="so360_submit" value="搜 索">
+                <input type="hidden" name="ie" value="utf8">
+                <input type="hidden" name="src" value="zz">
+                <input type="hidden" name="site" value="city.china.com.cn">
+                <input type="hidden" name="rg" value="1">
+              </form>
+            </div>
+          </div>
+          <div class="chinaweb_logo">
+            <a href="http://www.china.com.cn/" target="_blank" class="active" title="中国网">
+              <img src="{IMG_PATH}images/chinaweb_logo_100_69.png" width="120px" alt="中国城市--中国网"/>
+            </a>
+          </div>
+        </div>
+        <div class="row clear menu">
+          <map id="nav">
+            {pc:content action="category" catid="0" num="13" siteid="$siteid" order="listorder ASC"}
+            <ul>
+              <li>
+                <a href="{siteurl($siteid)}" class="active" title="中国城市">首页</a>
+              </li>
+              {loop $data $r}
+              <li class="buttons">
+                <a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}</a>
+              </li>
+              {/loop}
+              <li>
+                <a href="http://www.citycn.cn/rank.html" title="排行榜">排行榜</a>
+              </li>
+            </ul>
+            {/pc}
+          </map>
+        </div>
+        <div class="row clear kuaixun">
+          <span class="kx">快讯:</span>
+          <ul id="scroller">
+            {pc:content  action="position" posid="20" order="id desc" num="10"}
+            {loop $data $k $v}
+            <li>
+              <a href="{$v[url]}" title="{$v[title]}">{$v[title]}</a>&nbsp;|&nbsp;
+            </li>
+            {/loop}
+            {/pc}
+          </ul>
+          <script type="text/javascript">
+            $(function() {
+              $("#scroller").simplyScroll();
+              $("#city_tuijie_tu").simplyScroll({customClass : ""});
+            });
+          </script>
+        </div>        
+      </div>

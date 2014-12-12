@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/city_estate.css" rel="stylesheet" type="text/css" />
+    {template "content","header_one"}
+        <!--头部 end-->  
+        <div class="hr_6"></div>
+        <!-- 二级导航  -->
+        <div class="sub_nav">
+          {pc:content action="category" catid="$catid" num="25"   siteid="$siteid" order="listorder ASC"}
+          <?php $category = $data ;?>
+          <ul>
+            <li class="first">
+              <a href="{siteurl($siteid)}">城市</a><b class="dichan">规划</b>
+            </li>
+            {loop $data $r}
+            <li><a href="{$r[url]}">{$r[catname]}</a></li>
+            {/loop}
+          </ul>
+          {/pc}
+        </div>
+        <!-- 二级导航 end 广告 
+        <div id="ad" class="clear">
+        </div>
+        <div class="hr_6"></div>
+        <!-- 广告end -->
+        <div class="hr_6"></div>
+        <div id="page1_content">
+          <div class="special_focus float">
+            <div>
+              <h2 class="float">特别关注</h2>
+            </div>
+            <div class="clear"></div>
+            <div class="col-auto channel-slide" style="border: none;">
+              {pc:content  action="position" posid="22" catid="$catid" thumb="1" order="id desc" num="5"}
+                <div class="col-auto">
+                  <ul class="photo" style="width: 349px;">
+                  {loop $data $k $v}
+                      <li><a href="{$v[url]}" title="{$v[title]}"><img src="{thumb($v[thumb], 349, 230)}" width="349" height="230" alt="{$v[title]}" /></a></li>
+                  {/loop}
+                  </ul>
+                  <div class="title" style="background: none;">
+                  {loop $data $k $v}
+                    <p {if $n==1}style="display:block; height: auto"{/if} style="margin-top: 0; height: auto">
+                    <strong>
+                      <a href="{$v[url]}" title="{$v[title]}" class="blue" style="display:block; height: 24px;text-align: center;">
+                        {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                      </a>
+                    </strong>
+                      <?php 
+                        echo str_cut(strip_tags($v[description]), 150,'')."<a href=$v[url]>[详细]</a>";
+                      ?>
+                    </p>
+                  {/loop}
+                  </div>
+                </div>
+                 {/pc}
+            </div>
+          </div>
+          <div class="information float">
+            <div>
+              <h2 class="float">
+                <a href="{$category[97]['url']}" target="_blank">{$category[97]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[97]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"> </div>
+            <div class="host_news_list">
+              {pc:content  action="position" posid="23" catid="97" order="id DESC" num="2"}
+              {loop $data $k $v}
+                <h1 class="title"><a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                </a></h1>
+                <p class="article_summary">
+                  <?php 
+                        echo str_cut(strip_tags($v[description]), 125,'')."<a href=$v[url]>[详细]</a>";
+                      ?>
+                </p>
+              {/loop}
+              {/pc}
+            </div>
+            <div class="news_list">
+              <ul>
+{pc:get sql="SELECT * FROM phpcms_news WHERE posids=0 and catid=97 ORDER BY id DESC" num="5"}
+              {loop $data $k $v}
+                <li>
+                  <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                    ▪ {if $v[article_bac] == ""}{str_cut($v[title],80,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+              {/loop}
+              {/pc}
+              </ul>
+            </div>
+          </div>
+          <div class="webo float">
+            <div>
+              <h2 class="float">
+                <a href="{$category[135]['url']}" target="_blank">{$category[135]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[135]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"> </div>
+            <div class="webo_list float">
+              <ul>
+              {pc:content  action="lists" catid="135" order="id DESC" thumb="1" num="4"}
+              {loop $data $k $v}
+                {if $n!=2}
+                <li>
+                  <div class="video">
+                    <a href="{$v['url']}" title="{$v[title]}">
+                     <img src="{thumb($v[thumb],50,50)}" width="50" height="50">
+                    </a>
+                  </div>
+                  <div class="webo_article_summary">
+                    <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                      {if $v[article_bac] == ""}{str_cut($v[title],25,'')}{else}{$v[article_bac]}{/if}
+                    </a>
+                    <p class="article_summary">
+                      <?php 
+                        echo str_cut(strip_tags($v[description]), 90,'')."<a href=$v[url]>[详细]</a>";
+                      ?>
+                    </p>
+                  </div>
+                </li>
+                {/if}
+                {if $n==2}
+                <li>
+                  <div class="video">
+                   <a href="{$v['url']}" title="{$v[title]}">
+                     <img src="{thumb($v[thumb],50,50)}" width="50" height="50">
+                    </a>
+                  </div>
+                  <div class="webo_article_summary">
+                    <a href="{$v[url]}" title="{$v[title]}" class="article_title">                      
+                      {if $v[article_bac] == ""}{str_cut($v[title],25,'')}{else}{$v[article_bac]}{/if}
+                    </a>
+                    <p class="article_summary">
+                      <?php 
+                        echo str_cut(strip_tags($v[description]), 90,'')."<a href=$v[url]>[详细]</a>";
+                      ?>
+                    </p>
+                  </div>
+                </li>
+                <li class="fg_line"></li>
+                {/if}
+                {/loop}
+                {/pc}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hr_6"></div>
+
+        <!-- page2 start -->
+
+
+        <div id="page2_content">
+          <div class="policy float">
+            <div>
+              <h2 class="float">
+                <a href="{$category[98]['url']}" target="_blank">{$category[98]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[98]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"> </div>
+            {pc:content  action="lists" catid="98" order="id DESC" num="9"}
+            <!--{loop $data $k $v}
+            {if $n==1}
+            <div class="policy_recommend">
+              <h1 class="title">
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                </a>
+              </h1>
+              <p class="article_summary">
+                {str_cut(strip_tags($v[description]), 140,'详细')}
+              </p>              
+            </div>
+            <div class="fg_line">
+              <img src="{IMG_PATH}images/gray_line.jpg" width="360" height="1" style="display: block;">
+            </div>
+            {/if}
+            {/loop}-->
+            <div class="list">
+              <ul>
+                {loop $data $k $v}
+                {if $n<3}
+                <li>
+                  <a  href="{$v[url]}" title="{$v[title]}" target="blank" class="header">
+                    {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {if $n>2}
+                <li>
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    ▪ {if $v[article_bac] == ""}{str_cut($v[title],70,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {/loop}
+              </ul>
+            </div>
+            {/pc}
+          </div>
+          <div class="house_market float">
+            <div>
+              <h2 class="float">
+                <a href="{$category[99]['url']}" target="_blank">{$category[99]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[99]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"> </div>
+            <div class="list">
+              <ul>
+              {pc:content  action="lists" catid="99" order="id DESC" num="9"}
+                {loop $data $k $v}
+                {if $n<3}
+                <li>
+                  <a  href="{$v[url]}" title="{$v[title]}" target="blank" class="header">
+                    {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {if $n>2}
+                <li>
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    ▪ {if $v[article_bac] == ""}{str_cut($v[title],70,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {/loop}
+              {/pc}
+              </ul>
+            </div>
+          </div>
+          <div class="recommend">
+            <div>
+              <h2 class="float">
+                <a href="{$category[136]['url']}" target="_blank">{$category[136]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[136]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"></div>
+            <ul>
+              {pc:content  action="position" posid="24" catid="136" thumb="1" order="id DESC" num="2"}
+              {loop $data $k $v}
+              <li>
+                <div class="image">
+                  <a href="{$v['url']}" title="{$v[title]}">
+                    <img src="{thumb($v[thumb],180,115)}" width="180" height="115">
+                  </a>
+                </div>
+                <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],40,'')}{else}{$v[article_bac]}{/if}
+                </a>
+              </li>
+              {/loop}
+              {/pc}
+            </ul>
+            <div class="list float" style="border-top: 1px dashed #ccc; padding-top: 5px;">
+              <ul>
+              {pc:content  action="lists" catid="136" order="updatetime DESC" num="10"}
+              {loop $data $k $v}
+                <li style="float: none; text-align: left; line-height: 27px; height: 27px;">
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    ▪ {if $v[article_bac] == ""}{str_cut($v[title],35,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+              {/loop}
+              {/pc}
+              </ul>
+            </div>
+          </div>
+          <div class="estate float">
+            <div>
+              <h2 class="float">
+                <a href="{$category[100]['url']}" target="_blank">{$category[100]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[100]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"> </div>
+            {pc:content  action="lists" catid="100" order="id DESC" num="9"}
+            <div class="list">
+              <ul>
+                {loop $data $k $v}
+                {if $n<3}
+                <li>
+                  <a  href="{$v[url]}" title="{$v[title]}" target="blank" class="header">
+                    {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {if $n>2}
+                <li>
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    ▪ {if $v[article_bac] == ""}{str_cut($v[title],70,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {/loop}
+              </ul>
+            </div>
+            {/pc}
+          </div>
+          <div class="exposure float">
+            <div>
+              <h2 class="float">
+                <a href="{$category[102]['url']}" target="_blank">{$category[102]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[102]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"></div>
+            <div class="list">
+              <ul>
+              {pc:content  action="lists" catid="102" order="id DESC" num="9"}
+                {loop $data $k $v}
+                {if $n<3}
+                <li>
+                  <a  href="{$v[url]}" title="{$v[title]}" target="blank" class="header">
+                    {if $v[article_bac] == ""}{str_cut($v[title],70,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {if $n>2}
+                <li>
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    ▪ {if $v[article_bac] == ""}{str_cut($v[title],70,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </li>
+                {/if}
+                {/loop}
+              {/pc}
+              </ul>
+            </div>
+          </div>
+          <div class="hr_6"></div>
+          <div class="structure clear">
+            <div>
+              <h2 class="float">
+                <a href="{$category[101]['url']}" target="_blank">{$category[101]['catname']}
+                </a>
+              </h2>
+              <a href="{$category[101]['url']}" target="_blank" >
+                <img src="{IMG_PATH}images/more_icon.jpg" class="more"/>
+              </a>
+            </div>
+            <div class="clear"> </div>
+            {pc:content  action="position" posid="24" catid="101" thumb="1" order="id DESC" num="9"}
+            <div class="structure_recommend float">
+              {loop $data $k $v}
+              {if $n==1}
+              <div class="recommend_image">
+                <a href="{$v[url]}" title="{$v[title]}">
+                  <img src="{thumb($v[thumb], 235, 270)}" width="235" height="270">
+                </a>
+              </div>
+              <span class="title">
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {if $v[article_bac] == ""}{str_cut($v[title],40,'')}{else}{$v[article_bac]}{/if}
+                </a>
+              </span>
+              {/if}
+              {/loop}
+            </div>
+            <ul class="float">
+              {loop $data $k $v}
+              {if $n>1}
+              {if $n==6}
+                <li class="fg_line"> </li>
+              {/if}
+              <li>
+                <div class="image">
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    <img src="{thumb($v[thumb], 170, 125)}" width="170" height="125">
+                  </a>
+                </div>
+                <div>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {if $v[article_bac] == ""}{str_cut($v[title],40,'')}{else}{$v[article_bac]}{/if}
+                </a>
+                </div>
+              </li>
+              {/if}
+              {/loop}
+            </ul>
+            {/pc}
+          </div>
+        </div>
+        
+        
+        
+        <div class="hr_6"></div>
+        <div class="corporation float">
+          <h2>新品发布</h2>
+          <ul class="top_image">
+            <li><img src="{IMG_PATH}images/hezuozhuanqu_46_46_01.jpg" width="46" height="46" /><p>2011CIHAF第十三届中国交往会</p></li>
+            <li><img src="{IMG_PATH}images/hezuozhuanqu_46_46_02.jpg" width="46" height="46" /><p>博鳌21实际房地产论坛11届年会</p></li>
+            <li><img src="{IMG_PATH}images/hezuozhuanqu_46_46_03.jpg" width="46" height="46" /><p>2011房产商会夏季年会</p></li>
+            <li><img src="{IMG_PATH}images/hezuozhuanqu_46_46_04.jpg" width="46" height="46" /><p>第四届亚太商业地产国际峰会</p></li>
+            <li><img src="{IMG_PATH}images/hezuozhuanqu_46_46_05.jpg" width="46" height="46" /><p>2011(第二届)中国地产领袖年会</p></li>
+            <li><img src="{IMG_PATH}images/hezuozhuanqu_46_46_06.jpg" width="46" height="46" /><p>“114啦”最实用的网址导航</p></li>
+          </ul>
+          <ul class="bottom_link">
+            <li><a href="#">太行龙头春来早：野三坡第五届开山节隆重开幕</a></li>
+            <li><a href="#">伦敦桥畔顶级宅塔桥一号首都在华开卖</a></li>
+            <li><a href="#">孔雀城荣获“2011中国房地产住宅品牌TOP10”</a></li>
+            <li><a href="#">中国首座“会讲故事的商业街”讲露真容</a></li>
+            <li><a href="#">缤纷生活馆荣耀开启 西锦城辉耀城西</a></li>
+            <li><a href="#">凯德?锦绣捐百亩沙棘树 倡导地产保新理念</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- page2 end -->
+
+
+      <div class="hr_6"></div>
+
+      <!--尾部-->          
+      <script type="text/javascript">
+    function ChannelSlide(Name,Class){
+      $(Name+' ul.photo li').sGallery({
+        titleObj:Name+' div.title p',
+        thumbObj:Name+' .thumb li',
+        thumbNowClass:Class
+      });
+    }
+    new ChannelSlide(".channel-slide","on",349,230);
+    </script>
+{template "content","footer_my"}

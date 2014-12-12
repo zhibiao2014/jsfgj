@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}"/>
+  <meta name="description" content="{$SEO['description']}"/>
+  <link href="{CSS_PATH}style.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div id="content">
+      {template "content","header-common"}
+      <!--main-->
+      <div class="crumbs">
+        <a href="{siteurl($siteid)}" title="首页">首页</a><span> > </span>{catpos($catid)} 列表
+      </div>
+      <div class="news">
+        {pc:content  action="lists" catid="$catid" order="inputtime DESC" page="$page" num="40"}
+        <ul class="list">
+          {loop $data $r}
+          <li>
+            <a href="{$r[url]}" {title_style($r[style])}>{str_cut($r[title],79)}</a>
+            <span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>
+          </li>
+          {if $n%5==0}<div class="hr_6"></div>{/if}
+          {/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+        {/pc}
+      </div>
+    </div>
+    {template "content","footer-common"}
+  </div>
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+  <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("#scroller").simplyScroll();
+    });
+  </script>
+</boby>
+</html>

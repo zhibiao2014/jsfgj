@@ -1,0 +1,36 @@
+﻿
+/***** 首页 *****/
+/***** 中部  *****/
+
+*html img{
+  display: block;
+}
+
+.video{
+  width: 978px;
+  padding-top: 10px;
+  border: 1px solid #D8D8D8;
+}
+
+.video ul{
+  margin: 5px 0 0 12px;  
+}
+ 
+ .video ul li{
+  float: left;
+  width: 180px;
+  padding: 0 5px;
+  list-style-type: none;
+}
+
+ .video ul li .image{
+  width: 180px;
+  height: 125px;
+}
+
+ .video ul li a{
+  display: block;
+  width: 180px; 
+  background: #D8D8D8;
+  text-align: center;
+} 

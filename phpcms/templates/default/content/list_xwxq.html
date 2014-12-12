@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+  </title>
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+  <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+  <link href="{CSS_PATH}xwxq/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/index.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/list_show.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/common.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css"> 
+  #ie6-warning{ 
+    background:rgb(255,255,225);
+    position:absolute; 
+    top:0; 
+    left:0; 
+    font-size:12px; 
+    color:#333; 
+    width:100%; 
+    padding: 2px 0; 
+    text-align:center; 
+  }
+  #ie6-warning span{
+    padding-left:23px; 
+    background: url("{IMG_PATH}20100628012515690.gif") no-repeat scroll 3px center; 
+  } 
+  #ie6-warning a { 
+    text-decoration:none;
+    color: #F60;
+  }
+  body {
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+  }
+  .content_recommend ul li {
+    height: auto;
+  }
+  </style>
+</head>
+<body>
+    <!--[if lte IE 6]> 
+    <div id="ie6-warning"><span>您正在使用 Internet Explorer 低版本浏览器，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a></span>
+    </div> 
+    <script type="text/javascript"> 
+    function position_fixed(el, eltop, elleft){ 
+    // check if this is IE6 
+    if(!window.XMLHttpRequest) 
+    window.onscroll = function(){ 
+    el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+    el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+    } 
+    else el.style.position = "fixed"; 
+    } 
+    position_fixed(document.getElementById("ie6-warning"),0, 0); 
+    </script> 
+    <![endif]-->
+    <div id="header" class="header">
+      <div class="top">
+        <div class="wp">
+          <div class="top-right">
+            <a href="{$CATEGORYS[191][url]}">English</a>
+            <a href="{$CATEGORYS[199][url]}">Japanese</a>
+            <a href="{$CATEGORYS[200][url]}">Korean</a>
+            <!-- <a href="http://weibo.com/xuweixinqu?topnav=1&amp;topsug=1">徐圩微博</a> -->
+          </div>
+          <!-- <div style="height:30px;line-height: 30px;font-size: 12px;color: #276fa3;">欢迎来到徐圩新区网站！</div> -->
+        </div>
+      </div>
+      <div class="wp">
+        <div>
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="1000" height="231">
+            <param name="movie" value="{IMG_PATH}xwxq/en_top.swf">
+            <param name="quality" value="high">
+            <param name="wmode" value="transparent">
+            <embed src="{IMG_PATH}xwxq/en_top.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent" width="1000" height="231" />
+          </object>
+        </div>
+        <div class="tools">
+          <div class="time"> 
+            <?php 
+            // $words = array('日','一','二','三','四','五','六');
+            echo date("l").", ".date("M d,Y");
+            ?>
+          </div>
+        </div>
+        <div class="navmenu" id="navmenu">
+          <ul>
+            {pc:content action="category" catid="191" num="25" siteid="$siteid" order="listorder ASC"}
+            <li><a href="{$CATEGORYS[191][url]}" class="bold">Home</a></li>
+            {loop $data $r}
+            <li>
+              <a href="{$r[url]}" class="bold">
+                {$r[catname]}
+              </a>
+            </li>
+            {/loop}
+            {/pc}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear height10"></div>
+
+
+    <div id="middle" class="wp middle">
+      <div>
+        <div id="important_news" class="float">
+          <div class="news_list box">
+            <div class="title">          
+              <div class="text">{$catname}</div>
+            </div>
+            {pc:content  action="lists" catid="$catid" order="id DESC" page="$page" num="40"}
+            <ul class="list clear">
+              {loop $data $r}
+              <li>
+                <span class="rt">
+                  {date('Y-m-d H:i:s',$r[inputtime])}
+                </span>
+                <a href="{$r[url]}" target="_blank"{title_style($r[style])}>{str_cut($r[title],79)}
+                </a>
+              </li>
+              {if $n%5==0}<li class="bk20 hr"></li>{/if}
+              {/loop}
+            </ul>
+            <div id="pages" class="text-c">{$pages}</div>
+            {/pc}
+          </div>
+        </div>
+        <div class="content_recommend float">
+          <div class="col-auto">
+            <div class="box">
+              <div>
+                <h2 class="float" style="color: red;">Hot Rankings</h2>
+              </div>
+              <div class="clear"></div>
+              <ul class="content digg">
+                {pc:content  action="hits" catid="191" day="100" num="5"}
+                {loop $data $r}
+                <li>
+                  <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+                    {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+                  </a>
+                </li>
+                {/loop}
+                {/pc}
+              </ul>
+            </div>
+          </div>
+          <div class="hr_6"></div>
+          <div class="col-auto">
+            <div class="box">
+              <div>
+                <h2 class="float" style="color: red;">Editor Recommend</h2>
+              </div>
+              <div class="hr_6"></div>
+                {pc:content  action="position" posid="19" catid="191" thumb="1" order="listorder DESC" num="4"}
+                {loop $data $r}
+                <div class="img_text float">
+              <div>
+                <a href="{$r[url]}" title="{$r[title]}" target="blank">
+                  <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+                </a>
+              </div>
+              <a href="{$r[url]}" title="{$r[title]}" target="blank">
+                {str_cut($r[title],30)}
+              </a>
+            </div>
+                {/loop}
+                {/pc}
+            </div>
+          </div>
+        </div>
+        <div class="hr_6"></div>
+      </div>
+      <div class="clear height10"></div>
+    </div>
+    <div class="clear"></div><div id="footer" class="footer wp">
+      <div style="height:60px;">
+        <p style="margin-top:20px; text-align:center;">Copyright © <a href="http://city.china.com.cn/">city.china.com.cn</a> All Rights Reserved </p>
+        <p style="margin-top:20px; text-align:center;">E-mail: chinacity@china.org.cn Tel：010-58610672 京ICP证 040089号</p>
+      </div>
+    </div>
+  </body>
+  </html>

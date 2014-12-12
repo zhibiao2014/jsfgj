@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}"/>
+  <meta name="description" content="{$SEO['description']}"/>
+</head>
+<body>
+  {template "content","crawler-header-common"}
+  {pc:content  action="position" posid="12" thumb="1" order="id DESC" num="4"}
+  <div>
+    <ul>
+      {loop $data $k $v}
+      <li>
+        <img src="{thumb($v[thumb], 520, 300)}" width="520" height="300" alt="{$v[title]}" />
+        <a href="{$v[url]}" title="{$v[title]}">
+          <strong>{$v[title]}</strong>
+        </a>
+        <p>{strip_tags($v[description])}</p>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+  
+  <div>
+    {pc:content  action="position" posid="30" order="id DESC" num="10"}
+    <ul>
+      {loop $data $r}
+      <li>
+        <a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+        <p>{strip_tags($r['description'])}</p>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+  
+  <div>
+    {pc:content  action="position" posid="2" order="id DESC" num="11"}
+    <ul>
+      {loop $data $r}
+      <li>
+        <a href="{$r[url]}" title="{$r[title]}">
+          {$r[title]}
+        </a>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+
+  {pc:content action="category" catid="0" num="14" siteid="$siteid" order="listorder ASC"}
+  {loop $data $v}
+  <div>
+    <h2><?php echo $v['catname'] ?></h2>
+    {pc:content  action="lists" catid="$v['catid']" order="id DESC" num="20"}
+    <ul>
+      {loop $data $r}
+      <li>
+        <a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+        <p>{$r[description]}</p>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+  {/loop}
+  {/pc}
+
+
+  <!--热点视频-->
+  <div>
+    <h2>城市视频</h2>
+    <ul>
+      {pc:content  action="lists" catid="13" order="id ASC" num="5"}
+      {loop $data $r}
+      <li>
+        <a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+      </li>
+      {/loop}  
+      {/pc}          
+    </ul>
+  </div>
+
+  <div>
+    <h3>城市专题</h3>
+    <ul>
+      {pc:content  action="category" siteid="$siteid" catid="6" num="20"}
+      {loop $data $r}
+      <li><h4><a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}</a></h4></li>
+      {/loop}
+      {/pc}
+    </ul>
+    <div>
+      {pc:content  action="position" posid="25" thumb="1" order="id DESC" num="20"}
+      <ul>
+        {loop $data $r}
+        <li>
+          <a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+        </li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+
+  <!--城市访谈-->
+  <div>
+    <h2>城市访谈</h2>
+    <h3>
+      <a href="{$CATEGORYS[137]['url']}" title="{$CATEGORYS[137]['catname']}">{$CATEGORYS[137]['catname']}</a>
+    </h3>
+    <div>
+      {pc:content  action="lists" catid="137" thumb="1" order="id DESC" num="5"}
+      <ul>
+        {loop $data $v}
+        <li>
+          <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+        </li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+
+    <h3>
+      <a href="{$CATEGORYS[138]['url']}" title="{$CATEGORYS[138]['catname']}">{$CATEGORYS[138]['catname']}</a>
+    </h3>
+    <div>
+      {pc:content  action="lists" catid="138" thumb="1" order="id DESC" num="5"}
+      <ul>
+        {loop $data $v}
+        <li>
+          <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+        </li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+
+  <!--城市营销-->
+  <div>
+    <h2>城市营销</h2>
+    <h3>
+      <a href="{$CATEGORYS[25]['url']}" title="{$CATEGORYS[25]['catname']}">{$CATEGORYS[25]['catname']}</a>
+    </h3>
+    <div>
+      {pc:content  action="lists" catid="25" order="id DESC" num="5"}
+      <ul>
+        {loop $data $v}
+        <li>
+          <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+          <p>{strip_tags($v['description'])}</p>
+        </li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+  <div>
+    <h3>
+      <a href="{$CATEGORYS[26]['url']}" title="{$CATEGORYS[26]['catname']}">{$CATEGORYS[26]['catname']}</a>
+    </h3>
+    <ul>
+      {pc:content  action="lists" catid="26" order="updatetime DESC" num="5"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" target="_blank" title="{$v['title']}">{$v[title]}</a>
+      </li> 
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[27]['url']}" title="{$CATEGORYS[27]['catname']}">{$CATEGORYS[27]['catname']}</a></h3>
+    <ul>
+      {pc:content  action="lists" catid="27" order="updatetime DESC" num="5"}
+      {loop $data $v} 
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <!--城市经济-->
+  <div>
+    <h2>城市经济</h2>
+    <h3><a href="{$CATEGORYS[46]['url']}" title="{$CATEGORYS[46]['catname']}">{$CATEGORYS[46]['catname']}</a></h3>
+    <ul>
+      {pc:content  action="lists" catid="46" order="id DESC" num="10"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" target="_blank" title="{$v['title']}">
+          {$v[title]}
+        </a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[44]['url']}" title="{$CATEGORYS[44]['catname']}">{$CATEGORYS[44]['catname']}</a></h3>
+    {pc:content  action="lists" catid="44" order="id DESC" num="7"}
+    <ul>
+      <?php foreach ($data as $key => $v) { ?>
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">
+          <?php echo $v['title']; ?>
+        </a>
+      </li>
+      <?php } ?>
+    </ul>
+    {/pc}
+    <div>
+      {pc:content  action="position" posid="26" catid="44" thumb="1" order="id DESC" num="4"}
+      <ul>
+        {loop $data $v}
+        <li>
+          <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+        </li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[18]['url']}" title="{$CATEGORYS[18]['catname']}">{$CATEGORYS[18]['catname']}</a></h3>
+    {pc:content  action="position" posid="26" catid="18" thumb="1" order="id DESC" num="2"}
+    <ul>
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+
+  <div>
+    <ul>
+      {pc:content  action="lists" catid="18" order="id DESC" num="10"}
+      {loop $data $v} 
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <div>
+    <h3>
+      <a href="{$CATEGORYS[42]['url']}" title="{$CATEGORYS[42]['catname']}">{$CATEGORYS[42]['catname']}</a>
+    </h3>
+    <ul>
+      {pc:content  action="lists" catid="42" order="id DESC" num="10"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" target="_blank" title="{$v['title']}">
+          {$v[title]}
+        </a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <!--城市旅游-->
+  <div>
+    <h2>城市旅游</h2>
+    <h3><a href="{$CATEGORYS[31]['url']}" title="{$CATEGORYS[31]['catname']}">{$CATEGORYS[31]['catname']}</a></h3>
+    {pc:content  action="lists" catid="31" order="updatetime DESC" num="7"}
+    <ul>
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">
+          {$v[title]}
+        </a>
+        <p>
+          <?php echo strip_tags($v['description']); ?>
+        </p>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[32]['url']}" title="{$CATEGORYS[32]['catname']}">{$CATEGORYS[32]['catname']}</a></h3>
+    {pc:content  action="lists" catid="32" order="id DESC" num="7"}
+    <ul>
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">
+          {$v[title]}
+        </a>
+        <p>
+          <?php echo strip_tags($v['description']); ?>
+        </p>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[33]['url']}" title="{$CATEGORYS[33]['catname']}">{$CATEGORYS[33]['catname']}</a></h3>
+    {pc:content  action="lists" catid="33" order="id DESC" num="7"}
+    <ul>
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">
+          {$v[title]}
+        </a>
+        <p>
+          <?php echo strip_tags($v['description']); ?>
+        </p>
+      </li>
+      {/loop}
+    </ul>
+    {/pc}
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[72]['url']}" title="{$CATEGORYS[72]['catname']}">{$CATEGORYS[72]['catname']}</a></h3>
+    <div>
+      {pc:content  action="lists" catid="72" order="id DESC" num="7"}
+      <ul>
+        {loop $data $v}
+        <li>
+          <a href="{$v['url']}" title="{$v['title']}">
+            {$v[title]}
+          </a>
+          <p>
+            <?php echo strip_tags($v['description']); ?>
+          </p>
+        </li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div>
+  </div>
+
+  <!--城市文化-->
+  <div>
+    <h2>城市文化</h2>
+    <h3><a href="{$CATEGORYS[34]['url']}" target="_blank" title="{$CATEGORYS[34]['catname']}">{$CATEGORYS[34]['catname']}</a></h3>
+    <div>
+      <ul>
+        {pc:content  action="lists" catid="34" order="updatetime DESC" num="5"}
+        {loop $data $v}
+        <li>
+          <a href="{$v['url']}" target="_blank" title="{$v['title']}">{$v[title]}</a>
+        </li> 
+        {/loop}
+        {/pc}
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[35]['url']}" target="_blank" title="{$CATEGORYS[35]['catname']}">{$CATEGORYS[35]['catname']}</a></h3>
+    <ul>
+      {pc:content  action="lists" catid="35" order="updatetime DESC" num="5"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}"{title_style($v[style])}>{$v[title]}</a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[36]['url']}" target="_blank" title="{$CATEGORYS[36]['catname']}">{$CATEGORYS[36]['catname']}</a></h3>
+    
+    <ul>
+      {pc:content  action="lists" catid="36" order="id DESC" num="5"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <!--城市地产、生态、微博 -->
+  <div>
+    <h3><a href="{$CATEGORYS[45]['url']}" title="{$CATEGORYS[45]['catname']}">
+      {$CATEGORYS[45]['catname']}
+    </a></h3>
+    <ul>
+      {pc:content  action="lists" catid="45" order="id DESC" num="5"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" title="{$v['title']}">{$v[title]}</a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <div>
+    <h3><a href="{$CATEGORYS[12]['url']}" title="{$CATEGORYS[12]['catname']}">{$CATEGORYS[12]['catname']}</a></h3>
+    <ul>
+      {pc:content  action="lists" catid="12" order="id DESC" num="5"}
+      {loop $data $v}
+      <li>
+        <a href="{$v['url']}" target="_blank" title="{$v['title']}"{title_style($v[style])}>
+          {$v[title]}
+        </a>
+      </li>
+      {/loop}
+      {/pc}
+    </ul>
+  </div>
+
+  <div>
+    <p>
+      <a href="http://www.chinanewsweek.com.cn/" rel="nofollow" target="_blank">新闻周刊</a>|
+      <a href="http://news.sina.com.cn/" target="_blank">新浪</a>|
+      <a href="http://news.ifeng.com/" target="_blank">凤凰网</a>|
+      <a href="http://news.tom.com/" rel="nofollow" target="_blank">TOM新闻</a>|
+      <a href="http://news.qq.com/" target="_blank">腾讯</a>|
+      <a href="http://news.hexun.com/" rel="nofollow" target="_blank">和讯</a>|
+      <a href="http://news.163.com/" target="_blank">网易</a>|
+      <a href="http://news.sohu.com/" target="_blank">搜狐</a>|
+      <a href="http://www.southcn.com/" rel="nofollow" target="_blank">南方网</a>|
+      <a href="http://www.huanqiu.com/" rel="nofollow" target="_blank">环球时报</a>|
+      <a href="http://www.chinadaily.com.cn/hqzx/index.html" rel="nofollow" target="_blank">中国日报</a>|
+      <a href="http://news.rednet.cn/" target="_blank">红网</a>|
+      <a href="http://news.fjsen.com/" rel="nofollow" target="_blank">东南网</a>|
+      <a href="http://news.zjol.com.cn/" rel="nofollow" target="_blank">浙江在线</a>|
+      <a href="http://news.cqnews.net/" rel="nofollow" target="_blank">华龙网</a>|
+      <a href="http://news.enorth.com.cn/" rel="nofollow" target="_blank">北方网</a>|
+      <a href="http://news.eastday.com/" rel="nofollow" target="_blank">东方网</a>|
+      <a href="http://news.qianlong.com/" rel="nofollow" target="_blank">千龙网</a>|
+      <a href="http://news.cyol.com/node/news.htm" rel="nofollow" target="_blank">中国青年报</a>|
+      <a href="http://www.cnr.cn/newscenter/" rel="nofollow" target="_blank">中广网</a>|
+      <a href="http://www.ce.cn/xwzx/" rel="nofollow" target="_blank">中经网</a>|
+      <a href="http://gb.cri.cn/news/" rel="nofollow" target="_blank">国际在线</a>|
+      <a href="http://www.chinanews.com.cn/index.shtml" rel="nofollow" target="_blank">中新网</a>|
+      <a href="http://news.cctv.com/" rel="nofollow" target="_blank">央视网</a>|
+      <a href="http://news.people.com.cn/GB/index.html" rel="nofollow" target="_blank">人民网</a>|
+      <a href="http://www.xinhuanet.com/newscenter/" rel="nofollow" target="_blank">新华网</a>|
+      <a href="http://news.nen.com.cn/" rel="nofollow" target="_blank">东北新闻网</a>|
+      <a href="http://www.cyol.net/node/index.htm" rel="nofollow" target="_blank">中青在线</a>|
+      <a href="http://www.cs.com.cn/csnews/" rel="nofollow" target="_blank">中国证券报</a>|
+      <a href="http://www.bjd.com.cn/" rel="nofollow" target="_blank">京报网</a>|
+      <a href="http://www.gmw.cn/" rel="nofollow" target="_blank">光明日报</a>|
+      <a href="http://www.workercn.cn/" rel="nofollow" target="_blank">工人日报</a>|
+      <a href="http://www.bjnews.com.cn/" rel="nofollow" target="_blank">新京报网</a>|
+      <a href="http://www.iqilu.com/" rel="nofollow" target="_blank">齐鲁网</a>|
+      <a href="http://www.ccud.org.cn/" target="_blank">城市中国网</a>|
+      <a href="http://city.chinadaily.com.cn/" target="_blank">中国日报网CITY城市</a> |
+      {pc:link  action="type_list" typeid="60" siteid="1" linktype="0" order="listorder DESC" num="100" return="links"}
+      {loop $links $link}
+      <a href="{$link['url']}" target="_blank">{$link['name']}</a> |
+      {/loop}
+      {/pc}
+    </p>
+    <h1>地方网盟</h1> 
+    <p>
+      <a href="http://www.qianlong.com/" target="_blank" rel="nofollow">千龙网</a>|
+      <a href="http://www.eastday.com/" target="_blank" rel="nofollow">东方网</a>|
+      <a href="http://www.enorth.com.cn/" target="_blank" rel="nofollow">北方网</a>|
+      <a href="http://www.cqnews.net/" target="_blank" rel="nofollow">华龙网</a>|
+      <a href="http://www.southcn.com/" target="_blank" rel="nofollow">南方网</a>|
+      <a href="http://www.hebei.com.cn/" target="_blank" rel="nofollow">长城网</a>|
+      <a href="http://www.northeast.cn/" target="_blank" rel="nofollow">东北网</a>|
+      <a href="http://www.chinajilin.com.cn/" target="_blank" rel="nofollow">中国吉林网</a>|
+      <a href="http://www.nen.com.cn/" target="_blank" rel="nofollow">东北新闻网</a>|
+      <a href="http://www.zjol.com.cn/" target="_blank" rel="nofollow">浙江在线</a>|
+      <a href="http://www.anhuinews.com/" target="_blank" rel="nofollow">中安在线</a>|
+      <a href="http://www.fjsen.com/" target="_blank" rel="nofollow">东南新闻网</a>|
+      <a href="http://www.dzwww.com/" target="_blank" rel="nofollow">大众网</a>|
+      <a href="http://www.sxgov.cn/" target="_blank" rel="nofollow">黄河新闻网</a>|
+      <a href="http://www.dahe.cn/" target="_blank" rel="nofollow">大河网</a>|
+      <a href="http://www.cnhubei.com/" target="_blank" rel="nofollow">荆楚网</a>|
+      <a href="http://www.rednet.cn/" target="_blank" rel="nofollow">红网</a>|
+      <a href="http://www.jxcn.cn/" target="_blank" rel="nofollow">中国江西网</a>|
+      <a href="http://www.jschina.com.cn/" target="_blank" rel="nofollow">中国江苏网</a>|
+      <a href="http://www.newssc.org/" target="_blank" rel="nofollow">四川新闻网</a>|
+      <a href="http://www.gog.com.cn/" target="_blank" rel="nofollow">金黔在线</a>|
+      <a href="http://www.qhnews.com/" target="_blank" rel="nofollow">青海新闻网</a>|
+      <a href="http://www.cnwest.com/" target="_blank" rel="nofollow">西部网</a>|
+      <a href="http://www.gansudaily.com.cn/" target="_blank" rel="nofollow">每日甘肃网</a>|
+      <a href="http://www.hinews.cn/index.shtml" target="_blank" rel="nofollow">南海网</a>|
+      <a href="http://www.nxnews.net/" target="_blank" rel="nofollow">宁夏新闻网</a>| 
+      <a href="http://www.yunnan.cn/" target="_blank" rel="nofollow">云南网</a>|
+      <a href="http://www.nmgnews.com.cn/" target="_blank" rel="nofollow">内蒙古新闻网</a>|
+      <a href="http://www.gxnews.com.cn/" target="_blank" rel="nofollow">广西新闻网</a>|
+      <a href="http://www.chinatibetnews.com/" target="_blank" rel="nofollow">中国西藏新闻网</a>|
+      <a href="http://www.cjn.cn/" target="_blank" rel="nofollow">长江网</a>|
+      <a href="http://www.longhoo.net/gb/longhoo/index.html" target="_blank" rel="nofollow">龙虎网</a>|
+      <a href="http://www.sznews.com/" target="_blank" rel="nofollow">深圳新闻网</a>|
+      <a href="http://www.sznews.com/" target="_blank" rel="nofollow">中国宁波网</a>|
+      <a href="http://www.qingdaonews.com/" target="_blank" rel="nofollow">青岛新闻网</a>|
+      <a href="http://www.runsky.com/" target="_blank" rel="nofollow">天健网</a>|
+      <a href="http://www.sdnews.com.cn/" target="_blank" rel="nofollow">山东新闻网</a>|
+      <a href="http://bh.china.com.cn/" target="_blank" rel="nofollow">天津滨海</a>|
+      <a href="http://www.pudong.gov.cn/" target="_blank" rel="nofollow">上海浦东</a>|
+      <a href="http://www.gsei.com.cn/" target="_blank" rel="nofollow">甘肃飞天新闻网</a>|
+      <a href="http://www.daynews.com.cn/" target="_blank" rel="nofollow">山西新闻网</a>|
+      <a href="http://www.beijing.org.cn/" target="_blank" rel="nofollow">北京新闻网</a>|
+      <a href="http://www.iqilu.com/" target="_blank" rel="nofollow">齐鲁网</a>|
+      <a href="http://www.jiaodong.net/" target="_blank" rel="nofollow">胶东在线</a>|
+      <a href="http://www.zqxzf.com/" target="_blank" rel="nofollow">中国左权</a>|
+      <a href="http://www.jxnews.com.cn/" target="_blank" rel="nofollow">大江网</a>
+      <a href="http://www.taiwan.cn/local/" title="各地与台湾_中国台湾网" target="_blank">各地与台湾_中国台湾网</a>
+    </p>  
+    <h1>地方政府</h1> 
+    <p>
+      <a href="http://www.beijing.gov.cn/" target="_blank" rel="nofollow">北京</a> | 
+      <a href="http://www.tj.gov.cn/" target="_blank" rel="nofollow">天津</a> | 
+      <a href="http://www.hebei.gov.cn/" target="_blank" rel="nofollow">河北</a> | 
+      <a href="http://www.shanxigov.cn/" target="_blank" rel="nofollow">山西</a> | 
+      <a href="http://www.nmg.gov.cn/" target="_blank" rel="nofollow">内蒙古</a> | 
+      <a href="http://www.ln.gov.cn/" target="_blank" rel="nofollow">辽宁</a> | 
+      <a href="http://www.jl.gov.cn/" target="_blank" rel="nofollow">吉林</a> | 
+      <a href="http://www.hlj.gov.cn/" target="_blank" rel="nofollow">黑龙江</a> | 
+      <a href="http://www.shanghai.gov.cn/" target="_blank" rel="nofollow">上海</a> | 
+      <a href="http://www.jiangsu.gov.cn/" target="_blank" rel="nofollow">江苏</a> | 
+      <a href="http://www.zhejiang.gov.cn/gb/zjnew/index.html" target="_blank" rel="nofollow">浙江</a> | 
+      <a href="http://www.ah.gov.cn/" target="_blank" rel="nofollow">安徽</a> | 
+      <a href="http://www.fujian.gov.cn/" target="_blank" rel="nofollow">福建</a> | 
+      <a href="http://www.jiangxi.gov.cn/" target="_blank" rel="nofollow">江西</a> | 
+      <a href="http://www.shandong.gov.cn/" target="_blank" rel="nofollow">山东</a> | 
+      <a href="http://www.henan.gov.cn/" target="_blank" rel="nofollow">河南</a> | 
+      <a href="http://www.hubei.gov.cn/" target="_blank" rel="nofollow">湖北</a> | 
+      <a gbkurl="http://www.hunan.gov.cn/" href="http://www.hunan.gov.cn/" target="_blank" rel="nofollow">湖南</a> | 
+      <a href="http://www.gd.gov.cn/" target="_blank" rel="nofollow">广东</a> | 
+      <a href="http://www.gxzf.gov.cn/" target="_blank" rel="nofollow">广西</a> | 
+      <a href="http://www.hainan.gov.cn/code/V3/" target="_blank" rel="nofollow">海南</a> | 
+      <a href="http://www.cq.gov.cn/" target="_blank" rel="nofollow">重庆</a> | 
+      <a href="http://www.sc.gov.cn/" target="_blank" rel="nofollow">四川</a> | 
+      <a href="http://www.gzgov.gov.cn/" target="_blank" rel="nofollow">贵州</a> | 
+      <a href="http://www.yn.gov.cn/" target="_blank" rel="nofollow">云南</a> | 
+      <a href="http://www.chinatibetnews.com/" target="_blank" rel="nofollow">西藏</a> | 
+      <a href="http://www.shaanxi.gov.cn/" target="_blank" rel="nofollow">陕西</a> | 
+      <a href="http://www.gansu.gov.cn/" target="_blank" rel="nofollow">甘肃</a> | 
+      <a href="http://www.nx.gov.cn/structure/index.htm" target="_blank" rel="nofollow">宁夏</a> | 
+      <a href="http://www.qh.gov.cn/" target="_blank" rel="nofollow">青海</a> | 
+      <a href="http://www.xinjiang.gov.cn/" target="_blank" rel="nofollow">新疆</a> | 
+      <a gbkurl="http://www.gov.hk" href="http://www.gov.hk" target="_blank" rel="nofollow">香港</a> | 
+      <a href="http://www.gov.mo/egi/Portal/index.htm" target="_blank" rel="nofollow">澳门</a> | 台湾
+    </p> 
+  </div>
+  {template "content","crawler-footer-common"}
+</div>
+</boby>
+</html>

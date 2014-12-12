@@ -1,0 +1,39 @@
+img{
+  display: block;
+}
+
+.fangtan_list ul li{
+  display: block;
+  padding-left: 20px;
+  width: 176px;
+  padding-bottom: 10px;
+  list-style-type: none;
+}
+
+.img_title{
+  width: 102px;
+}
+
+.fangtan_list ul li a.title{
+  display: block;
+  width: 102px;
+  height: 22px;
+  background: #D8D8D8;
+  text-align: center;
+}
+
+.catname{
+  margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+  background: url("../../images/images/fangtan_tiao.jpg") no-repeat left center;
+}
+
+.catname a{
+  height: 30px;
+  line-height: 30px;
+  padding-left: 22px;
+  font-size: 14px;
+  font-family: "SimSun";
+  font-weight: bold;
+}

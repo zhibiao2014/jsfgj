@@ -1,0 +1,41 @@
+<?php 
+  $search = $_GET['username'];
+?>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="中国网是国务院新闻办领导，中国外文出版发行事业局管理的国家重点新闻网站" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    {pc:get sql="SELECT * FROM v9_employer a,v9_employer_data b WHERE a.id=b.id and a.catid='145' and (a.title='$search' or b.employer_id='$search')" return="data" num=1}
+      {if $data!=''}
+        {loop $data $v $r}
+          <div style="padding: 10px;">
+            <div style="float: left; width: 62px; height: 62px;">
+              <img src="{thumb($r[thumb], 62, 62)}" width='62' height='62' />
+            </div>
+            <div style="float: left; margin: 0 0 10px 10px;">
+              <span style="display: block; border-bottom: 1px solid #EEE; margin-bottom: 3px; color: #FF6C00; padding-bottom: 3px; height: 31px; line-height: 31px;">  
+                姓名：{$r[title]}
+              </span>
+              <span style="color: #049; height: 31px; line-height: 31px; display: block;">
+                编号：{$r[employer_id]}
+              </span>
+            </div>
+          </div>
+          <div style="clear: both; padding: 0 10px;"><span>简介：{$r[content]}</span></div>
+        {/loop}
+      {else}
+        <div style="color: #f60; font-size: 18px; text-align: center; line-height: 100px; height: 100px;">
+          您所查询的人员不存在！！！
+        </div>
+      {/if}
+    {/pc}
+  </body>
+</html>

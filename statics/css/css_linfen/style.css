@@ -1,0 +1,1160 @@
+HTML {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+
+
+DIV {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+SPAN {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+#list1 ul li {
+	float: left;
+	display: block;
+	width: 70px;
+	height: 18px;
+	margin-top: 14px;
+}
+#list3 ul li {
+	display: block;
+	width: 76px;
+	height: 20px;
+	margin-top: 18px;
+	float: left;
+	font-size: 14px;
+	margin-right: 15px;
+	list-style-type: disc;
+	margin-left: 18px;
+}
+#list3 ul .zx {
+	display: block;
+	width: 76px;
+	height: 20px;
+	margin-top: 18px;
+	float: left;
+	font-size: 14px;
+	margin-right: 10px;
+}
+#liebiao1 a {
+	color: #FFF;
+}
+#liebiaoleft {
+	border: 1px solid #CCC;
+	margin-left: 8px;
+}
+#liebiaonei ul li {
+	float: left;
+	margin-left: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCC;
+	font-size: 14px;
+	width: 578px;
+	text-align: left;
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+#liebiaonei ul li span {
+	width: 160px;
+	float: right;
+
+}
+#newtu ul li {
+	width: 120px;
+	height: auto;
+	float: left;
+	margin-left: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#newtu ul li a img {
+	border: 1px solid #CCC;
+}
+#liebiaoleft .zrbj {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CCC;
+	border-bottom-color: #CCC;
+	width: 590px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	height: 25px;
+	padding-top: 8px;
+	color: #F00;
+}
+#fontzoom {
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#liebiaoleft .ly {
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CC0001;
+	border-bottom-color: #CC0001;
+	width: 590px;
+	margin-left: 10px;
+	margin-bottom: 25px;
+	height: 18px;
+	padding-top: 3px;
+	color: #F00;
+	text-align: left;
+}
+#liebiaoleft2 {
+	border: 1px solid #CCC;
+	margin-left: 8px;
+	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+OBJECT {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+IFRAME {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+A {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+EM {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+STRONG {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+U {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+I {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+CENTER {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+LEGEND {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+LABEL {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+IMG {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; FONT-SIZE: 100%; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+BODY {
+	FONT: 12px "宋体",arial; BACKGROUND: url(../../images/images_linfen/mainbg.jpg) #f5f5f5 repeat-x 50% top
+}
+TABLE {
+	BORDER-SPACING: 0; BORDER-COLLAPSE: collapse
+}
+.f8 {
+	FONT-FAMILY: Tahoma, Geneva, sans-serif; FONT-SIZE: 8px; FONT-WEIGHT: normal
+}
+.f14 {
+	FONT-SIZE: 14px
+}
+.f16 {
+	FONT-SIZE: 16px
+}
+.f18 {
+	FONT-SIZE: 18px
+}
+.fw {
+	FONT-WEIGHT: bold
+}
+.bk1 {
+	FONT: 1px/1px Arial; CLEAR: both; OVERFLOW: hidden
+}
+.bk5 {
+	FONT: 1px/1px Arial; CLEAR: both; OVERFLOW: hidden
+}
+.bk10 {
+	FONT: 1px/1px Arial; CLEAR: both; OVERFLOW: hidden
+}
+.bk15 {
+	FONT: 1px/1px Arial; CLEAR: both; OVERFLOW: hidden
+}
+.bk1 {
+	HEIGHT: 1px
+}
+.bk5 {
+	HEIGHT: 5px
+}
+.bk10 {
+	HEIGHT: 10px
+}
+.bk15 {
+	HEIGHT: 15px
+}
+.cc00 {
+	COLOR: #c00
+}
+A.lc00 {
+	COLOR: #c00
+}
+A.lc00:hover {
+	COLOR: #333
+}
+.lc00 A {
+	COLOR: #c00
+}
+.lc00 A:hover {
+	COLOR: #333
+}
+A.l900 {
+	COLOR: #900
+}
+A.l900:hover {
+	COLOR: #333
+}
+.l900 A {
+	COLOR: #900
+}
+.l900 A:hover {
+	COLOR: #333
+}
+A.l333 {
+	COLOR: #333
+}
+A.l333:hover {
+	COLOR: #c00
+}
+.l333 A {
+	COLOR: #333
+}
+.l333 A:hover {
+	COLOR: #c00
+}
+A.l666 {
+	COLOR: #666
+}
+A.l666:hover {
+	COLOR: #c00
+}
+.l666 A {
+	COLOR: #666
+}
+.l666 A:hover {
+	COLOR: #c00
+}
+A.lfff {
+	COLOR: #fff
+}
+A.lfff:hover {
+	COLOR: #ff0
+}
+.lfff A {
+	COLOR: #fff
+}
+.lfff A:hover {
+	COLOR: #ff0
+}
+A.lff0 {
+	COLOR: #ff0
+}
+A.lff0:hover {
+	COLOR: #fff
+}
+.lff0 A {
+	COLOR: #ff0
+}
+.lff0 A:hover {
+	COLOR: #fff
+}
+A.lnn {
+	TEXT-DECORATION: none
+}
+A.lnn:hover {
+	TEXT-DECORATION: none
+}
+.lnn A {
+	TEXT-DECORATION: none
+}
+.lnn A:hover {
+	TEXT-DECORATION: none
+}
+A.lnu {
+	TEXT-DECORATION: none
+}
+A.lnu:hover {
+	TEXT-DECORATION: underline
+}
+.lnu A {
+	TEXT-DECORATION: none
+}
+.lnu A:hover {
+	TEXT-DECORATION: underline
+}
+A.luu {
+	TEXT-DECORATION: underline
+}
+A.luu:hover {
+	TEXT-DECORATION: underline
+}
+.luu A {
+	TEXT-DECORATION: underline
+}
+.luu A:hover {
+	TEXT-DECORATION: underline
+}
+A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #c00; TEXT-DECORATION: underline
+}
+.vod2 LI {
+	BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat
+}
+#forum .txt LI {
+	BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat
+}
+#main_news .txt LI {
+	BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat
+}
+.newsjs .col2 LI {
+	BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat
+}
+.l_news .txt LI {
+	BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat
+}
+.titlenv .w1 LI {
+	BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat
+}
+#headtop {
+	WIDTH: 100%; HEIGHT: 38px
+}
+#headtop .nav {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/topbg.jpg); MARGIN: 0px auto; WIDTH: 970px; HEIGHT: 38px; COLOR: #fff; OVERFLOW: hidden
+}
+#headtop .nav .col1 {
+	PADDING-LEFT: 12px; WIDTH: 220px; FLOAT: left; PADDING-TOP: 12px
+}
+#headtop .nav .col2 {
+	TEXT-ALIGN: right; LINE-HEIGHT: 38px; WIDTH: 680px; PADDING-RIGHT: 12px; FLOAT: right
+}
+#head {
+	BACKGROUND-COLOR: #fff; MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden
+}
+#head .col1 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 220px; FLOAT: left; COLOR: #666
+}
+#head .col2 {
+	LINE-HEIGHT: 24px; MARGIN-TOP: 3px; WIDTH: 730px; FLOAT: right
+}
+#nav1 {
+	BORDER-BOTTOM: #e8320d 3px solid; TEXT-ALIGN: center; LINE-HEIGHT: 28px; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; WIDTH: 960px; HEIGHT: 26px; OVERFLOW: hidden; BORDER-TOP: #ebebeb 1px solid
+}
+#main_ad1 {
+	PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden
+}
+#main_ad1 .ad {
+	LINE-HEIGHT: 20px; PADDING-LEFT: 10px; WIDTH: 950px; MARGIN-BOTTOM: 5px; FLOAT: left; OVERFLOW: hidden
+}
+#main_ad1 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 20px; LIST-STYLE-TYPE: none; FONT-SIZE: 12px
+}
+#main_ad1 LI {
+	WIDTH: 156px; FLOAT: left; HEIGHT: 20px; COLOR: #333; OVERFLOW: hidden
+}
+#main_ad1 .col1 {
+	WIDTH: 470px; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 7px
+}
+#main_ad1 .col2 {
+	WIDTH: 470px; DISPLAY: inline; FLOAT: right; MARGIN-RIGHT: 7px
+}
+#main_ad1 .col3 {
+	MARGIN-TOP: 5px; WIDTH: 470px; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 7px
+}
+#main_ad1 .col4 {
+	MARGIN-TOP: 5px; WIDTH: 470px; DISPLAY: inline; FLOAT: right; MARGIN-RIGHT: 7px
+}
+#main_ad1 .health_box {
+	DISPLAY: inline; MARGIN-RIGHT: 10px
+}
+#main_ad2 {
+	MARGIN: 0px auto 5px; WIDTH: 960px
+}
+#main_ad3 {
+	BACKGROUND-COLOR: #fff; MARGIN: 4px auto 0px; WIDTH: 960px; OVERFLOW: hidden
+}
+#main_ad3 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 20px; LIST-STYLE-TYPE: none; MARGIN-LEFT: 10px; FONT-SIZE: 12px
+}
+#main_ad3 LI {
+	WIDTH: 115px; FLOAT: left; HEIGHT: 20px; COLOR: #333; OVERFLOW: hidden
+}
+#main_bn {
+	BACKGROUND-COLOR: #fff; MARGIN: 10px auto; WIDTH: 960px; OVERFLOW: hidden
+}
+.tuij {
+	MARGIN: 0px auto 5px; WIDTH: 960px; OVERFLOW: hidden
+}
+.tuij DL {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 219px; PADDING-RIGHT: 5px; FLOAT: left; BORDER-TOP: #ccc 1px solid; MARGIN-RIGHT: 12px; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 5px
+}
+.tuij DL#temp {
+	MARGIN-RIGHT: 0px
+}
+.tuij DL DT {
+	WIDTH: 93px; FLOAT: left; HEIGHT: 58px; OVERFLOW: hidden
+}
+.tuij DL DT IMG {
+	WIDTH: 93px; HEIGHT: 58px
+}
+.tuij DL DD {
+	TEXT-ALIGN: left; LINE-HEIGHT: 20px; WIDTH: 118px; FLOAT: right; HEIGHT: 58px; OVERFLOW: hidden
+}
+.tuij DL DD A {
+	COLOR: #c00; FONT-WEIGHT: bold
+}
+.tuij DL DD A:hover {
+	COLOR: #333
+}
+.newsjs {
+	BACKGROUND-COLOR: #fff; MARGIN: 0px auto 5px; WIDTH: 960px; HEIGHT: 30px; OVERFLOW: hidden
+}
+.newsjs .col1 {
+	WIDTH: 90px; FLOAT: left
+}
+.newsjs .col2 {
+	BORDER-BOTTOM: #d0d0d0 1px solid; TEXT-ALIGN: left; BORDER-LEFT: #d0d0d0 0px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 859px; PADDING-RIGHT: 5px; FLOAT: right; HEIGHT: 28px; OVERFLOW: hidden; BORDER-TOP: #d0d0d0 1px solid; BORDER-RIGHT: #d0d0d0 1px solid; PADDING-TOP: 0px
+}
+.newsjs .col2 UL {
+	LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 12px
+}
+.newsjs .col2 LI {
+	TEXT-ALIGN: left; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; DISPLAY: inline; BACKGROUND-POSITION: 0px -56px; COLOR: #666666; OVERFLOW: hidden
+}
+.newsjs .col2 LI A {
+	COLOR: #333; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.newsjs .col2 LI A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+#headline {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/ttbg.gif); MARGIN: 0px auto 5px; WIDTH: 960px; HEIGHT: 95px; OVERFLOW: hidden
+}
+#headline .col1 {
+	WIDTH: 30px; FLOAT: left
+}
+#headline .col2 {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 28px; PADDING-LEFT: 0px; WIDTH: 920px; PADDING-RIGHT: 6px; FLOAT: right; OVERFLOW: hidden; PADDING-TOP: 10px
+}
+#headline .col2 H2 {
+	LINE-HEIGHT: 50px; FONT-FAMILY: "微软雅黑","黑体"; HEIGHT: 55px; FONT-SIZE: 45px; OVERFLOW: hidden
+}
+#headline .col2 H2 A {
+	COLOR: #da0000
+}
+#headline .col2 H2 A:hover {
+	COLOR: #333
+}
+#focus {
+	MARGIN: 0px auto 10px; WIDTH: 960px; OVERFLOW: hidden
+}
+#focus .col1 {
+	WIDTH: 480px; FLOAT: left; HEIGHT: 270px; OVERFLOW: hidden
+}
+#focus .col2 {
+	WIDTH: 465px; FLOAT: right; HEIGHT: 270px; OVERFLOW: hidden
+}
+#focus .col2 H3 {
+	LINE-HEIGHT: 32px; FONT-FAMILY: "黑体"; HEIGHT: 32px; FONT-SIZE: 20px; FONT-WEIGHT: normal
+}
+#focus .col2 P {
+	LINE-HEIGHT: 22px; COLOR: #666; FONT-SIZE: 12px
+}
+#focus .col2 P A {
+	COLOR: #666
+}
+#focus .col2 P A:hover {
+	COLOR: #c00
+}
+#focus .col2 .dujia {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/dujia.png); POSITION: absolute; MARGIN-TOP: -15px; WIDTH: 63px; HEIGHT: 55px; MARGIN-LEFT: 403px
+}
+#focus .col2 .ping {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/ping.png); POSITION: absolute; MARGIN-TOP: -15px; WIDTH: 63px; HEIGHT: 55px; MARGIN-LEFT: 403px
+}
+.line1 {
+	BORDER-BOTTOM: #ccc 1px solid; MARGIN: 8px auto
+}
+.line2 {
+	BORDER-BOTTOM: #ccc 1px dotted; MARGIN: 2px auto; HEIGHT: 1px; OVERFLOW: hidden
+}
+.show_box {
+	BORDER-BOTTOM: #aaa 1px solid; POSITION: relative; BORDER-LEFT: #aaa 1px solid; WIDTH: 478px; FLOAT: right; HEIGHT: 268px; OVERFLOW: hidden; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.show_box .mask {
+	POSITION: absolute; FILTER: Alpha(opacity=50); WIDTH: 480px; BACKGROUND: #000; HEIGHT: 40px; TOP: 230px; LEFT: 0px; opacity: 0.5
+}
+.show_box .linkbox {
+	Z-INDEX: 8; POSITION: absolute; LINE-HEIGHT: 40px; PADDING-LEFT: 14px; WIDTH: 500px; HEIGHT: 40px; TOP: 230px; LEFT: 0px
+}
+.show_box .linkbox A {
+	COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.show_box .showtab {
+	Z-INDEX: 8; POSITION: absolute; TOP: 240px; LEFT: 360px
+}
+.show_box .showtab A {
+	TEXT-ALIGN: center; LINE-HEIGHT: 22px; WIDTH: 22px; DISPLAY: block; FONT-FAMILY: Arial; BACKGROUND: url(http://cn.yimg.com/news/hp/1005/show_tab_bg.gif) no-repeat; FLOAT: left; HEIGHT: 22px; COLOR: #464646; FONT-WEIGHT: bold; MARGIN-RIGHT: 5px; TEXT-DECORATION: none
+}
+.show_box .showtab .on {
+	BACKGROUND-POSITION: left bottom; COLOR: #fff
+}
+#main {
+	MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden
+}
+#main .col1 {
+	BACKGROUND-COLOR: #fff; WIDTH: 290px; FLOAT: left; MARGIN-RIGHT: 10px
+}
+#main .col2 {
+	BACKGROUND-COLOR: #fff; WIDTH: 390px; FLOAT: left
+}
+#main .col3 {
+	BACKGROUND-COLOR: #fff; WIDTH: 260px; FLOAT: right
+}
+.titlebar1 {
+	HEIGHT: 42px; OVERFLOW: hidden
+}
+.col_bn1 {
+	TEXT-ALIGN: center; MARGIN: 0px auto 11px; WIDTH: 370px; OVERFLOW: hidden
+}
+.col_bn2 {
+	TEXT-ALIGN: center; MARGIN: 0px auto 8px; WIDTH: 270px; OVERFLOW: hidden
+}
+.exclusive1 {
+	BORDER-BOTTOM: #ccc 1px dotted; MARGIN: 10px auto 0px; WIDTH: 220px; HEIGHT: 100px; OVERFLOW: hidden
+}
+.exclusive1 IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; WIDTH: 110px; PADDING-RIGHT: 3px; FLOAT: left; HEIGHT: 83px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 3px
+}
+.exclusive1 P {
+	LINE-HEIGHT: 19px; WIDTH: 94px; FLOAT: right; HEIGHT: 90px; COLOR: #666; OVERFLOW: hidden
+}
+.exclusive1 P A {
+	COLOR: #c00; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.exclusive1 P A:hover {
+	COLOR: #333; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.exclusive1 H5 {
+	WIDTH: 100px; FLOAT: right
+}
+.exclusive1 H5 A {
+	COLOR: #c00; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.exclusive1 H5 A:hover {
+	COLOR: #333; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.exclusive2 {
+	BORDER-BOTTOM: #ccc 1px dashed; TEXT-ALIGN: center; PADDING-BOTTOM: 14px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 220px; PADDING-RIGHT: 0px; OVERFLOW: hidden; PADDING-TOP: 14px
+}
+.exclusive2 IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; WIDTH: 200px; PADDING-RIGHT: 5px; HEIGHT: 150px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 5px
+}
+.exclusive3 {
+	MARGIN: 10px auto 0px; WIDTH: 220px; HEIGHT: 100px; OVERFLOW: hidden
+}
+.exclusive3 IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; WIDTH: 110px; PADDING-RIGHT: 3px; FLOAT: left; HEIGHT: 83px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 3px
+}
+.exclusive3 .rt {
+	LINE-HEIGHT: 19px; WIDTH: 94px; FLOAT: right; HEIGHT: 90px; COLOR: #666; OVERFLOW: hidden
+}
+.exclusive3 .rt H2 {
+	COLOR: #c00; FONT-SIZE: 12px
+}
+.exclusive3 .rt H2 A {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.exclusive3 .rt H2 A:hover {
+	COLOR: #555; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.exclusive3 .rt A {
+	COLOR: #666; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.exclusive3 .rt A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.tab3 {
+	HEIGHT: 32px; OVERFLOW: hidden
+}
+.tab3 LI {
+	HEIGHT: 32px; OVERFLOW: hidden
+}
+.tab3 {
+	BACKGROUND: url(../../images/images_linfen/tag06.gif) no-repeat left top
+}
+.tab3 LI {
+	LINE-HEIGHT: 30px; PADDING-LEFT: 16px; FLOAT: left; HEIGHT: 30px; FONT-SIZE: 14px; OVERFLOW: hidden
+}
+.tab3 LI A {
+	COLOR: #a00; FONT-WEIGHT: bold
+}
+.tab3 .st_active {
+	BORDER-LEFT: #a00 1px solid; WIDTH: 69px; BACKGROUND: url(../../images/images_linfen/tag06.gif) no-repeat left top; BORDER-RIGHT: #a00 1px solid
+}
+.tab3 .st_normal {
+	WIDTH: 69px; BACKGROUND: url(../../images/images_linfen/tag06.gif) no-repeat -150px 0px
+}
+#main_news {
+	BORDER-BOTTOM: #dbdbdb 1px solid; BORDER-LEFT: #dbdbdb 1px solid; MARGIN: 0px auto 10px; WIDTH: 370px; OVERFLOW: hidden; BORDER-TOP: #dbdbdb 1px solid; BORDER-RIGHT: #dbdbdb 1px solid
+}
+#main_news .top {
+	BACKGROUND: url(../../images/images_linfen/tag04.gif) no-repeat left top; HEIGHT: 32px; OVERFLOW: hidden
+}
+#main_news .top H2 {
+	LINE-HEIGHT: 32px; PADDING-LEFT: 16px; FLOAT: left; COLOR: #a00; FONT-SIZE: 14px
+}
+#main_news .top .more {
+	LINE-HEIGHT: 32px; PADDING-RIGHT: 6px; FLOAT: right; COLOR: #666
+}
+#main_news .top2 {
+	BACKGROUND: url(../../images/images_linfen/tag04.gif) no-repeat left top; HEIGHT: 32px; OVERFLOW: hidden
+}
+#main_news .top2 H2 {
+	LINE-HEIGHT: 32px; PADDING-LEFT: 16px; WIDTH: 100px; FLOAT: left; COLOR: #a00; FONT-SIZE: 14px; OVERFLOW: hidden
+}
+#main_news .top2 P {
+	WIDTH: 179px; FLOAT: left; MARGIN-LEFT: 0px; OVERFLOW: hidden
+}
+#main_news .top2 DIV {
+	WIDTH: 179px; FLOAT: left; MARGIN-LEFT: 0px; OVERFLOW: hidden
+}
+#main_news .top2 .more {
+	LINE-HEIGHT: 32px; PADDING-RIGHT: 6px; FLOAT: right; COLOR: #666
+}
+#main_news .txt {
+	MARGIN: 0px auto 5px; WIDTH: 350px; OVERFLOW: hidden
+}
+#main_news .txt UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 14px
+}
+#main_news .txt LI {
+	MARGIN: 3px 0px; PADDING-LEFT: 10px; WIDTH: 340px; BACKGROUND-POSITION: 0px 8px; FLOAT: left; HEIGHT: 20px; COLOR: #666666; OVERFLOW: hidden
+}
+.title .w1 P A {
+	COLOR: #c00; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.title .w1 P A:hover {
+	COLOR: #333; FONT-SIZE: 14px; TEXT-DECORATION: underline
+}
+.title .w1 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 12px
+}
+.title .w1 LI {
+	MARGIN: 3px 0px; PADDING-LEFT: 10px; WIDTH: 195px; BACKGROUND-POSITION: 0px 8px; FLOAT: left; HEIGHT: 20px; COLOR: #666666
+}
+.title .w1 LI A {
+	COLOR: #666666; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.title .w1 LI A:hover {
+	COLOR: #666666; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.l_news {
+	BORDER-BOTTOM: #dbdbdb 1px solid; BORDER-LEFT: #dbdbdb 1px solid; MARGIN: 0px auto 10px; WIDTH: 270px; OVERFLOW: hidden; BORDER-TOP: #dbdbdb 1px solid; BORDER-RIGHT: #dbdbdb 1px solid
+}
+.l_news .top {
+	BACKGROUND: url(../../images/images_linfen/tag06.gif) no-repeat left top; HEIGHT: 32px; OVERFLOW: hidden
+}
+.l_news .top H2 {
+	LINE-HEIGHT: 32px; PADDING-LEFT: 20px; FLOAT: left; COLOR: #a00; FONT-SIZE: 14px
+}
+.l_news .top .more {
+	LINE-HEIGHT: 32px; PADDING-RIGHT: 6px; FLOAT: right; COLOR: #666
+}
+.l_news .txt {
+	MARGIN: 0px auto 5px; WIDTH: 250px; OVERFLOW: hidden
+}
+.l_news .txt UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 12px
+}
+.l_news .txt LI {
+	MARGIN: 3px 0px; PADDING-LEFT: 10px; WIDTH: 240px; BACKGROUND-POSITION: 0px 8px; FLOAT: left; HEIGHT: 20px; COLOR: #666666; OVERFLOW: hidden
+}
+.l_news .txt LI A {
+	COLOR: #333; FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+.l_news .txt LI A:hover {
+	COLOR: #c00; FONT-SIZE: 14px; TEXT-DECORATION: underline
+}
+.l_news .txt2 {
+	MARGIN: 0px auto 5px; WIDTH: 250px; OVERFLOW: hidden
+}
+.l_news .txt2 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 12px
+}
+.l_news .txt2 LI {
+	MARGIN: 3px 0px; WIDTH: 240px; COLOR: #666666; OVERFLOW: hidden
+}
+.l_news .txt2 LI A {
+	COLOR: #333; FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+.l_news .txt2 LI A:hover {
+	COLOR: #c00; FONT-SIZE: 14px; TEXT-DECORATION: underline
+}
+.title {
+	BORDER-BOTTOM: #ccc 1px dotted; MARGIN: 0px auto 5px; WIDTH: 350px; HEIGHT: 118px; OVERFLOW: hidden
+}
+.title IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 135px; PADDING-RIGHT: 1px; FLOAT: left; HEIGHT: 102px; OVERFLOW: hidden; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 1px
+}
+.title .w1 {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; WIDTH: 200px; FLOAT: right; HEIGHT: 102px; COLOR: #666
+}
+.title .w1 A {
+	COLOR: #c00; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.title .w1 A:hover {
+	COLOR: #333; FONT-SIZE: 14px; TEXT-DECORATION: underline
+}
+.titlenv {
+	MARGIN: 2px auto 5px; WIDTH: 350px; OVERFLOW: hidden
+}
+.titlenv .w2 {
+	WIDTH: 117px; FLOAT: left; COLOR: #666; OVERFLOW: hidden
+}
+.titlenv .w2 P {
+	LINE-HEIGHT: 21px; MARGIN: 4px auto; WIDTH: 108px; HEIGHT: 42px; OVERFLOW: hidden
+}
+.titlenv .w2 P A {
+	COLOR: #666; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.titlenv .w2 P A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.titlenv IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 108px; PADDING-RIGHT: 1px; HEIGHT: 152px; OVERFLOW: hidden; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 1px
+}
+.titlenv DL {
+	TEXT-ALIGN: center; WIDTH: 348px; OVERFLOW: hidden
+}
+.titlenv DL IMG {
+	WIDTH: 160px; HEIGHT: 115px
+}
+.titlenv DD {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+.titlenv .w1 {
+	TEXT-ALIGN: left; LINE-HEIGHT: 23px; WIDTH: 220px; FLOAT: right; COLOR: #666; OVERFLOW: hidden
+}
+.titlenv .w1 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 22px; LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 12px
+}
+.titlenv .w1 LI {
+	MARGIN: 2px 0px; PADDING-LEFT: 10px; WIDTH: 210px; BACKGROUND-POSITION: 0px 8px; FLOAT: left; HEIGHT: 22px; COLOR: #666666; OVERFLOW: hidden
+}
+.titlenv .w1 LI A {
+	COLOR: #444; FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+.titlenv .w1 LI A:hover {
+	COLOR: #c00; FONT-SIZE: 14px; TEXT-DECORATION: underline
+}
+#forum {
+	BORDER-BOTTOM: #dbdbdb 1px solid; BORDER-LEFT: #dbdbdb 1px solid; MARGIN: 0px auto 10px; WIDTH: 240px; OVERFLOW: hidden; BORDER-TOP: #dbdbdb 1px solid; BORDER-RIGHT: #dbdbdb 1px solid
+}
+#forum .top {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/tag05.gif); HEIGHT: 30px; OVERFLOW: hidden
+}
+#forum .top H2 {
+	LINE-HEIGHT: 32px; PADDING-LEFT: 15px; FLOAT: left; COLOR: #a00; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#forum .top .more {
+	LINE-HEIGHT: 32px; PADDING-RIGHT: 6px; FLOAT: right; COLOR: #666
+}
+#forum .txt {
+	MARGIN: 5px auto; WIDTH: 220px; OVERFLOW: hidden
+}
+#forum .txt UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; MARGIN: 0px; COLOR: #fff; CLEAR: both; FONT-SIZE: 12px
+}
+#forum .txt LI {
+	MARGIN: 2px 0px; PADDING-LEFT: 10px; WIDTH: 210px; BACKGROUND-POSITION: 0px -52px; FLOAT: left; HEIGHT: 20px; COLOR: #666666; OVERFLOW: hidden
+}
+#forum .txt LI A {
+	COLOR: #666; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+#forum .txt LI A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.vod1 {
+	BORDER-BOTTOM: #ccc 1px dotted; PADDING-BOTTOM: 9px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 230px; PADDING-RIGHT: 0px; HEIGHT: 114px; OVERFLOW: hidden; PADDING-TOP: 9px
+}
+.vod1 DL {
+	TEXT-ALIGN: center; MARGIN: 0px; WIDTH: 115px; FLOAT: left
+}
+.vod1 DL DT {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 100px; PADDING-RIGHT: 5px; PADDING-TOP: 0px
+}
+.vod1 DL DT A IMG {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 100px; PADDING-RIGHT: 1px; HEIGHT: 90px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; PADDING-TOP: 1px
+}
+.vod1 DL DD {
+	TEXT-ALIGN: center; LINE-HEIGHT: 22px; WIDTH: 115px; HEIGHT: 22px; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.vod2 {
+	PADDING-BOTTOM: 8px; MARGIN: 0px auto; PADDING-LEFT: 4px; WIDTH: 220px; PADDING-RIGHT: 4px; OVERFLOW: hidden; PADDING-TOP: 8px
+}
+.vod2 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; COLOR: #fff; MARGIN-LEFT: 5px; CLEAR: both; FONT-SIZE: 12px
+}
+.vod2 LI {
+	MARGIN: 2px 0px; PADDING-LEFT: 18px; WIDTH: 202px; BACKGROUND-POSITION: 0px -20px; FLOAT: left; HEIGHT: 20px; COLOR: #666666; OVERFLOW: hidden
+}
+.vod2 LI A {
+	COLOR: #666; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.vod2 LI A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.tab {
+	MARGIN: 0px auto; WIDTH: 308px; HEIGHT: 30px
+}
+.tab LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 30px; WIDTH: 154px; FLOAT: left; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+.tab LI A {
+	COLOR: #c00; FONT-SIZE: 14px
+}
+.tab LI A:hover {
+	TEXT-DECORATION: none
+}
+.tab2 {
+	BORDER-BOTTOM: #a00 1px solid; WIDTH: 370px; MARGIN-BOTTOM: 5px; HEIGHT: 28px; OVERFLOW: hidden
+}
+.tab2 LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 29px; WIDTH: 34px; FLOAT: left; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+.tab2 LI A {
+	COLOR: #c00; FONT-SIZE: 14px
+}
+.tab2 LI A:hover {
+	TEXT-DECORATION: none
+}
+.bo_active {
+	LINE-HEIGHT: 30px; BACKGROUND-COLOR: #fff; COLOR: #c00; FONT-SIZE: 14px; CURSOR: hand
+}
+.bo_normal {
+	LINE-HEIGHT: 30px; COLOR: #c00; FONT-SIZE: 14px; CURSOR: hand
+}
+.lun_active {
+	LINE-HEIGHT: 30px; BACKGROUND-COLOR: #fff; COLOR: #c00; FONT-SIZE: 14px; CURSOR: hand
+}
+.lun_normal {
+	LINE-HEIGHT: 30px; COLOR: #c00; FONT-SIZE: 14px; CURSOR: hand
+}
+.yt_active {
+	LINE-HEIGHT: 30px; BACKGROUND-COLOR: #fff; COLOR: #c00; FONT-SIZE: 14px; CURSOR: hand
+}
+.yt_normal {
+	LINE-HEIGHT: 30px; COLOR: #c00; FONT-SIZE: 14px; CURSOR: hand
+}
+.hiddencontent {
+	DISPLAY: none; COLOR: #666
+}
+.activecontent {
+	DISPLAY: block; COLOR: #666
+}
+.tabgp {
+	MARGIN: 0px auto; WIDTH: 960px; BACKGROUND: url(../../images/images_linfen/tag01.gif) repeat-x left top; HEIGHT: 30px
+}
+.tabgp UL {
+	LIST-STYLE-TYPE: none; MARGIN: 0px; CLEAR: both; FONT-SIZE: 12px
+}
+.tabgp LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 30px; WIDTH: 100px; FLOAT: left; OVERFLOW: hidden; MARGIN-RIGHT: 6px
+}
+.tabgp LI A {
+	COLOR: #c00; FONT-SIZE: 12px
+}
+.tabgp LI A:hover {
+	TEXT-DECORATION: none
+}
+#footer .black12 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 24px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; COLOR: #353535; FONT-SIZE: 12px; PADDING-TOP: 5px
+}
+#footer .tabgp4_active {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/tag03.gif); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 0px; COLOR: #00479b; FONT-SIZE: 12px; CURSOR: hand
+}
+#footer .tabgp4_normal {
+	BACKGROUND-IMAGE: url(../../images/images_linfen/tag02.gif); BACKGROUND-POSITION: 0px 0px; COLOR: #00479b; FONT-SIZE: 12px; CURSOR: hand
+}
+#footer .hiddencontent {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 24px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: none; COLOR: #353535; FONT-SIZE: 12px; PADDING-TOP: 5px
+}
+#footer .activecontent {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 24px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; COLOR: #353535; FONT-SIZE: 12px; PADDING-TOP: 5px
+}
+#footer .linkborder {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; WIDTH: 958px; BORDER-RIGHT: #ccc 1px solid
+}
+.yt_active {
+	BORDER-LEFT: #a00 1px solid; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND: url(../../images/images_linfen/tag06.gif) no-repeat left top; BORDER-RIGHT: #a00 1px solid
+}
+.yt_normal {
+	PADDING-LEFT: 20px; PADDING-RIGHT: 20px
+}
+#footer {
+	MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden
+}
+#footer .top {
+	TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN-TOP: 15px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #666; OVERFLOW: hidden
+}
+#footer .top A {
+	COLOR: #666; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+#footer .top A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+#footer .copyright {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 12px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #666; PADDING-TOP: 12px
+}
+.zb {
+	WIDTH: 470px; BACKGROUND: url(http://ads.sdnews.com.cn/adfiles/lszb.jpg) no-repeat; HEIGHT: 70px; OVERFLOW: hidden
+}
+.zb UL {
+	WIDTH: 380px; OVERFLOW: hidden
+}
+.zb UL LI {
+	PADDING-LEFT: 10px; WIDTH: 380px; BACKGROUND-POSITION: 0px -52px; HEIGHT: 22px; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+#demo {
+	MARGIN: 0px 5px 0px 75px; WIDTH: 470px; HEIGHT: 65px; OVERFLOW: hidden
+}
+.col_bn2 DIV {
+	FLOAT: left
+}
+.col_bn2 EMBED {
+	FLOAT: left
+}
+.col_bn2 IMG {
+	FLOAT: left
+}
+.main02 {
+	BORDER-BOTTOM: #eeeeee 1px solid; BORDER-LEFT: #eeeeee 1px solid; MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden; BORDER-TOP: #eeeeee 1px solid; BORDER-RIGHT: #eeeeee 1px solid
+}
+.main02 H2 {
+	LINE-HEIGHT: 28px; WIDTH: 960px; BACKGROUND: url(jiaoyu2.jpg) no-repeat; HEIGHT: 28px
+}
+.main02 H2 SPAN {
+	LINE-HEIGHT: 28px; FLOAT: right; HEIGHT: 28px; COLOR: #ffffff; FONT-SIZE: 14px; MARGIN-RIGHT: 10px
+}
+.main02 H2 SPAN A {
+	COLOR: #ffffff; FONT-SIZE: 14px
+}
+.main02 H2 FONT {
+	LINE-HEIGHT: 28px; FLOAT: left; HEIGHT: 28px; COLOR: #ffffff; MARGIN-LEFT: 25px; FONT-SIZE: 14px
+}
+.main02 H2 FONT A {
+	COLOR: #ffffff; FONT-SIZE: 14px
+}
+.main02 .fl {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 280px; BACKGROUND: #fff; FLOAT: left; CLEAR: both; OVERFLOW: hidden; MARGIN-RIGHT: 10px; PADDING-TOP: 10px
+}
+.main02 .fm {
+	WIDTH: 390px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 260px; OVERFLOW: hidden; MARGIN-RIGHT: 10px
+}
+.main02 .fm H3 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 30px; MARGIN-TOP: 10px; WIDTH: 390px; HEIGHT: 30px; OVERFLOW: hidden
+}
+.main02 .fm H3 A {
+	COLOR: #3ec923; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.main02 .fm H3 A:hover {
+	COLOR: #333; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.main02 .fm P {
+	BORDER-BOTTOM: #cccccc 1px dashed; LINE-HEIGHT: 20px; PADDING-LEFT: 5px; WIDTH: 390px; HEIGHT: 40px; OVERFLOW: hidden
+}
+.main02 .fm UL {
+	MARGIN-TOP: 5px; WIDTH: 390px; OVERFLOW: hidden
+}
+.main02 .fm LI {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 10px; WIDTH: 370px; BACKGROUND: url(libg.gif) no-repeat 0px 12px; HEIGHT: 28px; MARGIN-LEFT: 10px; OVERFLOW: hidden
+}
+.main02 .fm LI A {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.main02 .fm LI A:hover {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.main02 .fr {
+	WIDTH: 260px; BACKGROUND: #fff; FLOAT: right; HEIGHT: 260px; OVERFLOW: hidden
+}
+.main02 .fr .txt {
+	BORDER-BOTTOM: #ccc 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #ccc 1px solid; MARGIN-TOP: 10px; WIDTH: 238px; MARGIN-LEFT: 10px; OVERFLOW: hidden; BORDER-TOP: #ccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #ccc 1px solid
+}
+.main02 .fr .txt H2 {
+	LINE-HEIGHT: 28px; WIDTH: 260px; BACKGROUND: url(frbg.jpg) no-repeat; HEIGHT: 28px; COLOR: #cc6600; FONT-SIZE: 14px
+}
+.main02 .fr .txt H2 FONT {
+	COLOR: #3ec923; FONT-SIZE: 14px; MARGIN-RIGHT: 25px
+}
+.main02 .fr .txt DL {
+	WIDTH: 220px; MARGIN-LEFT: 5px; OVERFLOW: hidden
+}
+.main02 .fr .txt DT {
+	WIDTH: 104px; FLOAT: left; MARGIN-LEFT: 6px
+}
+.main02 .fr .txt DT IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 100px; PADDING-RIGHT: 1px; HEIGHT: 75px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 1px
+}
+.main02 .fr .txt DT H4 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 100px; HEIGHT: 40px; OVERFLOW: hidden
+}
+.main02 .fr .txt DT H4 A {
+	COLOR: ; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.main03 {
+	BORDER-BOTTOM: #eeeeee 1px solid; BORDER-LEFT: #eeeeee 1px solid; MARGIN: 0px auto; WIDTH: 960px; OVERFLOW: hidden; BORDER-TOP: #eeeeee 1px solid; BORDER-RIGHT: #eeeeee 1px solid
+}
+.main03 H2 {
+	LINE-HEIGHT: 28px; WIDTH: 960px; BACKGROUND: url(jiaoyu.jpg) no-repeat; HEIGHT: 28px
+}
+.main03 H2 SPAN {
+	LINE-HEIGHT: 28px; FLOAT: right; HEIGHT: 28px; COLOR: #ffffff; FONT-SIZE: 14px; MARGIN-RIGHT: 10px
+}
+.main03 H2 SPAN A {
+	COLOR: #ffffff; FONT-SIZE: 14px
+}
+.main03 H2 FONT {
+	LINE-HEIGHT: 28px; FLOAT: left; HEIGHT: 28px; COLOR: #ffffff; MARGIN-LEFT: 25px; FONT-SIZE: 14px
+}
+.main03 H2 FONT A {
+	COLOR: #ffffff; FONT-SIZE: 14px
+}
+.main03 .fl {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 280px; BACKGROUND: #fff; FLOAT: left; CLEAR: both; MARGIN-RIGHT: 10px; PADDING-TOP: 10px
+}
+.main03 .fm {
+	WIDTH: 390px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 260px; OVERFLOW: hidden; MARGIN-RIGHT: 10px
+}
+.main03 .fm H3 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 30px; MARGIN-TOP: 10px; WIDTH: 390px; HEIGHT: 30px; OVERFLOW: hidden
+}
+.main03 .fm H3 A {
+	COLOR: #f89a26; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.main03 .fm H3 A:hover {
+	COLOR: #333; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.main03 .fm P {
+	BORDER-BOTTOM: #cccccc 1px dashed; LINE-HEIGHT: 20px; PADDING-LEFT: 5px; WIDTH: 390px; HEIGHT: 40px; OVERFLOW: hidden
+}
+.main03 .fm UL {
+	MARGIN-TOP: 5px; WIDTH: 390px; OVERFLOW: hidden
+}
+.main03 .fm LI {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 10px; WIDTH: 370px; BACKGROUND: url(libg.gif) no-repeat 0px 12px; HEIGHT: 28px; MARGIN-LEFT: 10px; OVERFLOW: hidden
+}
+.main03 .fm LI A {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.main03 .fm LI A:hover {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.main03 .fr {
+	WIDTH: 260px; BACKGROUND: #fff; FLOAT: right; HEIGHT: 260px; OVERFLOW: hidden
+}
+.main03 .fr .txt {
+	BORDER-BOTTOM: #ccc 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #ccc 1px solid; MARGIN-TOP: 10px; WIDTH: 238px; MARGIN-LEFT: 10px; OVERFLOW: hidden; BORDER-TOP: #ccc 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #ccc 1px solid
+}
+.main03 .fr .txt H2 {
+	LINE-HEIGHT: 28px; WIDTH: 260px; BACKGROUND: url(frbg.jpg) no-repeat; HEIGHT: 28px; COLOR: #cc6600; FONT-SIZE: 14px
+}
+.main03 .fr .txt H2 FONT {
+	COLOR: #cc6600; FONT-SIZE: 14px; MARGIN-RIGHT: 25px
+}
+.main03 .fr .txt DL {
+	MARGIN-TOP: 5px; WIDTH: 238px; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 1px; OVERFLOW: hidden
+}
+.main03 .fr .txt DT {
+	WIDTH: 115px; FLOAT: left; MARGIN-LEFT: 2px
+}
+.main03 .fr .txt DT IMG {
+	WIDTH: 115px; HEIGHT: 90px
+}
+.main03 .fr .txt DT H4 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; WIDTH: 115px; HEIGHT: 25px; OVERFLOW: hidden
+}
+.main03 .fr .txt DT H4 A {
+	COLOR: ; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.main03 .fr .txt1 {
+	PADDING-BOTTOM: 8px; MARGIN: 0px auto; PADDING-LEFT: 4px; WIDTH: 220px; PADDING-RIGHT: 4px; OVERFLOW: hidden; BORDER-TOP: #ccc 1px dotted; PADDING-TOP: 8px
+}
+.main03 .fr .txt1 UL {
+	TEXT-ALIGN: left; LINE-HEIGHT: 21px; LIST-STYLE-TYPE: none; COLOR: #fff; MARGIN-LEFT: 5px; CLEAR: both; FONT-SIZE: 12px
+}
+.main03 .fr .txt1 LI {
+	LIST-STYLE-POSITION: inside; MARGIN: 2px 0px; PADDING-LEFT: 18px; WIDTH: 202px; BACKGROUND-POSITION: 0px -20px; FLOAT: left; HEIGHT: 20px; COLOR: #666666; OVERFLOW: hidden; LIST-STYLE-IMAGE: url(icon01.gif)
+}
+.main03 .fr .txt1 LI A {
+	COLOR: #666; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.main03 .fr .txt1 LI A:hover {
+	COLOR: #c00; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}

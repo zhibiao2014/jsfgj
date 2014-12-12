@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+  </title>
+  <link href="{CSS_PATH}style.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+  <link href="{CSS_PATH}stylesheets/content.css" rel="stylesheet" type="text/css" />
+  <body>
+    <div class="wrapper">
+      <div id="content">
+        {template "content","header-common"}
+        <!--头部 end-->
+        <div class="hr_6"></div>
+        <!-- <div id="ad" class="clear"></div> -->
+        <div class="hr_6"></div>
+        <div id="main">
+          <div class="Article">
+            <div class="bts float">
+              <a href="{siteurl($siteid)}" title="首页">首页</a> <span> > {catpos($catid)} 正文 </span> 
+            </div>
+            <div id="font">
+              <span>字号</span>
+              <a class="da">大</a>
+              <a class="zhong">中</a>
+              <a class="xiao">小</a>
+            </div>
+            <h1 class="title clear">{$title}</h1>
+            <div class="ms">
+              <span>时间：{$updatetime}</span>
+              <span>责任编辑：{$editor}</span>
+            </div>
+            <div class="content" style="text-align: left;">
+              {$content}
+              <div class="content_bottom">
+                <span>文章来源：<?php echo strip_tags($copyfrom); ?></span>
+              </div>
+            </div>
+            {if $pages}
+            <p id="pages" class="text-c" style="text-align: center;">
+              {$pages}
+            </p>
+            {/if}
+            <p>
+              <strong>相关热词搜索：</strong>{loop $keywords $keyword} <a href="{APP_PATH}tag_lists_{urlencode($keyword)}_1.html" class="blue">{$keyword}</a> | {/loop}
+            </p>
+            <p class="f14" style="text-align: left;">
+              <strong>上一篇：</strong>
+              <a href="{$previous_page[url]}" title="{$previous_page[title]}">
+                {$previous_page[title]}
+              </a><br />
+              <strong>下一篇：</strong>
+              <a href="{$next_page[url]}" title="{$next_page[title]}">{$next_page[title]}</a>
+            </p>
+            <div class="bk15"></div>
+            <div class="bshare-custom icon-medium" style="height: 33px; margin: 5px 0; "><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到豆瓣" class="bshare-douban"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+          </div>
+
+        </div>
+        {template "content" , "sidebar"}
+        <div class="hr_6"></div>
+        <!--尾部-->      
+
+        {template "content","footer-common"}
+        <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+        <script type="text/javascript">
+          $(function(){
+            $("#scroller").simplyScroll();
+            $('.Article .content img').LoadImage(true, 550, 660,'{IMG_PATH}s_nopic.gif');    
+            $("#font .da").click(function(){
+              $("#main .Article .content p").css("font-size","15px");
+              $("#main .Article .content").css("font-size","15px");
+            })
+
+            $("#font .zhong").click(function(){
+              $("#main .Article .content p").css("font-size","14px");
+              $("#main .Article .content").css("font-size","14px");
+            })
+
+            $("#font .xiao").click(function(){
+              $("#main .Article .content p").css("font-size","13px");
+              $("#main .Article .content").css("font-size","13px");
+            })
+          });
+        </script>
+      </div>
+    </boby>
+    </html>

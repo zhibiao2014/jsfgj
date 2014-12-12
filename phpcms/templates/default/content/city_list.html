@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}</title>
+    <meta name="keywords" content="{$SEO['keyword']}"/>
+    <meta name="description" content="{$SEO['description']}"/>
+    <link href="{CSS_PATH}stylesheets/common.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/city.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="content" class="clearfix city"> 
+            {template "content","header-common"}
+            <h1><a href="{siteurl($siteid)}/city_3360.html">中国城市新闻</a>  -  <?php echo $city['name']; ?></h1>
+            <div class="row city_list clearfix">
+                <div class="left_660 list">
+                    <div class="tab">
+                        <a href="{APP_PATH}city_lists_<?php echo $models['news']; ?>_<?php echo $keyid; ?>_1.html" class="<?php echo ($modelid == $models['news']) ? 'action' : ''; ?>">新闻</a>
+                        <a href="{APP_PATH}city_lists_<?php echo $models['online_player']; ?>_<?php echo $keyid; ?>_1.html" class="<?php echo ($modelid == $models['online_player']) ? 'action' : ''; ?>">视频</a>
+                        <a href="{APP_PATH}city_lists_<?php echo $models['picture']; ?>_<?php echo $keyid; ?>_1.html" class="<?php echo ($modelid == $models['picture']) ? 'action' : ''; ?>">图文</a>
+                    </div>
+                    <?php foreach ($infos as $key => $info) { ?>
+                    <div class="item clearfix">
+                        <?php if ($info['thumb']) { ?>
+                        <a href="<?php echo $info['url']; ?>" title="<?php echo $info['title']; ?>" target="_blank" class="float">
+                            <img src="{thumb($info[thumb],100,75)}" width="100" height="75" alt="<?php echo $info['keywords']; ?>"/>
+                        </a>
+                        <?php } ?>
+                        <div class="text float">
+                            <h3>
+                                <a href="<?php echo $info['url']; ?>" title="<?php echo $info['title']; ?>" target="_blank"><?php echo $info['title']; ?></a>
+                            </h3>
+                            <p><?php echo $info['description']; ?></p>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <div id="pages">
+                        <?php echo $pages; ?>
+                    </div>
+                </div>
+                {template "content" , "sidebar"}
+            </div>
+        </div>
+        {template "content","footer-common"}
+        <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+            $("#scroller").simplyScroll();
+            $("#city_tuijie_tu").simplyScroll({customClass : ""});
+            $(".city_table table tr:odd").css("background-color" , "#EBF2FA");
+        })
+        </script>
+    </div>
+</boby>
+</html>

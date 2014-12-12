@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/fangtan.css" rel="stylesheet" type="text/css" />
+    {template "content","header_one"}
+    <!--头部 end-->  
+    <div class="hr_6"></div>
+    <!-- 二级导航  -->
+    <div class="sub_nav">
+      <ul>
+        <li class="first"><a href="{siteurl($siteid)}">城市</a><b class="dichan">访谈</b></li>
+      </ul>
+    </div>
+    <div class="hr_6"></div>
+    <div class="fangtan clear">
+        {pc:content action="category" catid="$catid" num="25"   siteid="$siteid" order="listorder ASC"}
+        {loop $data $r}
+          <?php $id = $r['catid'];?>
+          <div class="catname clear">
+            <a href="{$r['url']}" target="blank">{$r['catname']}</a>
+          </div>
+          <div class="fangtan_list">
+            <ul class="photo-list picbig">
+              {pc:content  action="lists" catid="$id" order="id DESC" thumb="1" num="20"}
+                {loop $data $v}
+                <li class="float">
+                  <div class="img_title">
+                  <div class="image">
+                    <a href="{$v['url']}" title="{$v['title']}" target="blank">
+                      <img src="{thumb($v['thumb'],102,120)}" width="102" height="120">
+                    </a>
+                  </div>
+                  <a href="{$v['url']}" target="blank" class="title"> 
+                    {if $v[article_bac] == ""}{str_cut($v[title],25,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                </div>
+                </li>
+                {/loop}
+              {/pc}
+            </ul>
+          </div>
+        {/loop}
+        {/pc}
+    <div class="hr_6"></div>
+    </div>
+  <!--尾部-->
+{template "content","footer_my"}

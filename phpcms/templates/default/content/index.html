@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}"/>
+  <meta name="description" content="{$SEO['description']}"/>
+  <link href="{CSS_PATH}style.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="content"> 
+      {template "content","header-common"}
+      <div class="hr_6"></div>
+      <div class="row ad wzlj">
+      {loop subcat(9) $v}
+        <li><a href="{$v[url]}" title="{$v[catname]}">{$v[catname]}</a></li>
+      {/loop}
+      </div>
+      <div class="hr_6"></div>
+      <div class="row">
+        <div class="left_660">
+          <div>
+            <div class="scroll_img" style="position: relative;">
+              {pc:content  action="position" posid="9" thumb="1" order="id DESC" num="4"}
+              <div class="fd" style="position: relative;">
+                <ul class="photo">
+                  {loop $data $k $v}
+                  <li>
+                    <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+                      <img src="{thumb($v[thumb], 520, 300)}" width="520" height="300" alt="{$v[title]}" />
+                    </a>                
+                    <div class="title">
+                      <p  {if $n==1}style="display:block;"{else} style="display: none;"{/if}><strong><a href="{$v[url]}" title="{$v[title]}" class="blue" {title_style($v[style])}>
+                        {if $v[article_bac] == ""}{str_cut($v[title],100,'')}{else}{$v[article_bac]}{/if}</a></strong><br />{str_cut(strip_tags($v[description]), 62)}</p>
+                      </div>
+                    </li>
+                    {/loop}
+                  </ul>
+                </div>
+                <ul class="fx">
+                  {loop $data $k $v}
+                  <li {if $n==1}class="on" style="margin:0;"{/if}>
+                    <a href="{$v[url]}" style="display: block;">
+                      <img src="{thumb($v[thumb], 130, 75)}" alt="{$v[title]}" width="130" height="75" />
+                    </a>
+                  </li>
+                  {/loop}
+                </ul>
+                {/pc}
+              </div>
+            </div>
+            <div class="hr_6" ></div>
+            <div><img src="{IMG_PATH}images/blue_line01.jpg" width="660px" height="4px" alt=""/></div>
+          </div>
+          <div class="right_310">
+            {pc:content  action="position" posid="2" order="id DESC" num="1"}
+            <div>
+              {loop $data $r}
+              <div class="hd"><a href="{$r[url]}" title="{$r[title]}" target="_blank">{if $r[article_bac] == ""}{str_cut($r[title],36,'')}{else}{$r[article_bac]}{/if}</a></div>
+              <div class="bd" style="text-indent: 20px;"> 
+                <?php echo str_cut(strip_tags($r[description]), 120,'')."<a href='$r[url]'  target='_blank'>[详细]</a>"; ?>
+              </div>
+              {/loop}
+            </div>
+            {/pc}
+            <div class="gray_line"><img src="{IMG_PATH}images/gray_line.jpg" width="300px" height="1px" alt="" /></div>
+            {pc:content  action="position" posid="2" order="id DESC" num="11"}
+            <div class="list">
+              <ul>
+                {loop $data $r}
+                {if $n > 1}
+                <li><a href="{$r[url]}" title="{$r[title]}" target="_blank">
+                  {if $r[article_bac] == ""}{str_cut($r[title],60,'')}{else}{$r[article_bac]}{/if}
+                </a></li>
+                {/if}
+                {/loop}
+              </ul>
+            </div>    
+            {/pc}
+          </div>
+        </div>
+        <div class="hr_6"></div>
+        <div class="row ad">
+          <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=12"></script>
+        </div>
+        <div class="hr_6"></div>
+
+        <div class="row">
+          <div class="cat_nav">政务公开 >>></div>
+          <div class="hr_6"></div>
+          <div class="fangtan">
+            <div class="left_485">
+              <div>
+                <a href="{$CATEGORYS[19]['url']}" class="catname" title="{$CATEGORYS[19]['catname']}">{$CATEGORYS[19]['catname']}</a>
+                <a href="{$CATEGORYS[19]['url']}" class="more" title="{$CATEGORYS[19]['catname']}">
+                  <img src="{IMG_PATH}images/more_icon.jpg" width="35px" height="9px" alt="{$CATEGORYS[19]['catname']}" />
+                </a>
+              </div>
+              <div class="hr_6"></div>
+              <div class="neirong">
+                <div class="kangnei">
+                  <div class="neirong_list">
+                    {pc:content  action="lists" catid="19" order="id DESC" num="6"}
+                    <ul>
+                      {loop $data $v}
+                      <li>
+                        <a href="{$v['url']}" title="{$v['title']}">
+                          {$v[title]}
+                        </a>
+                      </li>
+                      {/loop}
+                    </ul>
+                    {/pc}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right_485">
+              <div>
+                <a href="{$CATEGORYS[21]['url']}" class="catname" title="{$CATEGORYS[21]['catname']}">{$CATEGORYS[21]['catname']}</a>
+                <a href="{$CATEGORYS[21][url]}" class="more" title="{$CATEGORYS[21]['catname']}">
+                  <img src="{IMG_PATH}images/more_icon.jpg" width="35px" height="9px" alt="{$CATEGORYS[21]['catname']}" />
+                </a>
+              </div>
+              <div class="hr_6"></div>
+              <div class="neirong">
+                <div class="kangnei">
+                  <div class="neirong_list">
+                    {pc:content  action="lists" catid="21" order="id DESC" num="6"}
+                    <ul>
+                      {loop $data $v}
+                      <li>
+                        <a href="{$v['url']}" title="{$v['title']}">
+                          {$v[title]}
+                        </a>
+                      </li>
+                      {/loop}
+                    </ul>
+                    {/pc}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hr_6"></div>
+
+        <div class="row ad">
+          <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=13"></script>
+        </div>
+        <div class="hr_6" ></div>
+
+        <div class="row">
+          <div class="cat_nav">公示公告 & 政策法规 >>></div>
+          <div class="hr_6" ></div>
+          
+          <div class="fangtan">
+            <div class="left_485">
+              <div>
+                <a href="{$CATEGORYS[14]['url']}" class="catname" title="{$CATEGORYS[14]['catname']}">{$CATEGORYS[14]['catname']}</a>
+                <a href="{$CATEGORYS[14]['url']}" class="more" title="{$CATEGORYS[14]['catname']}">
+                  <img src="{IMG_PATH}images/more_icon.jpg" width="35px" height="9px" alt="{$CATEGORYS[14]['catname']}" />
+                </a>
+              </div>
+              <div class="hr_6"></div>
+              <div class="neirong">
+                <div class="kangnei">
+                  <div class="neirong_list">
+                    {pc:content  action="lists" catid="14" order="id DESC" num="6"}
+                    <ul>
+                      {loop $data $v}
+                      <li>
+                        <a href="{$v['url']}" title="{$v['title']}">
+                          {$v[title]}
+                        </a>
+                      </li>
+                      {/loop}
+                    </ul>
+                    {/pc}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right_485">
+              <div>
+                <a href="{$CATEGORYS[26]['url']}" class="catname" title="{$CATEGORYS[26]['catname']}">{$CATEGORYS[26]['catname']}</a>
+                <a href="{$CATEGORYS[26][url]}" class="more" title="{$CATEGORYS[26]['catname']}">
+                  <img src="{IMG_PATH}images/more_icon.jpg" width="35px" height="9px" alt="{$CATEGORYS[26]['catname']}" />
+                </a>
+              </div>
+              <div class="hr_6"></div>
+              <div class="neirong">
+                <div class="kangnei">
+                  <div class="neirong_list">
+                    {pc:content  action="lists" catid="26" order="id DESC" num="6"}
+                    <ul>
+                      {loop $data $v}
+                      <li>
+                        <a href="{$v['url']}" title="{$v['title']}">
+                          {$v[title]}
+                        </a>
+                      </li>
+                      {/loop}
+                    </ul>
+                    {/pc}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hr_6" ></div>
+      </div>
+      <!--中部 end-->
+      <div class="hr_6" ></div> 
+
+      <div id="links" class="clear">
+        <p>
+          {pc:link  action="type_list" typeid="60" siteid="1" linktype="0" order="listorder DESC" num="100" return="links"}
+          {loop $links $link}
+          <a href="{$link['url']}" target="_blank">{$link['name']}</a> |
+          {/loop}
+          {/pc}
+        </p>
+      </div>
+      {template "content","footer-common"}
+      <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+      <script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+      <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+      <script type="text/javascript" src="{JS_PATH}jquery.slides.js"></script>
+      <script type="text/javascript">
+        function ChannelSlide(Name,Class){
+          $('.scroll_img ul.photo li').sGallery({
+            titleObj: Name + ' div.title p',
+            thumbObj: Name + ' .fx li',
+            thumbNowClass: Class });
+        }
+
+        $(function(){
+          $('#slides').slides({
+            preload: true,
+            generateNextPrev: true
+          });
+          new ChannelSlide(".scroll_img","on",311,260);
+
+          $("#scroller").simplyScroll();
+          $("#city_tuijie_tu").simplyScroll({customClass : ""});
+      /*$(".picbig").each(function(i){
+        var cur = $(this).find('.img-wrap').eq(0);
+        var w = cur.width();
+        var h = cur.height();
+        $(this).find('.img-wrap img').LoadImage(true, w, h,'{IMG_PATH}msg_img/loading.gif');
+      });*/
+      });
+      </script>
+    </div>
+  </boby>
+  </html>

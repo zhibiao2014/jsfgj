@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <title>{$SEO['title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}"/>
+  <meta name="description" content="{$SEO['description']}"/>
+  <link href="{CSS_PATH}stylesheets/common.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/rank.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div id="content"> 
+      {template "content","header-common"}
+      <div class="main photo-channel">
+        <div class="crumbs">
+          <h1><?php echo $SEO['title'] ?></h1> 
+        </div>
+        <?php if (is_array($tags)) { ?>
+        <div id="select_strip">
+          <div class="item border_bottom">
+            <span class="title float">标签</span>
+            <ul>
+              <li><a href="<?php echo rank_url(); ?>">人气排行榜</a></li>
+              <?php foreach ($tags as $key => $tag) { ?>
+              <li><a href="<?php echo rank_list_url($tag['id']); ?>" <?php if ($tag['id'] == $catid) { ?>class="selected"<?php } ?>><?php echo $tag['names']; ?></a></li>
+              <?php } ?>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear" style="height: 15px;"></div>
+        <?php } ?>
+        <div id="ranks" class="clearfix">
+          <?php foreach ($ranks as $key => $rank) { ?>
+          <div class="rank float">
+            <div class="product_from">
+              <a href="<?php echo rank_list_url($rank['vtid']); ?>"><?php echo $tags[$rank['vtid']]['names']; ?></a>
+            </div>
+            <a href="<?php echo rank_show_url( $rank['vtid'], $rank['id']); ?>" title="<?php echo $rank['votes_name']; ?>">
+              <div class="thumb">
+                <img class="wp-post-image" src="<?php echo empty($rank['reducepath']) ? IMG_PATH . 'nopic.gif' : 'http://www.rank365.cn/' . $rank['reducepath']; ?>" alt="<?php echo $rank['votes_name']; ?>"/>
+              </div>
+              <h3 class="title"><?php echo $rank['votes_name']; ?></h3>
+              <?php if(!empty($rank['contact'])) { ?>
+              <p class="list_description"><?php echo $rank['contact']; ?></p>
+              <?php } ?>
+              <div class="operate">
+                <span class="like" rel="like">浏览 (<?php echo $rank['watchnum']; ?>)</span>
+                <span class="like" rel="unlike">投票 (<?php echo $rank['vote_count']; ?>)</span>
+                <span class="read_more"></span>
+              </div>
+            </a>
+          </div>
+          <?php } ?>
+        </div>
+        <div class="loading"></div>
+      </div>
+      <div id="pages"><?php echo $pages; ?></div>
+    </div>
+
+    {template "content","footer-common"}
+    <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}/jquery.masonry.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#scroller").simplyScroll();
+
+        $container = $('#ranks');
+        $container.imagesLoaded(function(){
+          $container.masonry({
+            itemSelector : '.rank'
+          })
+        });
+        $(".good, .bad").live("click",function(){
+          vote(this);
+        });
+      });
+    </script>
+  </div>
+</boby>
+</html>

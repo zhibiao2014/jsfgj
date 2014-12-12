@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>   
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/weibo.css" rel="stylesheet" type="text/css" />
+    {template "content","header_one"}
+    <!--头部 end-->  
+    <div class="hr_6"></div>
+    <!-- 二级导航  -->
+    <div class="sub_nav">
+      <ul>
+        <li class="first"><a href="{siteurl($siteid)}">城市</a><b class="dichan">微博</b></li>
+      </ul>
+    </div>
+    <!-- 二级导航 end  -->
+    <!-- 广告
+    <div id="ad" class="clear">
+    </div>
+    广告end -->
+    <div class="hr_6"></div>
+    <div class="weibo clear">
+      <div class="weibo_img">
+        {pc:content action="category" catid="$catid" num="25"   siteid="$siteid" order="listorder ASC"}
+        {loop $data $r}
+          <ul class="float clear">
+            <li class="first">
+              <?php $id = $r['catid']; $url = $r['url']?>
+              <div>{$r['catname']}</div>
+            </li>
+            {pc:content  action="lists" catid="$id" order="id DESC" thumb="1" num="8" page="$page"}
+            {loop $data $v}
+              {if $n<8}
+              <li>
+                <div class="image">
+                  <a href="{$v['url']}" title="{str_cut($v['title'],50)}" target="blank">
+                    <img src="{thumb($v['thumb'],115,100)}" width="115" height="100">
+                  </a>
+                </div>
+                <a href="{$v['url']}" title="{str_cut($v['title'],50)}" target="blank"> 
+                  {str_cut($v['title'],25)}
+                </a>
+              </li>
+              {/if}
+              {if $n==8}<li class="last"><a href="{$url}">更多>></a></li>{/if}
+            {/loop}
+            {/pc}
+          </ul>
+        {/loop}
+        {/pc}
+      </div>
+    <div class="hr_6"></div>
+    </div>
+  <!--尾部-->
+{template "content","footer_my"}

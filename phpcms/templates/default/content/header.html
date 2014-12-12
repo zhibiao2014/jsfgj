@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+<link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+<link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}stylesheets/style_20120405.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+  <div id="content"> 
+    <!--头部 -->
+    <div id="header">      
+      <div class="row dingbu">
+        <div class="logo">
+          <a href="{siteurl($siteid)}" class="active"><img src="{IMG_PATH}images/logo.jpg" /></a>
+        </div>
+        <div class="header-middle">
+          <div class="sign">
+            <a href="#"><img src="{IMG_PATH}images/login.jpg" /></a>
+            <span></span>
+            <a href="{siteurl($siteid)}"><img src="{IMG_PATH}images/home.jpg" /></a>
+          </div>
+          <div class="sokuang">
+            <form id="search_form" method="get" action="http://city.cdfdc.gov.cn/index.php" target="_blank">
+              <input type="hidden" name="m" value="search">
+              <input type="hidden" name="c" value="index">
+              <input type="hidden" name="a" value="init">
+              <input type="hidden" name="typeid" value="1" id="typeid">
+              <input type="hidden" name="siteid" value="1" id="siteid">         
+              <input  class="swap_value text" type="text" name="q" id="q" value="搜索新闻" />
+              <input class="submit button" type="submit" value="" />
+            </form> 
+          </div>
+        </div>
+        <div class="chinaweb_logo">
+          <a href="{siteurl($siteid)}" class="active">
+            <img src="{IMG_PATH}images/chinaweb_logo_100_69.jpg" width="98px" height="69px" />
+          </a>
+        </div>
+      </div>
+      <div class="row clear menu">
+        <map id="nav">
+            {pc:content action="category" catid="0" num="14" siteid="$siteid" order="listorder ASC"}
+            <ul>
+                <li>
+                    <a href="{siteurl($siteid)}" class="active" title="中国城市">中国城市</a>
+                </li>
+                {loop $data $r}
+                {if $n==14}
+                <li>
+                    <a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}</a>
+                </li>
+                {/if}
+                {if $n!=14}
+                <li class="buttons">
+                    <a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}</a>
+                </li>
+                {/if}
+                {/loop}
+            </ul>
+            {/pc}
+        </map>
+      </div>
+      <div class="row clear kuaixun">
+        <span class="kx" style="float: left;">快讯:</span>
+        {pc:content  action="position" posid="9" order="id" num="10" cache="3600"}
+        <div id="announ">
+          <ul>
+          {loop $data $k $v}
+            <li><a href="{$v[url]}">{$v[title]}</a></li>
+          {/loop}
+          </ul>
+        </div>
+        {/pc}
+        {php echo runhook('glogal_header')}
+      <script type="text/javascript">
+      $(function(){
+        startmarquee('announ',22,1,500,3000);
+      })
+      </script> 
+      </div>        
+    </div>  

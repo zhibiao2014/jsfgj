@@ -1,0 +1,143 @@
+#main {
+width: 670px;
+margin-right: 10px;
+float: left;
+}
+#main .Article{
+  border: 1px solid #c3d4e7;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+#main .Article .bts{
+  text-align: left;
+  padding-left: 10px;
+}
+
+#main .Article #font{
+  float: right;
+  padding-right: 30px;
+}
+
+#main .Article #font a{
+  cursor: pointer;
+}
+
+#main .Article .title{
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  border-bottom: 1px dashed #CCC;
+  padding: 10px 0;  
+  margin-top: 30px;
+}
+
+#main .Article .ms{
+  color: #777;
+  height: 20px;
+  margin: 10px auto;
+  font-size: 13px;
+}
+
+#main .Article .ms span{
+  padding-left: 5px;
+}
+
+#main .Article img{
+  width: 550px;
+}
+
+#main .Article .content{
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#main .Article .content p{
+  color: #333;
+  height: auto;
+  font-size:14px;
+  line-height:23px;
+  word-wrap:break-word;
+  padding:8px 0;
+}
+
+#main .Article .content_bottom{
+  text-align: left;
+  padding-top: 10px;
+}
+
+#main .Article .content_bottom span{
+  font-size: 13px;
+}
+
+#main .Article .f14{
+  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px dotted #c3d4e7;
+  border-bottom: 1px dotted #c3d4e7;
+}
+
+#main .Article-Tool img{
+  height: 16px;
+  width: 16px;
+  vertical-align: bottom;
+}
+
+.Article .content img{
+  display: block;
+  margin: 0 auto;
+}
+.Article .content,.Article .content div{
+  font-size: 14px;
+}
+
+.content_recommend{
+  text-align: left;
+  width: 296px;
+  border: 1px solid #c3d4e7;
+}
+
+#content .content_recommend h2{
+  height: 28px;
+  line-height: 28px;
+  padding-left:0;
+}
+
+.content_recommend .recommend{
+  padding: 0 8px;
+}
+
+.content_recommend ul li{
+  list-style: none;
+  line-height: 22px;
+  height: 22px;
+} 
+
+.content_recommend .box{
+  background-color:#fff;
+  padding: 0 0 0 10px;
+  border: none;
+  margin: 0;
+}
+
+.content_recommend .img_text{
+  width: 130px;
+  padding: 0 5px;
+}
+
+.content_recommend .img_text a{
+  display: block;
+  width: 130px; 
+  background: #D8D8D8;
+  text-align: center;
+}
+.content_recommend .recommend{
+  padding: 0 8px;
+}
+
+.content_recommend  .travel{
+  padding: 10px 0 0 10px;
+}

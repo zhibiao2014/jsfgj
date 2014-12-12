@@ -1,0 +1,419 @@
+
+/***** 首页 *****/
+/***** 中部  *****/
+#content h1.title a{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #005790;
+  height: 24px;
+  line-height: 24px;
+}
+
+.br_1{
+  height: 1px;
+  padding: 5px 0;
+}
+
+#content .channel-slide .title p{
+  padding: 0 10px;
+}
+
+*html img{
+  display: block;
+}
+
+#content h2 a{
+  padding: 0;
+}
+
+.list a{
+  font-size: 13px;
+}
+
+#content .article_summary{
+  text-align: left;
+}
+#content #page1_content .local_news{
+  height: 340px;
+  width: 730px;
+  border:1px solid #D8D8D8;
+}
+
+#content #page1_content .special_focus{
+  width: 355px;
+  height: 305px;
+}
+#content #page1_content .special_focus .article .article_image{
+  width: 335px;
+  height: 230px;
+  margin: 0 auto; 
+}
+#content #page1_content .special_focus .article .article_summary{
+  width: 335px;
+  height: 60px;
+  margin: 0 auto;
+}
+#content #page1_content .information{
+  height: 305px;
+  width: 368px;
+  padding: 0 5px;
+}
+
+#content .fg_line{ 
+  margin: 0;
+  padding: 5px 0;
+}
+
+#content #page1_content .information .host_news_list{
+  height: auto;
+  padding: 0 10px;
+  text-align: center;
+}
+#content #page1_content .information .host_news_list .article_title{
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #005790;
+}
+#content #page1_content .information .host_news_list .article_summary{
+  text-align: left; 
+  height: 40px;
+  line-height: 20px;
+}
+
+#content #page1_content .information .news_list{
+  width: 368px;
+}
+
+#content #page1_content .information .news_list ul {
+  list-style: none;
+  padding: 0 10px;
+}
+#content #page1_content .information .news_list ul li a{
+  line-height: 26px;
+  height: 26px;
+  font-size: 14px;
+}
+#content #page1_content .plan{
+  float: right;
+  height: 340px;
+  width: 225px;
+  padding: 0 5px; 
+  border:1px solid #D8D8D8;
+}
+
+#content #page1_content .plan .plan_news{
+  width: 215px;
+  padding: 0 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content #page1_content .plan .article_title a{
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #005790;
+}
+
+#content #page1_content .plan .article_summary{
+  width: 210px;
+  height: 40px;
+  line-height: 20px;
+  text-align: left;
+  overflow: hidden;
+  word-break:break-all;
+}
+
+#content #page1_content .plan .plan_list ul li{
+  padding-left: 5px;
+  height: 26px;
+  line-height: 26px;
+  list-style: none;
+}
+
+#content #page1_content .plan .plan_list ul li a{
+  font-size: 13px;
+}
+
+#page2_content .banner{
+  clear: both;
+  height: 80px;
+  border-top: 1px solid #D8D8D8;
+}
+          
+#page2_content .hight_industry{
+  width: 314px;
+  height: 410px;
+  border: 1px solid #D8D8D8;
+}
+
+#page2_content .hight_industry .article .article_image{
+  margin: 0 auto;
+  padding-bottom: 10px;
+  width: 230px;
+  height: 120px;
+}
+
+#page2_content .hight_industry .article .article_summary{ 
+  width: 300px;
+  height: 80px;
+  padding-bottom: 10px;
+}
+
+#page2_content .hight_industry .article .article_summary p{
+  margin-left: 15px;
+  height: 60px;
+  width: 280px;
+}
+
+#page2_content .hight_industry ul,#page2_content .energy_source ul,#page2_content .economy_source ul{
+  padding-top: 10px;
+}
+
+#page2_content .hight_industry ul li,#page2_content .energy_source ul li,#page2_content .economy_source ul li{
+  list-style: none;
+  height: 27px;
+  line-height: 27px;
+  padding-left: 10px;
+}
+
+
+#page2_content .hight_industry ul li a,#page2_content .energy_source ul li a,#page2_content .economy_source ul li a{
+  font-size: 14px;
+}
+
+#page2_content .energy_source{
+  width: 330px;
+  height: 410px;
+  border: 1px solid #D8D8D8;
+  margin-left: 10px;
+}
+
+#page2_content .energy_source .article_image{
+  float: left;
+  padding: 0 10px 0 10px;
+}
+
+#page2_content .energy_source .article_summary{
+  float: left;
+  text-align: center;
+  width: 170px;
+  height: 100px;
+}
+
+#page2_content .energy_source .article_summary a{
+  font-size: 14px;
+  line-height: 33px;
+  height: 33px;
+  color: #005790;
+}
+#page2_content .energy_source .article_summary p{
+  text-align: left;
+  height: 60px;
+}
+
+
+#page2_content .economy_source {
+  width: 310px;
+  margin-left: 10px;
+  height: 410px;
+  border: 1px solid #D8D8D8;
+}
+
+#page2_content .economy_source .article{
+  width: 150px;
+}
+
+#page2_content .economy_source .article_image{
+  padding: 0 10px;
+  width: 130px;
+  height: 100px;
+}
+
+#page2_content .economy_source .article_summary{
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-bottom:6px;
+  height: 104px;
+}
+
+#page2_content .economy_source .article_summary a{
+  text-align: left;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 22px;
+  height: 44px;
+  color: #005790;
+}
+
+#page2_content .economy_source .article_summary p{
+  height: 60px;
+}
+
+
+#page2_content .enterprise_recommend{
+  width: 200px;
+  height: 527px;
+  margin-right: 10px;
+  border: 1px solid #D8D8D8;
+}
+#page2_content .enterprise_recommend .image_list ul{
+  width: 200px;
+  list-style: none;
+}
+#page2_content .enterprise_recommend .image_list ul li{
+  text-align: center;
+  float: left;
+  padding: 0 0 0 10px;
+  margin-bottom: 5px;
+}
+#page2_content .enterprise_recommend .image_list ul li .image{
+  width: 180px;
+  height: 115px;
+}
+#page2_content .enterprise_recommend .image_list ul li span{
+  width: 180px;
+  color: #005790;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  background-color: #D8D8D8;
+} 
+
+#page2_content .enterprise_recommend .list ul li{
+  padding-left: 10px;
+  list-style: none;
+  text-align: left;
+  height: 27px;
+  line-height: 27px;
+}
+
+
+#page2_content .enterprise_recommend .list ul li a{
+  font-size: 13px;
+}
+
+#page2_content .green_farm{
+  margin-top: 5px;
+}
+#page2_content .ocean_economic,#page2_content .green_farm{
+  width: 766px;
+  @width: 756px;
+  height: 260px;
+  border: 1px solid #D8D8D8;
+}
+
+#page2_content .ocean_economic .article,#page2_content .green_farm .article{
+  padding-left: 10px;
+  width: 190px;
+}
+
+#page2_content .ocean_economic .article .article_image,#page2_content .green_farm  .article .article_image{
+  padding: 0 10px 10px 5px;
+}
+
+#page2_content .ocean_economic .article .article_summary,#page2_content .green_farm .article .article_summary{
+  height: 90px
+}
+
+#page2_content .ocean_economic .article .article_summary a,#page2_content .green_farm .article .article_summary a{
+  font-size: 14px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: left;
+  display: block;
+  overflow: hidden;
+  color: #005790;
+}
+
+#page2_content .ocean_economic .article .article_summary p,#page2_content .green_farm .article .article_summary p{
+  height: 60px;
+}
+
+#page2_content .ocean_economic .list,#page2_content .green_farm .list{
+  padding-left: 10px;
+  height: 220px;
+}
+
+#page2_content .ocean_economic .list ul li,#page2_content .green_farm .list ul li{
+  height: 27px;
+  line-height: 27px;
+  list-style: none;
+}
+
+#page2_content .ocean_economic .list ul li a,#page2_content .green_farm .list ul li a{
+  font-size: 14px;
+}
+
+#page2_content .structure{
+  width: 978px;
+  height: 190px;
+  border: 1px solid #D8D8D8;
+}
+#page2_content .structure .structure_recommend{
+  padding: 0 5px;
+  width: 235px;
+  height: 150px;
+}
+#page2_content .structure .structure_recommend .recommend_image{
+  width: 235px;
+  height: 125px; 
+}
+
+#page2_content .structure .structure_recommend .title a{
+  display: block;
+  line-height: 20px;
+  font-size: 14px;
+  color: #005790;
+  text-align: center;
+}
+
+#page2_content .structure ul{
+  list-style: none;
+  width: 730px;
+}
+ 
+#page2_content .structure ul li{
+  float: left;
+  width: 170px;
+  padding: 0 5px;
+}
+#page2_content .structure ul li .image{
+  width: 170px;
+  height: 125px;
+}
+
+#page2_content .structure ul li a{
+  display: block;
+  width: 170px; 
+  background: #D8D8D8;
+  text-align: center;
+} 
+
+.content_link {
+  width: 980px;
+  border: 1px solid #D8D8D8;
+  height: 100px;
+}
+
+.content_link ul {
+  margin-left: 20px;
+}
+
+.content_link ul li{
+  float: left;
+  width: 170px;
+  margin-left: 20px; 
+}
+
+*html .content_link ul li{
+  float: left;
+  width: 180px;
+  padding: 0 5px;
+  margin: 0;
+}

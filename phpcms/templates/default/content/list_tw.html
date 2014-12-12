@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>   
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/weibo.css" rel="stylesheet" type="text/css" />
+    {template "content","header_one"}
+<!--main-->
+<div class="main photo-channel">
+  <div class="crumbs">
+    <a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)} 列表 </span> 
+  </div>
+  <div class="bk10"></div>
+  {pc:content action="lists" catid="$catid" num="40" thumb="1" order="id DESC" page="$page"}
+    <ul class="photo-list picbig">
+      {loop $data $r}
+      <li style="width: 185px;">
+        <div class="img-wrap">
+        <a href="{$r[url]}" target="_blank">
+          <img src="{thumb($r[thumb],150,112)}" width="150" height="112" alt="{$r[title]}"/>
+        </a>
+        </div>
+        <a href="{$r[url]}" target="_blank">
+          <span style="color:{$r[style]}">
+            {str_cut($r[title],28)}
+          </span>
+        </a>
+      </li>
+      {/loop}
+    </ul>
+    <div id="pages" class="text-c" style="text-align: center;">{$pages}</div>
+  {/pc}
+</div>
+{template "content","footer_my"}

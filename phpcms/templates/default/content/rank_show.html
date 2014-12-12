@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <title>{$SEO['title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}"/>
+  <meta name="description" content="{$SEO['description']}"/>
+  <link href="{CSS_PATH}stylesheets/common.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/rank.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div id="content"> 
+      {template "content","header-common"}
+      <div class="main photo-channel">
+        <div class="crumbs">
+          <h1><?php echo $SEO['title'] ?></h1> 
+        </div>
+        <?php if (is_array($tags)) { ?>
+        <div id="select_strip">
+          <div class="item border_bottom">
+            <span class="title float">标签</span>
+            <ul>
+              <li><a href="<?php echo rank_url(); ?>">人气排行榜</a></li>
+              <?php foreach ($tags as $key => $tag) { ?>
+              <li><a href="<?php echo rank_list_url($tag['id']); ?>" <?php if ($tag['id'] == $catid) { ?>class="selected"<?php } ?>><?php echo $tag['names']; ?></a></li>
+              <?php } ?>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear" style="height: 15px;"></div>
+        <?php } ?>
+
+        <div class="galleria">
+          <?php foreach ($options as $key => $option) { ?>
+          <a href="<?php echo empty($option['imapath']) ? IMG_PATH . 'nopic.gif' : "http://www.rank365.cn/". $option['imapath']; ?>" data-title="<?php echo $option['option_name']; ?>" title="<?php echo $option['option_name']; ?>">
+            <img id="image<?php echo $key; ?>" src="<?php echo empty( $option['oreducepath'] ) ? IMG_PATH . 'nopic.gif' : "http://www.rank365.cn/". $option['oreducepath']; ?>" alt="<?php echo $option['option_name']; ?>" data-title="<?php echo $option['option_name']; ?>" data-description='<div class="operate"><span class="like good" data-type="good" data-id="<?php echo $option['id']; ?>"><?php echo $option['good']; ?></span><span class="like bad" data-type="bad" data-id="<?php echo $option['id']; ?>"><?php echo $option['bad']; ?></span></div><p class="notice"></p><p class="description"><?php echo addslashes($option['option_data']); ?></p>'>
+          </a>
+          <?php } ?>
+          <?php foreach ($options as $key => $option) { ?>
+          <div class="hide">
+            <h3><?php echo $option['option_name']; ?></h3>
+            <p><?php echo $option['option_data']; ?></p>
+          </div>
+          <?php } ?>
+        </div>
+        <div id="galleria_text"></div>
+      </div>
+    </div>
+
+    {template "content","footer-common"}
+    <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+    <script type='text/javascript' src="{JS_PATH}galleria-1.3.5.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#scroller").simplyScroll();
+        Galleria.loadTheme('{JS_PATH}galleria.classic.js');
+        Galleria.run('.galleria', {
+          // imageCrop: 'landscape',
+          thumbCrop: true,
+          transition: 'fade',
+          showCounter: false,
+          showInfo: false,
+          showImagenav: true,
+          extend: function(options) {
+            // listen to when an image is shown
+            this.bind('image', function(e) {
+              // lets make galleria open a lightbox when clicking the main image:
+              $(e.imageTarget).click(this.proxy(function() {
+               this.openLightbox();
+             }));
+            });
+          }
+        });
+
+        Galleria.ready(function() {
+          $('.galleria').show();
+          this.bind("image", function(e) {
+            $("#galleria_text").html("<h3 class='title'>" + e.galleriaData.title + "</h3>" + e.galleriaData.description);
+            $("#galleria_text").find(".like").bind("click", function() {
+              $obj = $(this);
+              $id = $(this).data("id");
+              $type = $(this).data("type");
+              $.ajax({
+                url: "travel_vote.php",
+                type: "get",
+                data: { "id" : $id , "votetype" : $type },
+                success: function(msg) {
+                  if (msg == "success") {
+                    $(".notice").text("投票成功！");
+                    $match = $obj.text();
+                    $num = $match-(-1);
+                    $obj.text($num);
+                    $obj.unbind("click");
+                  } else {
+                    $(".notice").text("很遗憾，投票失败！");
+                  };
+                }
+              });
+            })
+            // Galleria.log(e.galleriaData);
+          });
+        });
+});
+</script>
+</div>
+</boby>
+</html>

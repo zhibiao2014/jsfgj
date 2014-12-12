@@ -1,0 +1,367 @@
+/******************
+* Author: Fancy
+* Date: 2012-03-30
+******************/
+
+.float{float: left;}
+
+
+/***** 基础类 *****/
+body {
+  font-family: 宋体;
+  font-size: 12px;
+  color: black;
+  line-height: 20px;
+}
+.clear{clear:both}
+.hr_6 {height: 6px;font-size: 1px;line-height: 1px;clear: both;}
+
+/* Layout */
+#header {
+  width: 100%;
+}
+
+#content {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#content .row{
+  width: 980px;
+}
+
+#content .row .left_660 {
+  width: 660px;
+  float: left; 
+}
+
+#content .row .right_310 {
+  width: 308px;
+  float: right;
+  border: 1px solid #D8D8D8;
+}
+
+#content .row .left_320_first {
+  width: 320px;
+  float: left;
+}
+
+#content .row .left_320 {
+  width: 320px;
+  margin-left: 10px;
+  float: left;
+}
+
+#content .row .left_485 {
+  width: 485px;
+  float: left;
+}
+
+#content .row .right_485 {
+  width: 485px;
+  float: right;
+}
+
+#content .row .left_410 {
+  width: 410px;
+  float: left;
+}
+
+#content .row .right_560 {
+  width: 560px;
+  float: right;
+}
+
+/***** 头部 *****/
+.wrapper {
+  background-image: url("../../images/images/body_bg.jpg");
+  background-repeat: repeat-x; 
+}
+
+#header .dingbu {
+  height: 84px;
+}
+
+#header .row .logo {
+  float: left;
+} 
+
+#header .row .header-middle{
+  float: left;   
+  width: 545px;
+  height: 74px;
+  margin: 0 10px 0 140px;
+} 
+
+#header .row .header-middle .sign {
+  margin: 10px 0 5px 0; 
+  float: right;
+}
+
+#header .row .header-middle .sign a{
+  color: #DDD;
+}
+
+#header .row .sokuang {
+  float: right;
+  background-color: #dfdfdf;
+  width: 545px;
+  height: 35px; 
+}
+
+#header .row .sokuang form{
+  width: 545px;
+  height: 35px; 
+  padding-left: 4px;
+}
+
+#header .row .sokuang form #so360_keyword {
+  vertical-align: middle;
+  padding: 0;
+  margin: 4px 0;
+  width: 390px;
+  height: 25px; 
+  line-height: 25px;
+  padding-left: 35px;
+  background-image: url("../../images/images/fangdajing.jpg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+#header .row .sokuang form #so360_submit{
+  vertical-align: middle;
+  width: 101px;
+  height: 25px; 
+  line-height: 25px;
+  padding: 0;
+  border: none;
+  text-indent: -9999px;
+  background-image: url("../../images/images/sosuo_icon.jpg");
+}
+
+#header .row .chinaweb_logo {
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+
+#header .menu{
+  background-image: url("../../images/images/menu02_bg.jpg");
+  background-repeat: no-repeat;
+  height: 35px;
+}
+
+#header .menu .active {
+  background: url("../../images/images/sanjiao.jpg") no-repeat 50% 100%;
+  background-color: #ffffff;
+  height: 35px;
+  color: #1d2e60;
+  display: block;
+  float: left;
+}
+#header .menu ul li{
+  color: #ffffff;
+  float: left;
+  list-style: none;
+}
+#header .menu ul li.buttons{
+  background: url("../../images/images/menu_fenge_line.jpg") no-repeat right;
+}
+#header .menu ul li a{
+  color: #ffffff; 
+  padding: 0 12px;
+  display: block;
+  line-height: 35px;
+  height: 35px;
+}
+#header .kuaixun {
+  padding-top: 5px;
+  height: 31px;
+  overflow: hidden;
+}
+
+#header .kuaixun .kx {
+  color: #ff9900; 
+  font-size: 14px;
+  height: 22px;
+  line-height: 22px;
+  float: left;
+}
+/**** content common ****/
+#content .more{
+  float: right; 
+  margin: 10px 10px 0 0;
+}
+
+#content .sub_nav ul{
+  list-style: none;
+  float: left; 
+}
+
+#content .sub_nav ul  li{
+  padding: 0 10px;
+  float: left;
+  height: 24px;
+  line-height: 24px; 
+  background: url("../../images/images/fenge_line_1_23.jpg") no-repeat center right;
+}
+
+#content .sub_nav ul  li.first{
+  font-weight: bold;
+  background: url("../../images/images/city_dichan_bg_69_24.jpg") no-repeat center center;;
+}
+
+#content .sub_nav ul  li.first .dichan{
+  margin-left: 3px;
+  color: #FFF;
+} 
+
+#content #ad_main{
+  padding: 0;
+  margin: 0;
+  width: 980px;
+  height: 80px;
+  border: 1px solid #D8D8D8;
+  /* display: none; */
+}
+
+#content #roll_news{
+  height: 33px;
+  line-height: 33px;
+  border: 1px solid #D8D8D8;
+}
+
+#content #roll_news span{
+  padding-left: 10px;
+}
+
+#content #page1_content{
+  width: 980px; 
+}
+
+#content h2 a{
+  font-weight: bold;
+  height: 33px;
+  line-height: 33px;
+}
+
+#content h2{
+  font-weight: bold;
+  padding-left: 10px;
+  height: 33px;
+  line-height: 33px;
+}
+
+#content p{
+  color: #777777;
+  height: 40px;
+  overflow: hidden;
+  word-break:break-all;
+}
+
+#content .article_summary{
+  height: 40px;
+  overflow: hidden;
+  word-break:break-all;
+  text-align: center;
+}
+
+/***** 尾部  *****/
+#links {
+  width: 980px;
+  margin: 12px auto;
+  background: #F1F1F1;
+  padding: 10px 0px;
+}
+
+div {
+  display: block;
+}
+
+#links h1 {
+  width: 890px;
+  height: 23px;
+  float: left;
+  margin: 8px 0px 0px 30px;
+  display: inline;
+  font-size: 14px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+body {
+  font-family: 宋体;
+  font-size: 12px;
+  color: black;
+  line-height: 20px;
+}
+
+#links p {
+  width: 890px;
+  float: left;
+  margin-left: 30px;
+  display: inline;
+  line-height: 180%;
+}
+
+#links p a {
+  padding: 0px 5px;
+}
+
+a {
+  text-decoration: none;
+  line-height: 20px;
+  color: black;
+}
+
+#footer {
+  width: 980px;
+  margin: 12px auto;
+  text-align: center;
+  line-height: 165%;
+}
+
+#content .corporation{
+  width: 960px;
+  clear: both;
+  padding: 5px 10px;
+  border: 1px solid #D8D8D8; 
+}
+#content .corporation .top_image li{
+  width: 160px;
+  height: 60px;
+  float: left;
+  list-style-type: none;
+}
+#content .corporation .top_image li p{
+  text-indent: 0;
+  width: 100px;
+  float: left;
+  padding: 0 5px; 
+}
+#content .corporation .top_image li img{
+  float: left;
+  width: 46px;
+  height: 46px;
+}
+
+#content .corporation .bottom_link{
+  clear: both;
+  float: left;
+}
+
+#content .corporation .bottom_link li{
+  width: 320px; 
+  float: left;
+  list-style-type: none;
+}
+#content .corporation .bottom_link li a{
+  color: #005790;  
+}
+#content #ad{
+  width: 978px;
+  height: 90px;
+  border: 1px solid #D8D8D8;
+}

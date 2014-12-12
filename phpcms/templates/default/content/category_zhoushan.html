@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>
+    <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}css_zhoushan/zhoushan.css" rel="stylesheet" type="text/css" />
+<style type="text/css"> 
+#ie6-warning{ 
+  background:rgb(255,255,225);
+  position:absolute; 
+  top:0; 
+  left:0; 
+  font-size:12px; 
+  color:#333; 
+  width:100%; 
+  padding: 2px 0; 
+  text-align:center; 
+}
+#ie6-warning span{
+ padding-left:23px; 
+ background: url("{IMG_PATH}20100628012515690.gif") no-repeat scroll 3px center; 
+} 
+#ie6-warning a { 
+text-decoration:none;
+color: #F60;
+} 
+</style>
+</head>
+<body>
+<!--[if lte IE 6]> 
+<div id="ie6-warning"><span>您正在使用 Internet Explorer 低版本浏览器，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a></span>
+</div> 
+<script type="text/javascript"> 
+function position_fixed(el, eltop, elleft){ 
+// check if this is IE6 
+if(!window.XMLHttpRequest) 
+window.onscroll = function(){ 
+el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+} 
+else el.style.position = "fixed"; 
+} 
+position_fixed(document.getElementById("ie6-warning"),0, 0); 
+</script> 
+<![endif]--> 
+    {pc:content action="category" catid="6" num="25"   siteid="$siteid" order="listorder ASC"}
+      <?php 
+        $category = $data; 
+      ?>
+    {/pc}
+    <div class="wrap" style="background: #999;">
+      <div class="content">
+        <div class="top_img">
+          <img src="{IMG_PATH}images_zhoushan/zs_01.jpg" /><img src="{IMG_PATH}images_zhoushan/zs_02.jpg" /><img src="{IMG_PATH}images_zhoushan/zs_03.jpg" />
+          </ul>
+        </div>
+        <div class="nav">
+          {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"} 
+          <?php 
+            $subcat = $data; 
+          ?>
+          <ul>
+            {loop $data $r}
+            <li>
+              <a href="{$r[url]}" target="blank">
+                {$r[catname]}&nbsp;&nbsp;|&nbsp;&nbsp;
+              </a>
+            </li>
+            {/loop}
+          </ul>
+          {/pc}
+        </div>
+        <div class="page2">
+          <div class="left float">
+            <div class="focus">
+              {pc:content  action="position" posid="28" catid="147" thumb="1" order="id DESC" num="4"}
+              <div class="slide float">
+                <div class="FocusPic">
+                    <div class="content" id="main-slide">
+                      <div class="changeDiv">  
+                      {loop $data $r}
+                        <a href="{$r['url']}" title="{str_cut($r['title'],50)}" target="blank">
+                          <img src="{thumb($r['thumb'],402,268)}" alt="{$r['title']}" width="402" height="268" />
+                        </a>
+                      {/loop}
+                      </div>
+                    </div>
+                </div>
+              </div>
+              {/pc}
+            </div>
+            <div class="zhoushan_sum">
+              <img src="{IMG_PATH}images_zhoushan/zs_15.jpg" />
+              {pc:content  action="lists" catid="188" order="id DESC" num="1"}
+                {loop $data $v}
+              <p style="font-size: 16px; line-height: 28px;text-indent: 40px;">
+                <?php 
+                  echo $v["description"]."<a href=$v[url]>[详细]</a>";
+                ?>
+              </p>
+                {/loop}
+              {/pc}
+            </div>
+          </div>
+          <div class="center float">
+            <div class="focus_article">
+              <div><img src="{IMG_PATH}images_zhoushan/c.gif" height='15'></div>
+              {pc:content  action="lists" catid="183" order="id DESC" num="2"}
+                <div class="article_content">
+                  {loop $data $r}
+                    <div style="margin-bottom: 15px;">
+                    <a href="{$r['url']}" target="_blank" title="{$r['title']}">
+                      {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+                    </a> 
+                    <p>
+                    <?php 
+                      echo str_cut(strip_tags($r[description]), 170,'')."<a href=$r[url] style='font-size: 14px; font-weight: normal;'>[详细]</a>";
+                    ?>
+                    </p>
+                    </div>
+                  {/loop}
+                </div>
+              {/pc}
+            </div>
+            <div class="xinqufazan">
+              <div class="more" align="right"><a href="{$subcat['148']['url']}" target="blank">更多&gt;&gt;</a></div>
+              <div class="list">
+                <ul>
+                {pc:content  action="lists" catid="148" order="id DESC" num="9"}
+                  {loop $data $k $r}
+                    <li sytle="height: 26px; line-height: 26px;">
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank" sytle="height: 26px; line-height: 26px;">
+                      >>{if $r[article_bac] == ""}{str_cut($r[title],65,'')}{else}{$r[article_bac]}{/if}
+                      </a>
+                    </li>
+                  {/loop}
+                {/pc}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="right float">
+            <div class="theme">
+              <div class="title">                
+                <img src="{IMG_PATH}images_zhoushan/zs_09.jpg" height="38" width="225"/>
+              </div>
+              <div class="img_title">
+                <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=28"></script>
+                <script>
+                  /*var title = $("#theme_img_title").siblings("a").children("img").first
+                  for(i in title){
+                    alert(i);
+                    alert(title.i);
+                  }*/
+                  // $(title[0]).attr("title")
+                  // $("#theme_img_title").text(title)
+                </script>
+                <a href="" id="theme_img_title"></a>
+              </div>
+              <div style="background: url('{IMG_PATH}images_zhoushan/zs_bg_006.jpg'); height: 3px; width: 215px;">
+                <img src="{IMG_PATH}images_zhoushan/c.gif" height="3"/>
+              </div>
+              <div class="list">
+                <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=29"></script>
+              </div>
+            </div>
+            <div class="video">
+              <img src="{IMG_PATH}images_zhoushan/zs_12.jpg" />
+              {pc:content  action="lists" catid="185" order="id DESC" thumb="1" num="1"}
+              <div>
+                {loop $data $r} 
+                  <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                  <img src="{thumb($r['thumb'],215,161)}" alt="{$r['title']}" width="215" height="161" /> 
+                  </a>
+                  <a href="{$r['url']}" title="{$r[title]}" target="_blank" class="title">
+                    {if $r[article_bac] == ""}
+                      {str_cut($r[title],40,'')}
+                    {else}
+                      {$r[article_bac]}
+                    {/if}
+                  </a> 
+                {/loop}                
+                <?php 
+                  echo str_cut(strip_tags($r[description]), 150,'')."<a href=$r[url]>[详细]</a>";
+                ?>
+              </div>
+              {/pc}
+            </div>
+          </div>
+        </div>
+        <table width="1004" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td height="11" background="{IMG_PATH}images_zhoushan/zs_bg_003.jpg"><img src="{IMG_PATH}images_zhoushan/c.gif" width="1" height="1"></td>
+          </tr>
+        </tbody></table>
+        <div class="page3">
+          <div class="left float">
+            <div class="cat_name">
+              <img src="{IMG_PATH}images_zhoushan/zs_20.jpg"/>
+            </div>
+            {pc:content  action="lists" catid="176" order="id DESC" num="6"}
+            <div class="list">
+              <ul>
+                {loop $data $r}
+                  <li>
+                    <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                    {if $r[article_bac] == ""}
+                      {str_cut($r[title],50,'')}
+                    {else}
+                      {$r[article_bac]}
+                    {/if}
+                    </a>
+                    <p>
+                      <?php 
+                      echo str_cut(strip_tags($r[description]), 100,'')."<a href=$r[url] style='font-size: 12px; height: 18px; line-height: 18px;font-weight: normal; display: inline; color: #333;'>[详细]</a>";
+                    ?>
+                    </p>
+                  </li>
+                {/loop}
+              </ul>
+              <div class="more" align="right" style=""><a href="{$subcat['176']['url']}" target="blank">更多&gt;&gt;</a></div>
+            </div>
+            {/pc}
+          </div>
+          <div class="center float">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td height="40"><img src="{IMG_PATH}images_zhoushan/zs_22.jpg" width="90" height="30" /></td>
+                <td width="50"><span class="more003"><a href="{$subcat['150']['url']}" target="blank">更多&gt;&gt;</a></span></td>
+              </tr>
+            </tbody></table>
+            <div class="fg_line clear"></div>
+            <div class="img_tit">
+              {pc:content  action="position" posid="24" catid="150" thumb="1" order="id DESC" num="1"}
+              {loop $data $r}
+              <div class="img float">
+                <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                  <img src="{thumb($r['thumb'],186,139)}" alt="{$r['title']}" width="186" height="139" style="display: block;"/> 
+                </a>
+              </div>
+              <div class="title_des">
+                <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                  {if $r[article_bac] == ""}
+                    {str_cut($r[title],26,'')}
+                  {else}
+                    {str_cut($r[article_bac],26,'')}
+                  {/if}
+                </a>
+                <p>
+                  <?php 
+                      echo str_cut(strip_tags($r[description]), 155,'')."<a href=$r[url] style='font-size: 14px; height: 22px; line-height: 22px; font-weight: normal; display: inline; color: #333;'>[详细]</a>";
+                    ?>
+                </p>
+              </div>
+              {/loop}
+              {/pc}
+              <div class="fg_line clear"></div>
+              <div class="list clear">
+              {pc:content  action="lists" catid="150" order="id DESC" num="3"}
+                <ul>
+                {loop $data $r}
+                  <li>
+                    <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                    {if $r[article_bac] == ""}
+                      {str_cut($r[title],66,'')}
+                    {else}
+                      {$r[article_bac]}
+                    {/if}
+                    </a>
+                  </li>
+                {/loop}
+                </ul>
+              {/pc}
+              </div>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="47" background="{IMG_PATH}images_zhoushan/zs_bg_004.jpg"><img src="{IMG_PATH}images_zhoushan/zs_39.jpg" width="90" height="47"></td>
+                  <td width="50" background="{IMG_PATH}images_zhoushan/zs_bg_004.jpg"><span class="more003"><a href="{$subcat['152']['url']}" target="blank">更多&gt;&gt;</a></span></td>
+                </tr>
+              </table>
+              <div class="fg_line_qundao clear"></div>
+              <div class="list_img">
+                {pc:content  action="lists" catid="152" order="id DESC" thumb="1" num="4"}
+                  <ul>
+                  {loop $data $r}
+                    <li>
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                        <img src="{thumb($r['thumb'],148,98)}" alt="{$r['title']}" width="148" height="98" style="display: block;"/> 
+                      </a>
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank" class="title">
+                      {if $r[article_bac] == ""}
+                        {str_cut($r[title],35,'')}
+                      {else}
+                        {$r[article_bac]}
+                      {/if}
+                      </a>
+                    </li>
+                  {/loop}
+                  </ul>
+                {/pc}
+              </div>
+            </div>
+          </div>
+          <div class="right float">
+            <div class="area_culture">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="43" width="320"><img src="{IMG_PATH}images_zhoushan/zs_24.jpg" width="90" height="30"></td>
+                  <td width="50" align="right"><span class="more003"><a href="{$subcat['151']['url']}" target="blank">更多&gt;&gt;</a></span></td>
+                </tr>
+              </table>
+              {pc:content  action="lists" catid="151" order="id DESC" thumb="1" num="2"} 
+                {loop $data $r}
+              <div class="area_img">
+                <div class="img float">
+                  <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                    <img src="{thumb($r['thumb'],148,98)}" alt="{$r['title']}" width="148" height="98" style="display: block;"/> 
+                  </a>
+                </div>
+                <div class="float article">
+                  <a href="{$r['url']}" title="{$r[title]}" target="_blank"><b>
+                  {if $r[article_bac] == ""}
+                    {str_cut($r[title],35,'')}
+                  {else}
+                    {$r[article_bac]}
+                  {/if}
+                  </b></a>
+                  <p style="font-size: 14px;">
+                    <?php 
+                      echo str_cut(strip_tags($r[description]), 125,'')."<a href=$r[url] style='font-size: 14px; font-weight: normal;'>[详细]</a>";
+                    ?>
+                  </p>
+                </div>
+              </div>
+              {/loop}
+              {/pc} 
+            </div>            
+            <div class="area_face area_culture">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="47" background="{IMG_PATH}images_zhoushan/zs_bg_007.jpg"><img src="{IMG_PATH}images_zhoushan/zs_36.jpg" width="99" height="47"></td>
+                  <td width="50" background="{IMG_PATH}images_zhoushan/zs_bg_007.jpg"><span class="more003"><a href="{$subcat['177']['url']}" target="blank">更多&gt;&gt;</a></span></td>
+                </tr>
+              </table>
+              <div class="area_img">
+              {pc:content  action="lists" catid="177" thumb="1" num="2" order="id DESC" } 
+                {loop $data $r}
+                  {if $n==1}
+                    <div class="float img">
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                        <img src="{thumb($r['thumb'],148,98)}" alt="{$r['title']}" width="148" height="98" style="display: block;"/> 
+                      </a>
+                    </div>
+                    <div class="float article">
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank"><b>
+                      {if $r[article_bac] == ""}
+                        {str_cut($r[title],35,'')}
+                      {else}
+                        {$r[article_bac]}
+                      {/if}
+                      </b></a>
+                      <p style="font-size: 14px;">
+                        <?php 
+                      echo str_cut(strip_tags($r[description]), 125,'')."<a href=$r[url] style='font-size: 14px; font-weight: normal;'>[详细]</a>";
+                    ?>
+                      </p>
+                    </div>
+                  {/if}
+                {/loop} 
+                </div>
+                <div class="area_img">
+                {loop $data $r}
+                  {if $n==2}
+                    <div class="float img_art">
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                        <img src="{thumb($r['thumb'],148,98)}" alt="{$r['title']}" width="148" height="98" style="display: block;"/> 
+                      </a>
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank" style="display: block; text-align: center;">
+                      {if $r[article_bac] == ""}
+                        {str_cut($r[title],30,'')}
+                      {else}
+                        {$r[article_bac]}
+                      {/if}</a>
+                    </div>
+                  {/if}
+                {/loop}
+                {/pc}
+                <div class="float list">
+                  <ul>
+                {pc:content  action="lists" catid="177" order="id DESC" num="5"}
+                  {loop $data $k $r}
+                    <li>
+                      <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                        {if $r[article_bac] == ""}{str_cut($r[title],40,'')}{else}{$r[article_bac]}{/if}
+                      </a>
+                    </li>
+                  {/loop}
+                {/pc}
+                </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:url({IMG_PATH}images_zhoushan/zs_bg_008.jpg) repeat-x left center; height: 10px;">
+          <img src="{IMG_PATH}images_zhoushan/c.gif" width="1" height="1">
+        </div>
+        <div class="page4 clear">
+          <div class="zhoushan">
+            <img src="{IMG_PATH}images_zhoushan/zs_45.jpg" width="90" height="30">
+          </div>
+          <div class="zhoushan_yx">
+          {pc:content  action="lists" catid="154" order="id DESC" thumb="1" num="4"}
+            {loop $data $k $r}
+            {if $n==1}
+            <div class="first_img float">
+              <a href="{$r['url']}" title="{str_cut($r['title'],50)}" target="blank">
+          <img src="{thumb($r['thumb'],300,200)}" alt="{$r['title']}" width="300" height="200"/>
+              </a>
+              <a href="{$r['url']}" title="{$r[title]}" target="_blank" class="title">
+                {if $r[article_bac] == ""}{str_cut($r[title],55,'')}{else}{$r[article_bac]}{/if}
+              </a>
+            </div>
+            {else}
+            <div class="float img_art">
+              <a href="{$r['url']}" title="{str_cut($r['title'],50)}" target="blank">
+                <img src="{thumb($r['thumb'],198,148)}" alt="{$r['title']}" width="198" height="148" />
+              </a>
+              <div class="art">
+                <a href="{$r['url']}" title="{$r[title]}" target="_blank">
+                 {if $r[article_bac] == ""}{str_cut($r[title],35,'')}{else}{$r[article_bac]}{/if}
+                </a>
+                <p>
+                  <?php 
+                    echo str_cut(strip_tags($r[description]), 140,'')."<a href=$r[url] style='line-height: 20px; font-weight: normal; display: inline; color: #898989; font-size: 12px;'>[详细]</a>";
+                  ?>
+                </p>
+              </div>
+            </div>
+            {/if}
+            {/loop}
+          {/pc}
+          </div>
+          <div class="scrollpic">
+            <table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+            <tr>
+              <td ><div id="colee_right3" style="overflow:hidden;width:1004px;">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td id="colee_right1" valign="top" align="center">
+                      <table cellpadding="2" cellspacing="0" border="0">
+                        <tr align="center">
+                        {pc:content  action="lists" catid="187" order="id DESC" thumb="1" num="15"}
+                          {loop $data $k $r}
+                          <td>
+                          <a href="{$r['url']}" title="{str_cut($r['title'],50)}" target="blank">
+        <img src="{thumb($r['thumb'],203,133)}" alt="{$r['title']}" width="203" height="133" />
+                           </a>
+                          </td>
+                          {/loop}
+                        {/pc}
+                        </tr>
+                      </table>
+                    </td>
+                    <td id="colee_right2" valign="top"></td>
+                  </tr>
+                </table>
+              </div>
+              <script>
+                var speed=30//速度数值越大速度越慢
+                var colee_right2=document.getElementById("colee_right2");
+                var colee_right1=document.getElementById("colee_right1");
+                var colee_right3=document.getElementById("colee_right3");
+                colee_right2.innerHTML=colee_right1.innerHTML
+                function Marquee4(){
+                if(colee_right3.scrollLeft<=0)
+                colee_right3.scrollLeft+=colee_right2.offsetWidth
+                else{
+                colee_right3.scrollLeft--
+                }
+                }
+                var MyMar4=setInterval(Marquee4,speed)
+                colee_right3.onmouseover=function(){clearInterval(MyMar4);}
+                colee_right3.onmouseout=function() {MyMar4=setInterval(Marquee4,speed);}
+              </script>
+              </td>
+            </tr>
+            <tr>
+              <td height="1" bgcolor="#898788"><img src="{IMG_PATH}images_zhoushan/c.gif" width="1" height="1" /></td>
+            </tr>
+            </table>
+          </div>
+        </div>
+        <style>
+          .footer ul li{
+            width: 155px; float: left;
+          }
+          .footer ul li a{
+            line-height: 30px; height: 30px; font-size: 12px;
+          }
+        </style>
+        <div class="footer">
+          <table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+            <tr>
+              <td height="43">
+                <img src="{IMG_PATH}images_zhoushan/zs_49.jpg" width="68" height="30" hspace="5">
+              </td>
+            </tr>
+            <tr>
+              <td height="60" valign="middle">
+                <ul style="width: 953px; margin: 0 auto;">
+                  <!-- <li style="width: 136px; float: left;">
+                    <a href="" style="line-height: 30px; height: 30px;">
+                      浙江舟山群岛新区
+                    </a>
+                  </li> -->
+                  <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=32"></script>
+                </ul>
+              </td>
+            </tr><!-- 
+            <tr>
+              <td height="150" bgcolor="#014984">&nbsp;</td>
+            </tr> -->
+          </table>
+          <style>
+          #footer {
+            width: 1004px;
+            clear: both;
+            text-align: center;
+            line-height: 165%;
+            background: #014984;
+            padding-top: 30px;
+            height: 120px;
+            font-size: 12px;
+            }
+          #footer a{
+            font-size: 13px;
+          }
+        </style>
+        <div id="footer">
+          版权所有 © 中国互联网新闻中心 北京华盛骄阳文化传媒有限公司 电子邮件: chinacity@china.org.cn<br/> 
+          电话：010-58610672  京ICP证 040089号 网络传播视听节目许可证号:0105123<br/> 
+          <a href="http://www.china.com.cn/">关于中国网</a> | 
+          <a href="http://download.china.cn/ch/htm/20110106/city.html">关于中国城市</a> | 法律顾问：
+          <a href="http://www.yuecheng.com/">北京岳成律师事务所</a> | 
+          <a href="http://download.china.cn/ch/htm/20110106/city.html">刊登广告</a> | 
+          <a href="http://www.china.com.cn/fuwu/node_7028918.htm">本站地图</a>
+        </div>          
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript">
+    $(function(){
+    new slide("#main-slide","cur",402,268,1);//焦点图
+    })
+  </script>
+  </body>
+</html>

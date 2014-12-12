@@ -1,0 +1,42 @@
+/*	@charset "gb2312";全局样式表	*/
+body {
+	margin: 0px; padding:0px; text-align:center;
+	font-size:12px; line-height:160%;	overflow-y:yes;
+}
+table,td,div,input,button{padding:0px;}
+a:link,a:active,a:visited,a:hover{text-decoration: none; color:#000; }
+a:hover{ color:#003F87;text-decoration: underline;  }
+li strong {color:red;}
+img{ border:none; }	div{overflow:hidden;} form{margin:0px;padding:0px;}
+.c{	clear:both; width:960px;margin-left:auto;margin-right:auto;text-align:left;background:#fff;}
+
+.font14,.font14 div,.font14 input,.font14 td,.font14 li{font-size:14px;}
+.c666 a,.c666 a:link,.c666 a:active,.c666 a:visited,.c666 a:hover{color:#666; }.c666 a:hover{color:#66f; }
+
+.tmenu div{letter-spacing:1px;padding-top:4px;}
+
+.topmenu div{letter-spacing:1px;}
+.topmenu a:link,.topmenu a:active,.topmenu a:visited{color:#000; padding:0px 5px;}.topmenu a:hover{color:#00f; }
+
+
+#menu{text-align:left;line-height:32px;height:32px;background:#f76e0e url(m_background.gif);color:#fff;;}
+#menu a:link,#menu a:active,#menu a:visited{	font-weight:bolder;color:#fff;}#menu a:hover{ }
+#menu a.mthis:link,#menu a.mthis:active,#menu a.mthis:visited{text-decoration: underline;}
+
+.line{clear:both;border-top:1px dotted #999;background:none;margin-top:10px;height:10px;overflow:hidden;}
+
+.fff,.fff a,.fff a:link,.fff a:active,.fff a:visited,.fff a:hover{color:#fff; }.fff a:hover{color:#ff0; }
+b a:link,b a:active,b a:visited,b a:hover{color:#f00; }b a:hover{color:#f70; }
+
+ul{list-style:none;margin:0px;padding:0px;}
+.ul1 li{padding:5px 0px 0px 12px;background:url(../../images/images_linfen/def/dian.gif) no-repeat 2px 11px;}
+.ul2 li{padding:5px 0px 0px 12px;background:url(../../images/images_linfen/def/bdian.gif) no-repeat 2px;}
+.ulqq li{padding:2px 0px 1px 12px;background:url(../../images/images_linfen/def/dian.gif) no-repeat 2px 20px;
+	border-bottom:1px dashed #ccc;}.ulqq li img{width:74px;height:23px;position:relative;top:4px;}
+
+.footgg table{width:100%;}	.footgg td{width:20%;text-align:center;}
+.footgg img{width:180px;height:70px;padding:1px;border:1px solid #ccc;}
+#foot a:link,#foot a:active,#foot a:visited{color:#008;}#foot a:hover{ color:#00f; }
+#foot{text-align:center;padding:5px 0px 2px;}
+
+#fmenu{background:url(../../images/images_linfen/fmenu.gif);height:39px;padding-left:300px;}

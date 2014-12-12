@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+    <meta name="keywords" content="{$SEO['keyword']}"/>
+    <meta name="description" content="{$SEO['description']}"/>
+    <link href="{CSS_PATH}stylesheets/common.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/city.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div id="content"> 
+            {template "content","header-common"}
+            <div class="row city city_category">
+                <h1>城市列表 - 中国城市新闻</h1>
+                <div class="city_table">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <?php foreach ($infos as $key => $info) { ?>
+                        <tr>
+                            <td width="100" class="name"><strong><?php echo $info['name']; ?></strong></td>
+                            <td>
+                                <?php if ( is_array($info['childs']) && !empty( $info['childs'] ) ) { foreach ($info['childs'] as $key => $value) { ?>
+                                <a href="{APP_PATH}city_lists_<?php echo $modelid; ?>_<?php echo $value['linkageid']; ?>_1.html" target="_blank"><?php echo $value['name']; ?></a>
+                                <?php } } ?>
+                            </td>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {template "content","footer-common"}
+    <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}jquery.simplyscroll.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#scroller").simplyScroll();
+        $("#city_tuijie_tu").simplyScroll({customClass : ""});
+        $(".city_table table tr:odd").css("background-color" , "#EBF2FA");
+    })
+    </script>
+</div>
+</boby>
+</html>

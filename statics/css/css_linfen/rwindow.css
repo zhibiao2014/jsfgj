@@ -1,0 +1,99 @@
+.line {
+	BORDER-BOTTOM: #aaa 1px dashed; MARGIN-TOP: 3px; WIDTH: 99%; MARGIN-BOTTOM: 3px; HEIGHT: 1px; OVERFLOW: hidden
+}
+.col3 .rall DL {
+	HEIGHT: 667px; MARGIN-LEFT: 10px
+}
+.rli {
+	TEXT-ALIGN: center; MARGIN-TOP: 50px; WIDTH: 35px; HEIGHT: 233px; OVERFLOW: hidden
+}
+.rli .rtop SPAN {
+	HEIGHT: 14px; OVERFLOW: hidden; CURSOR: pointer
+}
+#to-right {
+	WIDTH: 235px
+}
+.rall {
+	TEXT-ALIGN: center; MARGIN-TOP: 50px; OVERFLOW: hidden
+}
+.rli .lia LI {
+	PADDING-BOTTOM: 10px; WIDTH: 34px; FONT: 16px/25px "ºÚÌå"; OVERFLOW: hidden; CURSOR: pointer; PADDING-TOP: 10px
+}
+.rall .lia LI {
+	PADDING-BOTTOM: 10px; WIDTH: 34px; FONT: 16px/25px "ºÚÌå"; OVERFLOW: hidden; CURSOR: pointer; PADDING-TOP: 10px
+}
+.rall .on {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; BACKGROUND: #fff; BORDER-TOP: #aaa 1px solid
+}
+.rall .off {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; BACKGROUND: url(libg01.gif); BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.rli .on {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; BACKGROUND: url(libg01.gif); BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.rli .off {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; BACKGROUND: url(libg01.gif); BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid
+}
+.rli DL {
+	DISPLAY: none
+}
+.rall .lia {
+	POSITION: absolute; WIDTH: 35px; FLOAT: left; LEFT: 1px
+}
+#to-right DL {
+	BORDER-BOTTOM: #aaa 1px solid; WIDTH: 200px; BACKGROUND: url(200bg.gif) #fff repeat-y; FLOAT: right; BORDER-TOP: #aaa 1px solid
+}
+.rall DL {
+	OVERFLOW: hidden; PADDING-TOP: 10px
+}
+.rall .rtop {
+	TEXT-ALIGN: right; HEIGHT: 14px; OVERFLOW: hidden
+}
+.rall .rtop SPAN {
+	MARGIN-LEFT: 5px; CURSOR: pointer
+}
+#to-right DD LI {
+	WIDTH: 180px
+}
+.rall DD LI {
+	TEXT-ALIGN: left; PADDING-LEFT: 10px; BACKGROUND: url(../../images/images_linfen/icon.gif) no-repeat 0px -52px; HEIGHT: 25px; MARGIN-LEFT: 5px; OVERFLOW: hidden
+}
+#to-right DD {
+	WIDTH: 200px
+}
+#to-right DT {
+	WIDTH: 200px
+}
+#to-right DD UL {
+	WIDTH: 200px
+}
+.rall DD {
+	LINE-HEIGHT: 25px; FLOAT: left; OVERFLOW: hidden
+}
+.rall DT {
+	LINE-HEIGHT: 25px; FLOAT: left; OVERFLOW: hidden
+}
+.rall DD UL {
+	LINE-HEIGHT: 25px; FLOAT: left; OVERFLOW: hidden
+}
+.col3 .rall DD {
+	WIDTH: 220px
+}
+.col3 .rall DT {
+	WIDTH: 220px
+}
+.col3 .rall UL {
+	WIDTH: 220px
+}
+.rall DT {
+	TEXT-ALIGN: center
+}
+#to-right DT IMG {
+	BORDER-BOTTOM: #eee 1px solid; BORDER-LEFT: #eee 1px solid; WIDTH: 180px; HEIGHT: 135px; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid
+}
+.col3 .rall DT IMG {
+	BORDER-BOTTOM: #eee 1px solid; BORDER-LEFT: #eee 1px solid; WIDTH: 200px; HEIGHT: 135px; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid
+}
+.rall H3 {
+	BORDER-LEFT: #aaa 1px solid; BACKGROUND: url(libg02.gif) #aaa repeat-x; HEIGHT: 25px; FONT-SIZE: 14px; BORDER-RIGHT: #aaa 1px solid
+}

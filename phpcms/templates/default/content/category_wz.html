@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>   
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/important_news.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    .content_recommend .recommend span {cursor: pointer;}
+    </style>
+    {template "content","header_one"}
+<div class="important_news">
+  <div class="crumbs">
+    <a href="{siteurl($siteid)}" title="中国城市">中国城市</a><span> > </span>{catpos($catid)} 列表
+  </div>
+</div>
+<!--main-->
+<div id="important_news">
+  <div class="news_list float">
+    {pc:content  action="lists" catid="$catid" order="updatetime DESC" page="$page" num="40"}
+    <ul class="list lh24 f14">
+    {loop $data $r}
+      <li>
+        <span class="rt">
+          {date('Y-m-d H:i:s',$r[updatetime])}
+        </span>
+        <a href="{$r[url]}" target="_blank"{title_style($r[style])}>{str_cut($r[title],79)}
+        </a>
+      </li>
+      {if $n%5==0}<li class="bk20 hr"></li>{/if}
+    {/loop}
+    </ul>
+    <div id="pages" class="text-c">{$pages}</div>
+    {/pc}
+  </div>
+</div>
+    <div class="content_recommend float">
+      <div class="recommend">
+        <div>
+          <h2 class="float">城市推介</h2>
+        </div>
+        <div class="clear"></div>
+        {pc:content  action="position" posid="15" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc} 
+      </div>
+      <div class="hr_6"></div>
+      <div class="col-auto">
+        <div class="box">
+          <div>
+            <h1 class="float" style="color: red;">热点排行</h1>
+          </div>
+          <div class="clear"></div>
+          <ul class="content digg">
+          {pc:content  action="hits" catid="9" day="5" num="5"}
+            {loop $data $r}
+              <li>
+                <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+                {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+                </a>
+              </li>
+            {/loop}
+          {/pc}
+          </ul>
+        </div>
+      </div>
+      <div class="hr_6"></div>
+      <div class="recommend toggle">
+        <div>
+          <h2 class="float"><span class="qiye">城市企业|</span><span class="kaifaqu">开发区</span></h2>
+          <img src="{IMG_PATH}images/more_icon.jpg" class="more" />
+        </div>
+        <div class="clear"></div>
+        <div class="qiye_liebiao">
+        {pc:content  action="position" posid="16" catid="18" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc}
+        <div class="travel list clear">
+        <ul>
+        {pc:content  action="position" posid="16" order="listorder DESC" num="5"}
+        {loop $data $r}
+          <li>
+            <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+              ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+        {/loop}
+        {/pc}
+        </ul>
+        </div>
+        </div>
+        <div class="kaifaqu_liebiao" style="display: none;">
+        {pc:content  action="position" posid="16" catid="44" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc}
+        <div class="travel list clear">
+        <ul>
+        {pc:content  action="position" posid="16" order="listorder DESC" num="5"}
+        {loop $data $r}
+          <li>
+            <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+              ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+        {/loop}
+        {/pc}
+        </ul>
+        </div>
+        </div>
+      </div>
+      <div class="hr_6"></div>
+      <div class="recommend">
+        <div>
+          <h2 class="float">城市旅游</h2>
+          <a href="/index.php?m=content&c=index&a=lists&catid=14" target="blank"><img src="{IMG_PATH}images/more_icon.jpg" class="more" /></a>
+        </div>
+        <div class="clear"></div>
+        {pc:content  action="position" posid="17" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc}
+        <div class="travel list clear">
+        <ul>
+        {pc:content  action="position" posid="17" order="listorder DESC" num="5"}
+        {loop $data $r}
+          <li>
+            <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+              ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+        {/loop}
+        {/pc}
+        </ul>
+        </div>
+      </div>
+      <div class="hr_6"></div>
+      <div class="recommend">
+        <div>
+          <h2 class="float">城市文化</h2>
+          <a href="/index.php?m=content&c=index&a=lists&catid=15" target="blank"><img src="{IMG_PATH}images/more_icon.jpg" class="more" /></a>
+        </div>
+        <div class="clear"></div> 
+        {pc:content  action="position" posid="18" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc} 
+        <div class="travel list clear">
+        <ul>
+        {pc:content  action="position" posid="18" order="listorder DESC" num="5"}
+        {loop $data $r}
+          <li>
+            <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+              ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+        {/loop}
+        {/pc}
+        </ul>
+        </div>
+      </div>
+      <div class="hr_6"></div>
+      <div class="col-auto">
+        <div class="box">
+          <div>
+            <h1 class="float" style="color: red;">编辑推荐</h1>
+          </div>
+          <div class="clear"></div>
+          <ul class="content digg">
+          {pc:content  action="position" posid="19" thumb="1" order="listorder DESC" num="5"}
+            {loop $data $r}
+              <li>
+                <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+                {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+                </a>
+              </li>
+            {/loop}
+          {/pc}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="hr_6"></div>
+      <!--尾部-->      
+<script type="text/javascript">
+  $(".content_recommend .recommend span.qiye").click(function(){
+    $(".content_recommend .recommend .kaifaqu_liebiao").css("display","none");
+    $(".content_recommend .recommend .qiye_liebiao").css("display","block");
+  });
+  $(".content_recommend .recommend span.kaifaqu").click(function(){
+    $(".content_recommend .recommend .qiye_liebiao").css("display","none");
+    $(".content_recommend .recommend .kaifaqu_liebiao").css("display","block");
+  });
+</script>   
+{template "content","footer_my"}

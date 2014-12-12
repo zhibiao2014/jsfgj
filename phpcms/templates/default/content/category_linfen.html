@@ -1,0 +1,700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0025)http://www.sdnews.com.cn/ -->
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+  <HEAD>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title> 
+    <LINK rel=stylesheet type=text/css href="{CSS_PATH}css_linfen/style.css">
+      <LINK rel=stylesheet type=text/css href="{CSS_PATH}css_linfen/rwindow.css">
+        <link href="{CSS_PATH}css_linfen/body.css" rel="stylesheet" type="text/css" />
+
+        <STYLE>#headline .col2 H2 {
+          FONT-SIZE: 40px
+        }
+        </STYLE>
+
+        <SCRIPT language=JavaScript type=text/javascript>
+  //切换
+  function tabchange(tabid,tabNumber,totaltab){
+    for(var j=1;j<=totaltab;j++){
+      if (j != tabNumber)
+      {
+        document.getElementById(tabid+ "_title" + j).className= tabid+"_normal";
+        document.getElementById(tabid+ "_content" + j).className= "hiddencontent";
+      }
+      else
+      {
+       document.getElementById(tabid+ "_title" + j).className= tabid+"_active";
+       document.getElementById(tabid+ "_content" + j).className= "activecontent";
+     }     
+   }
+ }
+ </SCRIPT>
+
+ <SCRIPT type=text/javascript src="{JS_PATH}js_linfen/s.js"></SCRIPT>
+
+ <SCRIPT type=text/javascript src="{JS_PATH}js_linfen/jquery-1.4.min.js"></SCRIPT>
+
+ <SCRIPT type=text/javascript src="{JS_PATH}js_linfen/float.js"></SCRIPT>
+
+ <META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
+  <BODY>
+    <div style="height:27px;background:#CC0001;border-bottom:1px solid #EC9A9C;">
+      <div class="c fff" style="background:transparent;border-color:#CC0001;">
+        <div style="padding:0px 10px;">
+          <div style="float:left;width:290px;padding-top:1px;line-height:26px;">
+            <a href="#">设为首页</a> |
+            <a href="javascript:window.external.addFavorite('http://jjsx.china.com.cn','聚焦山西');" target="_self">收藏</a> |
+            <a href="http://mail.china.com.cn/cgi-bin/index.cgi" target="_blank">邮箱</a> |
+            <a href="http://weather.china.com.cn/" target="_blank">天气</a> |
+            <a href="http://www.baidu.com/" target="_blank">百度</a>
+          </div>
+          <div style="float:left;width:240px;padding-top:1px;">
+            <form id="search_form" method="get" action="/index.php" target="_blank">
+              <input type="hidden" name="m" value="search">
+              <input type="hidden" name="c" value="index">
+              <input type="hidden" name="a" value="init">
+              <input type="hidden" name="typeid" value="1" id="typeid">
+              <input type="hidden" name="siteid" value="1" id="siteid">         
+              <input  class="swap_value text" type="text" name="q" id="q" />
+              <input class="submit button" type="submit" value="搜索" style="background:transparent;color:#fff;border:none;cursor:pointer;"/>
+            </form> 
+          </div>
+        <!--<div style="float:right;width:400px;padding-top:1px;line-height:26px;text-align:right;">
+          2012-07-26 星期四 农历六月初八 大暑第五天
+        </div>-->
+      </div>
+    </div>
+  </div>
+  <div id="head" style="width:960px; height:100px; margin:0px auto;" class="c">
+    <div id="hleft1" style="float:left; width:150px; height:100px; ">
+      <span style="margin-top:18px; margin-left:2px; width:146px; height:56px; display:block;">
+        <a href="{siteurl($siteid)}">
+          <img src="{IMG_PATH}images_linfen/logo.jpg" width="146" height="62">
+        </a>
+      </span>
+    </div>
+    <div id="hleft2" style="float:left;width:700px; height:100px; ">
+      <div style="width:616px; height:20px;color:#c00;letter-spacing:5px; float:right;clear:both;"></div>
+      <div style="clear:both; width:auto; height:1px;"></div>
+      <div id="menu1" style="float:left;width:700px; height:45px; clear:both;">
+        <div style="float:left;width:638px; height:45px; color:#000; letter-spacing:2px; clear:both;"> 
+          <div>
+            <a href="http://www.china.com.cn">中国网首页</a> | 
+            {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+            <?php $category = $data ;?>  
+            {loop $data $r} 
+            {if $n==8}
+          </div>
+          <div>
+            <a href="{siteurl($siteid)}">中国城市</a> | 
+            {/if}         
+            <a href="{$r[url]}" target="blank">
+              {$r[catname]}
+            </a> | 
+            {/loop}
+            {/pc}
+          </div>
+        </div>
+        <div style="float:left;"> 
+          <div style="margin-top:3px;">
+            <a href="/index.php?m=content&c=index&a=lists&catid=3"><img src="{IMG_PATH}images_linfen/lianxi.jpg"  width="57" height="15" border="0"></a>
+            <div style="clear:both; height:2px;"></div>
+            <a href="/index.php?m=content&c=index&a=lists&catid=186"><img src="{IMG_PATH}images_linfen/chaxun.jpg" width="57" height="15" border="0"></a>
+          </div>
+        </div>
+      </div>
+      <div id="menu2" style="border-top:1px solid #d0d0d0; font-size:12px; clear:both;">
+        <a href={$category[170][url]} style="color:#F00;">辖区:</a>
+        <a href={$category[170][url]} > 尧都区</a>| 
+        <a href={$category[170][url]} >侯马</a>| 
+        <a href={$category[170][url]} >霍州</a>| 
+        <a href={$category[170][url]} >洪洞</a>| 
+        <a href={$category[170][url]} >翼城</a>| 
+        <a href={$category[170][url]} >汾西</a>| 
+        <a href={$category[170][url]} >隰县</a>|
+        <a href={$category[170][url]} >安泽</a>|
+        <a href={$category[170][url]} >永和</a>|
+        <a href={$category[170][url]} >古县</a>|
+        <a href={$category[170][url]} >浮山</a>|
+        <a href={$category[170][url]} >曲沃</a>|
+        <a href={$category[170][url]} >襄汾</a>|
+        <a href={$category[170][url]} >吉县</a>|
+        <a href={$category[170][url]} >乡宁</a>|
+        <a href={$category[170][url]} >大宁</a>|
+        <a href={$category[170][url]} >蒲县</a>
+      </div>
+    </div>
+    <div id="hleft3" style="float:left;width:110px; height:100px;">
+      <div style="width:111px; height:70px; margin-top:18px;">
+        <img src="{IMG_PATH}images_linfen/right-log.jpg" width="98" height="55">
+      </div>
+    </div>
+  </div>
+  <div style="width:960px; height:180px; margin:0px auto; background-color:#CCC;"><script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=36"></script></div> 
+  <!-- <DIV id=headline>
+    <DIV class=col2>
+      <div id=headline2>      
+      {pc:content  action="lists" catid="178" order="id DESC" num="5"}
+        <?php $i = 0; foreach($data as $key => $value) { 
+          $tmp[$i++] = $value;
+        } ?>
+        <div class=col2>
+          <h2>
+            <a href={$tmp[0][url]}>
+              {$tmp[0][title]}
+            </a>
+          </h2>
+          <div style="margin-top:-7px;">
+            [<a href={$tmp[1][url], 40,'')}>
+              {str_cut($tmp[1][title], 60,'')}
+            </a>]
+            [<a href={$tmp[2][url]}>
+              {str_cut($tmp[2][title], 60,'')}
+            </a>]
+            [<a href={$tmp[3][url]}>
+              {str_cut($tmp[3][title], 60,'')}
+            </a>] 
+            [<a href={$tmp[4][url]}>
+              {str_cut($tmp[4][title], 60,'')}
+            </a>] 
+          </div>
+        </div>
+      {/pc}
+      </div>
+    </DIV>
+  </DIV> -->
+  <DIV class=newsjs>
+    <DIV class=col1>
+      <IMG src="{IMG_PATH}images_linfen/news_icon.gif" width=90 height=30>
+      </DIV>
+      <DIV id=titleLi class=col2>
+        {pc:content  action="lists" catid="174" order="id DESC" num="13"}
+        <UL>
+          {loop $data $k $v}
+          <LI>
+            <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+              {str_cut($v[title], 56)}
+            </a>
+          </li>
+          {/loop}
+        </UL>
+        {/pc}
+      </DIV>
+      <SCRIPT type=text/javascript>
+      function AutoScroll(obj)
+      {
+        $(obj).find("ul:first").animate({marginTop:"-25px"},500,function(){
+          $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+      }
+      $(document).ready(function(){setInterval('AutoScroll("#titleLi")',3000);});
+      </SCRIPT>
+    </DIV>
+  </div>
+  <DIV id="focus"  style="background-color:#FFF;">
+    <DIV class="col1">
+      <DIV class=show_box>
+        {pc:content  action="lists" catid="179" order="id DESC" thumb="1" num="4"}
+        {loop $data $k $v}
+        <DIV style="DISPLAY: none" class=showpic>
+          <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+            <img src="{thumb($v[thumb], 480, 270)}" title="{$v['title']}" width="480" height="270" alt="{$v[title]}" />
+          </a>
+          <DIV class=mask></DIV>
+          <DIV class=linkbox>
+            <a href="{$v[url]}" title="{$v[title]}">
+              {str_cut($v[title], 36)}
+            </a>
+          </DIV>
+        </DIV>
+        {/loop}
+        <DIV class=showtab>
+          {loop $data $k $v}
+          <A {if $n==1} class=on {/if} href="{$v[url]}"  target=_blank>{$n}</A> 
+          {/loop}
+        </DIV>
+        {/pc}
+      </DIV>                        
+      <SCRIPT type=text/javascript  
+      src="{JS_PATH}js_linfen/sdnewsFocusPic.js"></SCRIPT>
+    </DIV>
+    <DIV class=col2 style="text-align:left;">
+      <?php $i=0;?>
+      {pc:content  action="lists" catid="180" order="id DESC" num="16"}
+      {loop $data $k $v}
+      <?php
+      $data_array[$i][$n%4] = $v;
+      if($n%4==0)
+        $i++;
+      ?>
+      {/loop}
+      {/pc}
+      <?php foreach($data_array as $key => $value){?>
+      <DIV>
+        <H3>
+          <a href="{$value[0][url]}" title="{$value[0][title]}">
+            {str_cut($value[0][title], 60, '')}
+          </a>
+        </H3>
+        <P>
+          <a href="{$value[1][url]}" title="{$value[1][title]}">
+            {str_cut($value[1][title], 30, '')}
+          </a>&nbsp;|&nbsp;
+          <a href="{$value[2][url]}" title="{$value[2][title]}">
+            {str_cut($value[2][title], 30, '')}
+          </a>&nbsp;|&nbsp;
+          <a href="{$value[3][url]}" title="{$value[3][title]}">
+            {str_cut($value[3][title], 30, '')}
+          </a>
+        </P>
+      </DIV>
+      <DIV class=line1></DIV>
+      <?php } ?>
+    </DIV>
+  </DIV>
+</div>
+<DIV id=main style=" margin-top:8px;">
+  <DIV class=col3>
+    <DIV class=titlebar1>
+      <IMG src="{IMG_PATH}images_linfen/fl3.gif" width=260 height=42>
+      </DIV>
+      <DIV id=forum>
+        <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=41"></script>
+      </DIV>
+      <DIV id=forum>
+        <DIV class=top>
+          <H2>{$category[159][catname]}</H2><A class=more href="{$category[159][url]}">更多&gt;&gt;</A>
+        </DIV>
+        {pc:content  action="lists" catid="159" order="id DESC" thumb="1" num="5"}
+        {loop $data $k $v}
+        <DIV class=exclusive3>
+          <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+            <img src="{thumb($v[thumb], 118, 91)}" title="{$v['title']}" width="118" height="91" alt="{$v[title]}" />
+          </a>
+          <DIV class=rt>
+            <H2>
+              <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+                {str_cut($v[title], 60, '')}
+              </a>
+            </H2>
+          </DIV>
+        </DIV>
+        {if $n!=6}<DIV class=line2></DIV>{/if}
+        {/loop}
+        {/pc}
+      </DIV>
+    </DIV>
+    <DIV class=col1>
+      <DIV>
+        <IMG src="{IMG_PATH}images_linfen/fl1.gif" width=290 height=42>
+        </DIV>
+        <DIV class=l_news>
+          <DIV class=top>
+            <H2>{$category[156][catname]}</H2>
+            <A class=more href="{$category[156][url]}">更多&gt;&gt;</A>
+          </DIV>
+          <DIV class=txt>
+            <UL>
+              {pc:content  action="lists" catid="156" order="id DESC" num="12"}
+              {loop $data $k $v}
+              <LI>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {str_cut($v[title], 60, '')}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </UL>
+          </DIV>
+        </DIV>
+        <DIV class="col_bn2 ad">
+          <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=39"></script>
+        </DIV>
+        <DIV class=l_news>
+          <DIV class=top>
+            <H2>{$category[162][catname]}</H2>
+            <A class=more href="{$category[162][url]}">更多&gt;&gt;</A> 
+          </DIV>
+          <DIV class=txt>
+            <UL>
+              {pc:content  action="lists" catid="162" order="id DESC" num="12"}
+              {loop $data $k $v}
+              <LI>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {str_cut($v[title], 40, '')}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </UL>
+          </DIV>
+        </DIV>
+      </DIV>
+      <DIV class=col2>
+        <DIV class=titlebar1><IMG src="{IMG_PATH}images_linfen/fl2.gif" width=390 height=42></DIV>
+        <DIV id=main_news>
+          <DIV class=top>
+            <H2>热点</H2><!-- 广告位：全景山西180X30按钮 -->
+            <!-- <A class=more href="{$category[161][url]}">更多&gt;&gt;</A> -->
+          </DIV>
+          <DIV class=txt>
+            <UL>
+              {pc:content  action="lists" catid="157" order="id DESC" num="8"}
+              {loop $data $k $v}
+              <LI>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </UL>
+          </DIV>
+        </DIV>
+        <DIV id=main_news>
+          <DIV class=top>
+            <H2>{$category[165][catname]}</H2><A class=more href="{$category[165][url]}">更多&gt;&gt;</A> 
+          </DIV>
+          <DIV class=txt>
+            <UL>
+              {pc:content  action="lists" catid="165" order="id DESC" num="7"}
+              {loop $data $k $v}
+              <LI>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </UL>
+          </DIV>
+        </DIV>
+        <DIV id=main_news>
+          <DIV class=top>
+            <H2>{$category[161][catname]}</H2><A class=more href="{$category[161][url]}">更多&gt;&gt;</A>
+          </DIV>
+          <DIV class=txt>
+            <UL>
+              {pc:content  action="lists" catid="161" order="id DESC" num="8"}
+              {loop $data $k $v}
+              <LI>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {if $v[article_bac] == ""}{str_cut($v[title],65,'')}{else}{$v[article_bac]}{/if}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </UL>
+          </DIV>
+        </DIV>
+      </DIV>
+    </DIV>
+    <div style="margin:0px auto; width:960px; height:90px; background-color:#CCC;">
+      <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=37"></script></div>
+      <DIV id=main>
+        <DIV class=col3>
+          <DIV class=bk10></DIV>
+          <DIV id='forum' class="qufen_0 dd">
+            <DIV class=top>
+              <H2>{$category[173][catname]}</H2><A class=more href="{$category[173][url]}">更多&gt;&gt;</A> 
+            </DIV>
+            {pc:content  action="lists" catid="173" order="id DESC" thumb="1" num="2"}
+            {loop $data $k $v}
+            {if $n<3}
+            <DIV class='exclusive1' style="text-align:left;">
+              <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+                <img src="{thumb($v[thumb], 118, 91)}" title="{$v['title']}" width="118" height="91" alt="{$v[title]}" />
+              </a>
+              <P>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {str_cut($v[title], 80 , '')}
+                </a>
+              </P>
+            </DIV>
+            {/if}
+            {/loop}
+            <DIV class=txt>
+              <UL>
+                {loop $data $k $v}
+                {if $n>2}
+                <LI>
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    {str_cut($v[title], 40, '')}
+                  </a>
+                </LI>
+                {/if}
+                {/loop}
+                {/pc}
+              </UL>
+            </DIV>
+          </DIV>
+          <DIV id='forum' class="qufen_2  cc">
+            <DIV class=top>
+              <H2>{$category[167][catname]}</H2>
+              <A class=more href="{$category[167][url]}">More&gt;&gt;</A>
+            </DIV>
+            {pc:content  action="lists" catid="167" order="id DESC" thumb="1" num="6"}
+            {loop $data $k $v}
+            {if $n<3}
+            <DIV class=exclusive1 style="text-align:left;">
+              <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+                <img src="{thumb($v[thumb], 118, 91)}" title="{$v['title']}" width="118" height="91" alt="{$v[title]}" />
+              </a>
+              <P>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {str_cut($v[title], 80 , '')}
+                </a>
+              </P>
+            </DIV>
+            {/if}
+            {/loop}
+            <DIV class=txt>
+              <UL>
+                {loop $data $k $v}
+                {if $n>2}
+                <LI>
+                  <a href="{$v[url]}" title="{$v[title]}">
+                    {str_cut($v[title], 50, '')}
+                  </a>
+                </LI>
+                {/if}
+                {/loop}
+                {/pc}
+              </UL>
+            </DIV>
+      </DIV><!-- 
+      <DIV id='forum' class="qufen_3">
+        <DIV class=top>
+        <H2>{$category[173][catname]}</H2><A class=more href="{$category[173][url]}">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=exclusive1>
+        {pc:content  action="lists" catid="173" order="id DESC" thumb="1" num="2"}
+        {loop $data $k $v}
+          <DL>
+            <DD>
+            <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+              <img src="{thumb($v[thumb], 160, 120)}" title="{$v['title']}" width="160" height="120" alt="{$v[title]}" />
+            </a>
+            <H5><a href="{$v[url]}" title="{$v[title]}">
+              {str_cut($v[title], 80 , '')}
+            </a></H5>
+            </DD>
+          </DL>
+        {/loop}
+        {/pc}
+        </DIV>
+        <DIV class=txt>
+          <UL>
+          {pc:content  action="lists" catid="173" order="id DESC" num="6"}
+            {loop $data $k $v}
+            <LI>
+            <a href="{$v[url]}" title="{$v[title]}">
+              {str_cut($v[title], 50, '')}
+            </a>
+            </LI>
+            {/loop}
+          {/pc}
+          </UL>
+        </DIV>
+      </DIV> -->
+      <DIV id='forum' class="qufen_4">
+        <DIV class=top>
+          <H2>{$category[169][catname]}</H2><A class=more href="{$category[169][url]}">更多&gt;&gt;</A>
+        </DIV>
+        <DIV class=vod1>
+          {pc:content  action="lists" catid="169" order="id DESC" thumb="1" num="5"}
+          {loop $data $k $v}
+          {if $n<3}
+          <DL>
+            <DT>
+              <a href="{$v[url]}" title="{$v[title]}" target="_blank">
+                <img src="{thumb($v[thumb], 107, 80)}" title="{$v['title']}" width="107" height="80" alt="{$v[title]}" />
+              </a>
+              <a href="{$v[url]}" title="{$v[title]}">
+                视屏：{str_cut($v[title], 15 , '')}
+              </a>
+            </DT>
+          </DL>
+          {/if}
+          {/loop}
+        </DIV>
+        <DIV class=vod2>
+          <UL>
+            {loop $data $k $v}
+            {if $n>2}
+            <LI>
+              <a href="{$v[url]}" title="{$v[title]}">
+                {str_cut($v[title], 45, '')}
+              </a>
+            </LI>
+            {/if}
+            {/loop}
+            {/pc}
+          </UL>
+        </DIV>
+      </DIV>
+    </DIV>
+    <DIV class=col1>
+      <DIV class=bk10></DIV>
+      <DIV class=l_news>
+        <DIV class=top>
+          <H2>{$category[160][catname]}</H2><A class=more href="{$category[160][url]}">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=txt>
+          <UL>
+            {pc:content  action="lists" catid="160" order="id DESC" num="10"}
+            {loop $data $k $v}
+            <LI>
+              <a href="{$v[url]}" title="{$v[title]}">
+                {str_cut($v[title], 45, '')}
+              </a>
+            </LI>
+            {/loop}
+            {/pc}
+          </UL>
+        </DIV>
+      </DIV>
+
+      <DIV class=col_bn2>
+        <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=40"></script>
+      </DIV>
+      <DIV class=l_news>
+        <DIV class=top>
+          <H2>{$category[163][catname]}</H2><A class=more href="{$category[163][url]}">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=txt>
+          <UL>
+            {pc:content  action="lists" catid="163" order="id DESC" num="10"}
+            {loop $data $k $v}
+            <LI>
+              <a href="{$v[url]}" title="{$v[title]}">
+                {str_cut($v[title], 45, '')}
+              </a>
+            </LI>
+            {/loop}
+            {/pc}
+          </ul>
+        </DIV>
+      </DIV>
+      <DIV class=l_news>
+        <DIV class=top>
+          <H2>办事指南</H2><A class=more href="/index.php?m=content&c=index&a=lists&catid=171">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=txt>
+          <div id="list1" style="width:240px; height:290px; margin-top:10px; margin-left:10px;">
+            <UL>
+              {pc:content  action="lists" catid="171" order="id DESC" num="20"}
+              {loop $data $k $v}
+              <LI>
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {str_cut($v[title], 12, '')}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </ul>
+          </div>
+        </DIV>
+      </DIV>
+    </DIV>
+    <DIV class=col2>
+      <DIV class=bk10></DIV>
+      <DIV id=main_news>
+        <DIV class=top>
+          <H2>{$category[170][catname]}</H2><A class=more href="{$category[170][url]}">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=txt>
+          <UL>
+            {pc:content  action="lists" catid="170" order="id DESC" num="10"}
+            {loop $data $k $v}
+            <LI>
+              <a href="{$v[url]}" title="{$v[title]}">
+                {str_cut($v[title], 65, '')}
+              </a>
+            </LI>
+            {/loop}
+            {/pc}
+          </ul>
+        </DIV>
+      </DIV>
+      <DIV class=col_bn1>
+        <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=38"></script>
+      </DIV>
+      <DIV id=main_news>
+        <DIV class=top>
+          <H2>{$category[164][catname]}</H2><A class=more href="{$category[164][url]}">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=txt>
+          <UL>
+            {pc:content  action="lists" catid="164" order="id DESC" num="10"}
+            {loop $data $k $v}
+            <LI>
+              <a href="{$v[url]}" title="{$v[title]}">
+                {str_cut($v[title], 65, '')}
+              </a>
+            </LI>
+            {/loop}
+            {/pc}
+          </ul>
+        </DIV>
+      </DIV>
+      <DIV id=main_news>
+        <DIV class=top>
+          <H2>企业办事指南</H2><A class=more href="/index.php?m=content&c=index&a=lists&catid=172">更多&gt;&gt;</A> 
+        </DIV>
+        <DIV class=txt1>
+          <div id="list3" style="width:330px; height:315px;; margin-left:18px; clear:both;">
+            <UL>
+              {pc:content  action="lists" catid="172" order="id DESC" num="24"}
+              {loop $data $k $v}
+              <LI>▪
+                <a href="{$v[url]}" title="{$v[title]}">
+                  {str_cut($v[title], 12, '')}
+                </a>
+              </LI>
+              {/loop}
+              {/pc}
+            </ul>
+          </div>
+        </DIV>
+      </DIV>
+    </DIV>
+  </DIV>
+  <DIV id=main_ad1>
+    <TABLE border=0 cellSpacing=0 cellPadding=0 width=960 align=center>
+      <TBODY>
+        <TR>
+          <!-- <TD width=800>
+          <SCRIPT type=text/javascript>BAIDU_CLB_fillSlot("139429");</SCRIPT>
+        </TD>
+        <TD width=160>
+          <SCRIPT type=text/javascript>BAIDU_CLB_fillSlot("139430");</SCRIPT>
+        </TD> -->
+      </TR>
+    </TBODY>
+  </TABLE>
+</DIV>
+
+<DIV></DIV>
+
+<DIV class=bk10></DIV>
+
+<DIV id=footer>
+  <DIV class=top>
+    版权所有 © 中国互联网新闻中心 北京华盛骄阳文化传媒有限公司  电子邮件: chinacity@china.org.cn<br/> 
+    电话：010-58610672  京ICP证 040089号 网络传播视听节目许可证号:0105123<br/> 
+    <a href="http://www.china.com.cn/">关于中国网</a> | 
+    <a href="http://city.china.com.cn/index.php?m=content&c=index&a=lists&catid=2" title="关于中国城市">关于中国城市</a> | 法律顾问：
+    <a href="http://www.yuecheng.com/" rel="nofollow">北京岳成律师事务所</a> | 
+    <a href="http://city.china.com.cn/index.php?m=content&c=index&a=lists&catid=2" title="中国城市站广告刊登">刊登广告</a> | 
+    <a href="http://city.china.com.cn/index.php?m=content&c=rss&siteid=1" title="中国城市站内地图">本站地图</a>
+    <a href="{$CATEGORYS[111]['url']}" title="中国城市精彩回顾">中国城市精彩回顾</a>
+  </DIV>
+</DIV>{tjcode()}{php echo runhook('glogal_footer')}
+</BODY>
+</HTML>

@@ -1,0 +1,146 @@
+@charset "utf-8";
+.wp {
+	margin: 0px auto;
+	width: 1000px;
+}
+.header{
+background: url(../../images/xwxq/topbg.jpg) repeat-x top center;
+}
+.top {
+	width: 100%;
+	height: 30px;
+	background-color: #f3f3f3;
+}
+.top .top-right {
+	float: right;
+	height: 30px;
+}
+.top .top-right a {
+	margin-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #276fa3;
+	background: url(../../images/xwxq/tool-a-bg.jpg) no-repeat center left;
+	padding-left:10px;
+}
+
+.top .top-right a:hover {
+	text-decoration: none;
+}
+.tools {
+	width: 100%;
+	height: 30px;
+	line-height:30px;
+	background-color: #f3f3f3;
+	overflow:hidden;
+}
+.tools .weather {width:230px; padding-right:20px; float:right;}
+.tools .time {width:150px; float:right;}
+.tools .email {width:350px;padding-left:20px; background:url(../../images/xwxq/ico.png) 0px -22px no-repeat;*background:url(../../images/xwxq/ico.gif) 0px -22px no-repeat; _background:url(../../images/xwxq/ico.gif) 0px -22px no-repeat; float:right;}
+*html .tools .email form{margin-top:4px;}
+*+html .tools .email form{margin-top:0px;}
+.clear {
+	clear: both;
+}
+.height10 {
+	height: 10px;
+}
+.bold{
+	font-weight:600;
+}
+.navmenu ul {
+	width: 100%;
+	height: 43px;
+	list-style: none;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	background: url('../../images/xwxq/menu-bg.jpg') repeat-x;
+}
+.navmenu li {
+	padding: 0 23px;
+	float: left;
+	height: 43px;
+	line-height: 43px;
+	background: url('../../images/xwxq/menu-splite.jpg') no-repeat right;
+	list-style: none;
+	text-align: center;
+}
+.navmenu li a {
+	color: #fff;
+	line-height: 43px;
+	height: 43px;
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+}
+.navmenu li a:hover, .navmenu li.hover a {
+	border: none;
+	text-decoration: none;
+	line-height: 43px;
+	color: #fff;
+}
+.navmenu li.right {
+	background: none;
+}
+.dropMenu {
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	width: 100px;
+	visibility: hidden;
+	margin: -2px 0 0 -1px;
+	border: 1px solid #177dc5;
+	border-top: 0px;
+	background-color: #fff;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+}
+.dropMenu li {
+	margin-top: 2px;
+	margin-bottom: 4px;
+	padding-left: 6px;
+	list-style: none;
+}
+.dropMenu li a {
+	width: 80px;
+	display: block;
+	text-align: left;
+	text-decoration: none;
+	color: #333;
+	padding: 4px 0 4px 0px;
+}
+.dropMenu+li a {
+	border-top: none;
+}
+* html .dropMenu a {
+	width: 100%;
+	color: #333;
+}
+.dropMenu a:hover {
+	text-decoration: underline;
+	color: #2d6bac;
+}
+.footer {
+	border: 1px solid #c9d9f0;
+}
+.float {
+	float: left;
+}
+.hr_6 {
+	clear: both;
+	height: 6px;
+}
+/* 默认幻灯片 */
+.FocusPic{zoom:1;position:relative; overflow:hidden;margin-top: 4px;}
+.FocusPic .content{overflow:hidden}
+.FocusPic .changeDiv a{position:absolute;top:0px;left:0px;display:none;}
+.FocusPic .title-bg,.FocusPic .title{position:absolute;left:0px;bottom:0;width:434px;height:30px;line-height:30px;overflow:hidden}
+.FocusPic .title-bg{background:#000;filter:alpha(opacity=50);opacity:0.5;}
+.FocusPic .title a{display:block;padding-left:15px;color:#fff; font-size:14px;}
+.FocusPic .change{bottom:4px;height:20px;right:3px;*right:5px;_right:4px;position:absolute;text-align:right;z-index:9999;}
+.FocusPic .change i {background:#666;color:#FFF;cursor:pointer;font-family:Arial;font-size:12px;line-height:15px;margin-right:2px;padding:2px 6px; font-style:normal; height:15px;display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline;}
+.FocusPic .change i.cur {background:#FF7700;}
+

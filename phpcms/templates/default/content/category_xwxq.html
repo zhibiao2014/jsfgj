@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    Xuwei New Area -- CHINA CITY -- CHINA
+  </title>
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+  <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+  <link href="{CSS_PATH}xwxq/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/index.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/common.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css"> 
+  #ie6-warning{ 
+    background:rgb(255,255,225);
+    position:absolute; 
+    top:0; 
+    left:0; 
+    font-size:12px; 
+    color:#333; 
+    width:100%; 
+    padding: 2px 0; 
+    text-align:center; 
+  }
+  #ie6-warning span{
+    padding-left:23px; 
+    background: url("{IMG_PATH}20100628012515690.gif") no-repeat scroll 3px center; 
+  } 
+  #ie6-warning a { 
+    text-decoration:none;
+    color: #F60;
+  } 
+  body {
+    font-family: Georgia,'微软雅黑' ,  Arial, Helvetica, sans-serif;
+  }
+  </style>
+</head>
+<body>
+    <!--[if lte IE 6]> 
+    <div id="ie6-warning"><span>您正在使用 Internet Explorer 低版本浏览器，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a></span>
+    </div> 
+    <script type="text/javascript"> 
+    function position_fixed(el, eltop, elleft){ 
+    // check if this is IE6 
+    if(!window.XMLHttpRequest) 
+    window.onscroll = function(){ 
+    el.style.top = (document.documentElement.scrollTop + eltop)+"px"; 
+    el.style.left = (document.documentElement.scrollLeft + elleft)+"px"; 
+    } 
+    else el.style.position = "fixed"; 
+    } 
+    position_fixed(document.getElementById("ie6-warning"),0, 0); 
+    </script> 
+    <![endif]-->
+    <div id="header" class="header">
+      <div class="top">
+        <div class="wp">
+          <div style="float: left;" class="top-right"><a href="javascript:void(0)">Welcome to website of Xuwei New Area</a></div>
+          <div class="top-right">
+            <a href="{$CATEGORYS[191][url]}">English</a>
+            <a href="{$CATEGORYS[199][url]}">Japanese</a>
+            <a href="{$CATEGORYS[200][url]}">Korean</a>
+            <!-- <a href="http://weibo.com/xuweixinqu?topnav=1&amp;topsug=1">徐圩微博</a> -->
+          </div>
+          <!-- <div style="height:30px;line-height: 30px;font-size: 12px;color: #276fa3;">欢迎来到徐圩新区网站！</div> -->
+        </div>
+      </div>
+      <div class="wp">
+        <div>
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="1000" height="231">
+            <param name="movie" value="{IMG_PATH}xwxq/en_top.swf">
+            <param name="quality" value="high">
+            <param name="wmode" value="transparent">
+            <embed src="{IMG_PATH}xwxq/en_top.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent" width="1000" height="231" />
+          </object>
+        </div>
+        <div class="tools">
+          <div class="time"> 
+            <?php 
+            // $words = array('日','一','二','三','四','五','六');
+            echo date("l").", ".date("M d,Y");
+            ?>
+          </div>
+          <!-- <div class="weather">
+            <iframe src="http://cache.xixik.com.cn/5/lianyungang/" width="200" height="30" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" scrolling="no"></iframe>
+          </div> -->
+        </div>
+        <div class="navmenu" id="navmenu">
+          <ul>
+            {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+            <li><a href="{$url}" class="bold">Home</a></li>
+            {loop $data $r}
+            <li>
+              <a href="{$r[url]}" class="bold">
+                {$r[catname]}
+              </a>
+            </li>
+            {/loop}
+            {/pc}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear height10"></div>
+
+    <div id="middle" class="wp middle">
+      <div> 
+        <!--新闻中心-->
+        <div class="box newscenter" style="height: auto;">
+          <!--<div class="title">
+            <div class="more">
+              <a href="http://www.xwxq.gov.cn/news/dynamics/index.shtml" target="_blank">More&gt;&gt;</a>
+            </div>
+            <div class="text2">新闻资讯</div>
+            <div class="text">新闻中心</div>
+          </div>-->
+          <div class="clear"></div>
+          <script type="text/javascript">
+          $(function(){
+              new slide("#main-slide","cur",550,360,1);//焦点图
+            })
+          </script>
+          <div id="page1_content">
+            {pc:content  action="position" posid="22" catid="191" thumb="1" order="listorder DESC" num="4"}
+            <div class="slide" style="float: left;">
+              <div class="FocusPic">
+                <div class="content" id="main-slide">
+                  <div class="changeDiv">  
+                    {loop $data $r}
+                    {str_cut($r['title'],50)}
+                    <a href="{$r['url']}" title="{$r['title']}" target="blank">
+                      <img src="{thumb($r['thumb'],550,360)}" title="{$r['title']}" width="550" height="360" />
+                    </a>
+                    {/loop}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/pc}
+            <div class="host_news_list float">
+              <div class="news article_padding">
+                {pc:content  action="position" posid="23" catid="191" order="id DESC" num="12"}
+                {loop $data $k $v}
+                {if $n==1}
+                <div>
+                  <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                    {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                  <p class="article_summary">
+                    {str_cut(strip_tags($v[description]), 250,'')}
+                    <a href="{$v[url]}" target="blank" class="more_article">More>></a>
+                  </p>
+                </div>
+                <div class="fg_line">
+                  <img src="{IMG_PATH}images/gray_line.jpg" width="393" height="1" style="display: block;">
+                </div>
+                {else}
+                <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                </a>
+                {/if}
+                {/loop}
+                {/pc}
+              </div>
+            </div>
+          </div>
+          <div class="hr_6"></div>
+        </div>
+      </div>
+      <div class="clear height10"></div>
+      <div>
+        <div class="box xqgk float">
+          <div class="title">
+            <div class="more">
+              <!-- <a href="http://www.xwxq.gov.cn/news/reports/index.shtml" target="_blank" class="more_article">More</a> -->
+            </div>
+            <div class="text"><!-- 新区概况 --> {$CATEGORYS[192][catname]} </div>
+          </div>
+          <div class="clear"></div>
+          <div class="newspart">
+            {pc:content  action="lists" catid="192" order="id DESC" num="4"}
+            {loop $data $k $v}
+            <p><a href="{$v[url]}" target="_blank" class="title"><!-- 徐圩概况 -->{$v[title]}</a>
+              {str_cut(strip_tags($v[description]), 250,'')} <a href="{$v[url]}" target="_blank" class="more_article">More>></a></p>  
+              {/loop}
+              {/pc}
+            </div>
+          </div>
+          <div class="box mtgz float">
+            <div class="title">
+              <div class="more">
+                <a href="{$CATEGORYS[202][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a>
+              </div>
+              <div class="text"><!-- 媒体关注 -->{$CATEGORYS[202][catname]} </div>
+            </div>
+            <div class="clear"></div>
+            <div class="host_news_list float">
+              <div class="Media_report article_padding">
+                {pc:content  action="lists" catid="202" order="id DESC" num="10"}
+                {loop $data $k $v}
+                {if $n < 3}
+                <div>
+                  <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                    {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                  </a>
+                  <p class="article_summary">
+                    {str_cut(strip_tags($v[description]), 250,'')}
+                    <a href="{$v[url]}" target="blank" class="more_article">More>></a>
+                  </p>
+                </div>
+                <div class="fg_line">
+                  <img src="{IMG_PATH}images/gray_line.jpg" width="393" height="1" style="display: block;">
+                </div>
+                {else}
+                <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                </a>
+                {/if}
+                {/loop}
+                {/pc}
+              </div>
+            </div>
+          </div>
+          <div class="video box float">
+            <div class="title">
+              <div class="more">
+                <a href="{$CATEGORYS[201][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a>
+              </div>
+              <div class="text"><!-- 视频专区 -->{$CATEGORYS[201][catname]} </div>
+            </div>
+            <div class="clear"></div>
+            <div class="Video newspart">
+              <ul class="float">
+                {pc:content  action="lists" catid="201" order="id DESC" thumb="1" num="1"}
+                {loop $data $k $v}
+                <li>
+                  <div style="position: relative;">
+                    <a href="{$v['url']}" target="_blank"><img src="{thumb($v['thumb'],240,170)}" width='240' height="170" class="float"></a>
+                    <a href="{$v['url']}" target="_blank"><img src="{IMG_PATH}xwxq/images_Pause_Scgedyke.png" style="position: absolute; z-index:10; top: 72px; left: 105px; width: 30px; height: 30px;"></a>
+                  </div>
+                  <a href="{$v['url']}" target="_blank"><span>{if $v[article_bac] == ""}{str_cut($v[title],80,'……')}{else}{$v[article_bac]}{/if}</span></a>
+                </li>
+                {/loop}
+                {/pc}
+              <!-- <li>
+                <a href="">
+                  <div style="position: relative;">
+                    <img src="{IMG_PATH}xwxq/video.jpg" width='240' height="170px" class="float">
+                    <span  style="position: absolute; z-index:10; left: 0px; bottom: 0px; width: 240px; height: 20px;">海滨大道快速推进</span>
+                    <img src="{IMG_PATH}xwxq/images_Pause_Scgedyke.png" style="position: absolute; z-index:10; top: 72px; left: 105px; width: 30px; height: 30px;">
+                  </div>
+                </a>
+              </li> -->
+            </ul>
+            <div class="float">
+              <a href="http://www.jsfyjt.com.cn/" target="_blank" style="display: block; width: 230px; margin: 0 auto; padding-bottom: 13px;"><img src="{IMG_PATH}xwxq/fangyang.gif" width='230' height="47px"></a>
+              <a href="http://www.xwxq.gov.cn/2012/0618/651.shtml" target="_blank" style="display: block; width: 230px; margin: 0 auto; padding-bottom: 13px;"><img src="{IMG_PATH}xwxq/suhai.gif" width='230' height="47px"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear height10"></div>
+      <div class="float" style="width: 800px;">
+        <div class="zljl float box">
+          <div class="title">
+            <div class="more">
+              <a href="{$CATEGORYS[194][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a>
+            </div>
+            <div class="text"><!-- 战略交流 -->{$CATEGORYS[194][catname]} </div>
+          </div>
+          <div class="clear"></div>
+          <div class="host_news_list float">
+            <div class="planning article_padding">
+              {pc:content  action="lists" catid="194" order="id DESC" thumb="1" num="4"}
+              {loop $data $k $v}
+              <div class="float" style="width: 180px; padding-right: 9px; overflow: hidden;">
+                <a href="{$v['url']}" title="{$v['title']}" target="blank" class="float"><img src="{thumb($v['thumb'],180,135)}" width="180" height="135" /></a>
+                <a href="{$v['url']}" title="{$v['title']}" target="blank" class="float"><p style="height: 36px; line-height: 18px; overflow: hidden;">
+                  {if $v[article_bac] == ""}{str_cut($v[title],80,'……')}{else}{$v[article_bac]}{/if}
+                </p></a>
+              </div>
+              {/loop}
+              {/pc}
+            </div>
+          </div>
+        </div>
+        <div class="box mtgz zsyz float">
+          <div class="title">
+            <div class="more">
+              <a href="{$CATEGORYS[195][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a>
+            </div>
+            <div class="text"><!-- 招商引资 -->{$CATEGORYS[195][catname]} </div>
+          </div>
+          <div class="clear"></div>
+          <div class="host_news_list float">
+            <div class="investment article_padding">
+              {pc:content  action="lists" catid="195" order="id DESC" num="10"}
+              {loop $data $k $v}
+              {if $n < 3}
+              <div>
+                <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                </a>
+                <p class="article_summary">
+                  {str_cut(strip_tags($v[description]), 250,'')}
+                  <a href="{$v[url]}" target="blank" class="more_article">More>></a>
+                </p>
+              </div>
+              <div class="fg_line">
+                <img src="{IMG_PATH}images/gray_line.jpg" width="393" height="1" style="display: block;">
+              </div>
+              {else}
+              <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+              </a>
+              {/if}
+              {/loop}
+              {/pc}
+            </div>
+          </div>
+        </div>
+        <div class="box xqcy float">
+          <div class="title">
+            <div class="more">
+              <a href="{$CATEGORYS[198][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a>
+            </div>
+            <div class="text"><!-- 新区产业 -->{$CATEGORYS[198][catname]} </div>
+          </div>
+          <div class="clear"></div>
+          <div class="host_news_list float">
+            <div class="industry article_padding">
+              {pc:content  action="lists" catid="198" order="id DESC" num="10"}
+              {loop $data $k $v}
+              {if $n < 3}
+              <div>
+                <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                </a>
+                <p class="article_summary">
+                  {str_cut(strip_tags($v[description]), 250,'')}
+                  <a href="{$v[url]}" target="blank" class="more_article">More>></a>
+                </p>
+              </div>
+              <div class="fg_line">
+                <img src="{IMG_PATH}images/gray_line.jpg" width="393" height="1" style="display: block;">
+              </div>
+              {else}
+              <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+              </a>
+              {/if}
+              {/loop}
+              {/pc}
+            </div>
+          </div>
+        </div>
+        <div class="box hzjl mtgz float">
+          <div class="title">
+            <div class="more">
+              <a href="{$CATEGORYS[203][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a>
+            </div>
+            <div class="text"><!-- 合作交流 -->{$CATEGORYS[203][catname]} </div>
+          </div>
+          <div class="clear"></div>
+          <div class="host_news_list float">
+            <div class="cooperation article_padding">
+              {pc:content  action="lists" catid="203" order="id DESC" num="10"}
+              {loop $data $k $v}
+              {if $n==1}
+              <div>
+                <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                  {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+                </a>
+                <p class="article_summary">
+                  {str_cut(strip_tags($v[description]), 250,'')}
+                  <a href="{$v[url]}" target="blank" class="more_article">More>></a>
+                </p>
+              </div>
+              <div class="fg_line">
+                <img src="{IMG_PATH}images/gray_line.jpg" width="393" height="1" style="display: block;">
+              </div>
+              {else}
+              <a href="{$v[url]}" title="{$v[title]}" class="article_title">
+                {if $v[article_bac] == ""}{str_cut($v[title],50,'')}{else}{$v[article_bac]}{/if}
+              </a>
+              {/if}
+              {/loop}
+              {/pc}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="float" style="width: 200px;">
+        <div class="jsxl float box ">
+          <div class="title">
+            <div class="more"><a href="{$CATEGORYS[197][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a></div>
+            <div class="text"><!-- 建设巡礼 -->{$CATEGORYS[197][catname]} </div>
+          </div>
+          <div class="clear"></div>
+          <div class="newspart">
+            {pc:content  action="lists" catid="197" order="id DESC" thumb="1" num="4"}
+            {loop $data $k $v}
+            <a href="{$v['url']}" title="{$v['title']}" target="blank">
+              <div class="float" style="width: 180px; padding-bottom: 9px; overflow: hidden;">
+                <img src="{thumb($v['thumb'],180,145)}" width="180" height="145" />
+                <p style="height: 36px; line-height: 18px; overflow: hidden;">
+                  {if $v[article_bac] == ""}{str_cut($v[title],80,'……')}{else}{$v[article_bac]}{/if}
+                </p>
+              </div>
+            </a>
+            {/loop}
+            {/pc}
+          </div>
+        </div>
+      </div>
+      <div class="clear height10"></div>
+      <div>
+        <div class="box">
+          <div class="title" style="height:29px;">
+            <div class="more"><a href="{$CATEGORYS[205][url]}" target="_blank" class="more_article"><!-- 更多 -->More</a></div>
+            <div class="text"><!-- 新区映面 -->{$CATEGORYS[205][catname]} </div>
+          </div>
+          <div class="hr_6"></div>
+          <div class="zoology_image">
+            <table class="scorll">
+              <tr>
+                {pc:content  action="lists" catid="205" order="id DESC" thumb="1" num="25"}
+                {loop $data $k $v}
+                <td>
+                  <div class="image">
+                    <a href="{$v[url]}" title="{$v[title]}">
+                      <img src="{thumb($v[thumb],180,125)}" width="180" height="125">
+                    </a>
+                  </div>
+                  <span>
+                    <a href="{$v[url]}" title="{$v[title]}">
+                      {str_cut($v[title], 45)}
+                    </a>
+                  </span>
+                </td>
+                {/loop}
+                {/pc}
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+      jQuery(function($) {
+          function ScrollAction(listObj, listElem, speed, isSeries) { //listObj为需要滚动的列表，  speed为滚动速度
+            var pos, left, anileft, width;
+            var id = '';  //记录setInterval的标记id
+            
+            pos = listObj.children().eq(0).position(); 
+            left = pos.left;      //列表的left
+            anileft = left;       //记录当前运动时的left
+            width = listObj.width();  //列表的高度
+            
+            var scrollUp = function() {
+              anileft--;
+              if(!isSeries) { //isSeries变量控制是否连续滚动，false不连续，true连续
+                if(anileft == -width) { //不连续，滚动玩重新滚动
+                  listObj.css({'left': left});
+                  anileft = left;
+                };
+              } else {
+                var td = listObj.children().eq(0).children().eq(0);
+                if(anileft == -td.children().eq(0).width()) {  //连续滚动
+                  var firstItem = '<' + listElem +'>' + td.children().eq(0).html() + '</' + listElem +'>';
+                  td.children().eq(0).remove();
+                  td.append(firstItem);
+                  anileft = 10;
+                };
+              };
+              listObj.css({'left': anileft + 'px'});
+            };
+            
+            var hover = function(id) {
+              listObj.hover(function() {
+                clearInterval(id);
+              }, function() {
+                id = setInterval(scrollUp, speed);
+              });
+            };
+            
+            this.start = function() {
+              id = setInterval(scrollUp, speed);
+              hover(id);
+            };
+          };
+          var sa = new ScrollAction($('.zoology_image .scorll'), 'td', 30, true);
+          var width = $('.zoology_image .scorll td').eq(0).width();
+          var num = $('.zoology_image .scorll td').length;
+          $('.zoology_image .scorll').css('width' , ((width - (-10))*num) +"px");
+          sa.start();
+        });
+</script>
+<div class="clear height10"></div>
+</div>
+<div class="clear"></div>
+<div id="footer" class="footer wp">
+      <!-- <div style="background-color:#e5e5e5;height:30px;text-align:center;line-height:30px;font-size:12px;">
+        <span style="margin-right:10px;"><a href="http://www.china.com.cn/">关于中国网</a></span>|<span style="margin-left:10px;margin-right:10px;"><a href="http://download.china.cn/ch/htm/20110106/city.html">关于中国城市</a></span>|<span style="margin-left:10px;margin-right:10px;">法律顾问：<a href="http://www.yuecheng.com/">北京岳成律师事务所</a></span>|<span style="margin-left:10px;margin-right:10px;"><a href="http://download.china.cn/ch/htm/20110106/city.html">刊登广告</a></span>|<span style="margin-left:10px;margin-right:10px;"><a href="http://www.china.com.cn/fuwu/node_7028918.htm">本站地图</a></span>
+      </div> -->
+      <div style="height:60px;">
+        <p style="margin-top:20px; text-align:center;">Copyright © <a href="http://city.china.com.cn/">city.china.com.cn</a> All Rights Reserved </p>
+        <p style="margin-top:20px; text-align:center;">E-mail: chinacity@china.org.cn Tel：010-58610672 京ICP证 040089号</p>
+      </div>
+    </div>
+  </body>
+  </html>

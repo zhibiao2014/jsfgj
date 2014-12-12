@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+.more_article {
+	color: #395ab9;
+}
+
+.middle {
+	padding: 0px 5px 0px 5px;
+}
+.middle div {
+	/*position: relative;*/
+	overflow: hidden;
+}
+.middle .box {
+	border: 1px solid #c9d9f0;
+	background: url(../../images/xwxq/box-bg.jpg) repeat-x top;
+}
+.middle .box .title {
+	float: left;
+	width: 100%;
+	/*min-height: 29px;*/
+}
+.middle .box .title .text {
+	margin-left: 10px;
+	background: url(../../images/xwxq/box-title.jpg) repeat-x top;
+	width: 138px;
+	height: 29px;
+	font-size: 17px;
+	color: #FFF;
+	font-weight: 700;
+	line-height: 29px;
+	text-align: center;
+}
+.middle .box .title .more {
+	float: right;
+	margin-right: 10px;
+	height: 27px;
+	line-height: 27px;
+}
+#page1_content {
+	width: 978px;
+}
+.host_news_list {
+	margin-left:10px;
+	margin-top: 4px;
+	height: 358px;
+	width: 415px;
+}
+.zljl .host_news_list, .zsyz .host_news_list, .xqcy .host_news_list, .hzjl .host_news_list {
+	width: 378px;
+}
+.middle .zljl,.middle .zsyz,.middle .xqcy,.middle .hzjl{
+	width: 388px;
+}
+.middle .hzjl, .xqcy {
+	margin-top: 10px;
+}
+.newscenter .host_news_list {
+	border: 1px solid #69c4f3;
+}
+#page1_content .article_padding {
+	padding: 0 10px;
+}
+.host_news_list div {
+	margin-bottom: 5px;
+}
+
+#page1_content .host_news_list .article_padding div .article_title{
+	font-size: 15px;
+	font-weight: bold;
+	color: #005790;
+	height: 52px;
+	max-height: 52px;
+	line-height: 26px;
+	background: none;
+	padding-left: 0px;
+}
+
+.host_news_list .article_padding div .article_title{
+	font-size: 15px;
+	font-weight: bold;
+	color: #005790;
+	background: none;
+	padding-left: 0px;
+}
+.host_news_list .article_title{
+	background: url(../../images/xwxq/dot14b.gif) no-repeat 0 8px;
+	padding-left: 12px;
+	max-height: 52px;
+	line-height: 26px;
+	display:block;
+	overflow: hidden;
+	font-size: 13px;
+	color: #333;
+}
+#page1_content .host_news_list .article_title{
+	max-height: 48px;
+	line-height: 24px;
+	font-size: 14px;
+}
+.article_padding .article_summary {
+	line-height: 20px;
+	max-height: 80px;
+	overflow: hidden;
+	font-size: 13px;
+	padding-right: 10px; 
+}
+.middle .newscenter {
+	background: none;
+	float: left;
+	height: 400px;
+	padding: 0 10px;
+}
+.middle .newscenter .more  a{
+	color: #dc2137;
+}
+.middle .newscenter .text2 {
+	float: right;
+	margin-right: 230px;
+	*margin-right: 135px;
+	font-size: 18px;
+	color: #dc2137;
+	font-weight: 700;
+	height: 29px;
+	line-height: 29px;
+}
+.newspart{
+	margin-left: 10px;
+	margin-top: 4px;
+}
+.xqgk {
+	width: 291px;
+}
+.xqgk .newspart {
+	height: 358px;
+}
+.xqgk .newspart p{
+	width: 270px;
+	margin-bottom: 8px;
+	padding: 3px;
+	height: 74px;
+	line-height: 18px;
+	overflow: hidden;
+	background: rgba(255,255,255,0);
+	color: #005790;
+}
+
+.xqgk .newspart p a.title{
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #005790;
+}
+.mtgz {
+	width: 425px;
+}
+.mtgz {
+	margin: 0 10px;
+}
+.video {
+	width: 258px;
+}
+.video .newspart{
+	width: 248px;
+	height: 358px;
+}
+.video .newspart ul li{
+	width: 240px;
+	margin: 0 10px 8px 0;
+	float: left;
+}
+.video .newspart ul li img{
+	width: 240px;
+	height: 170px;
+}
+.video .newspart ul li span{
+	display: block;
+	line-height: 20px;
+	height: 40px;
+	overflow: hidden;
+	text-align: center;
+	/*background-color: #333;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;*/
+	color: block;
+}
+
+
+.jsxl {
+	width: 198px;
+}
+
+
+.zoology_image {
+	width: 978px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	height: 150px;
+}
+.zoology_image .scorll {
+	height: 150px;
+	position: absolute;
+	margin-left: 0px;
+}
+.zoology_image .scorll td {
+	width: 180px;
+	padding: 0 5px;
+	list-style-type: none;
+}
+.scorll td span a{
+	height: 20px;
+	line-height: 20px;
+  display: block;
+  width: 180px; 
+  background: #D8D8D8;
+  text-align: center;
+} 
+
+.middle .tab .title ul li.checked {
+background-color: #fff;
+color: #408ecc;
+}
+.middle .tab .title ul li {
+height: 25px;
+width: 103px;
+line-height: 25px;
+float: left;
+text-align: center;
+cursor: pointer;
+font-size: 17px;
+font-weight: 700;
+color: #FFF;
+border: 1px solid #ccdaef;
+background-color: #539ad2;
+}

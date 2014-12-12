@@ -1,0 +1,38 @@
+<div class="content_recommend float">
+    <div class="col-auto">
+        <div class="box">
+            <h2 style="color: red;">排行榜</h2>
+            <ul class="content digg">
+                {pc:content  action="hits" catid="$catid" num="5"}
+                {loop $data $r}
+                <li>
+                    <a href="{$r[url]}" title="{$r[title]}">
+                        {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+                    </a>
+                </li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+    </div>
+    <div class="hr_6"></div>
+    <div class="col-auto">
+        <div class="box">
+            <div>
+                <h2 class="float" style="color: red;">相关文章</h2>
+            </div>
+            <div class="clear"></div>
+            <ul class="content digg">
+                {pc:content  action="relation" catid="$catid" order="id DESC" num="5"}
+                {loop $data $r}
+                <li>
+                    <a href="{$r[url]}" title="{$r[title]}">
+                        {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+                    </a>
+                </li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+    </div>
+</div>

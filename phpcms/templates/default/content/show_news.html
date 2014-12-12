@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+  </title>
+  <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/content.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+  .content_recommend .recommend span {cursor: pointer;}
+  </style>
+  {template "content","header_one"}
+  <!--头部 end-->
+  <div class="hr_6"></div>
+  <!-- <div id="ad" class="clear"></div> -->
+  <div class="hr_6"></div>
+  <div id="main">
+    <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=42"></script>
+    <div class="Article">
+      <div class="bts float">
+        <a href="{siteurl($siteid)}" title="中国城市">中国城市网</a> <span> > {catpos($catid)} 正文 </span> 
+      </div>
+      <div id="font">
+        <span>字号</span>
+        <a class="da">大</a>
+        <a class="zhong">中</a>
+        <a class="xiao">小</a>
+      </div>
+      <h1 class="title clear">{$title}</h1>
+      <div class="ms">
+        <a href="{siteurl($siteid)}" title="中国城市">中国城市网</a>
+        <span>city.china.com.cn</span>
+        <span>时间：{$updatetime}</span>
+        <span>责任编辑：{$editor}</span>
+      </div>
+      <div class="content" style="text-align: left;">
+        {if $allow_visitor==1}
+        {$content}
+        {else}
+        <CENTER>
+          <a href="{APP_PATH}index.php?m=content&c=readpoint&allow_visitor={$allow_visitor}">
+            <font color="red">阅读此信息需要您支付 <B><I>{$readpoint} {if $paytype}元{else}点{/if}</I></B>，点击这里支付
+            </font>
+          </a>
+        </CENTER>
+        {/if}
+        <div class="content_bottom">
+          <span>文章来源：<?php echo strip_tags($copyfrom); ?></span>
+        </div>
+      </div>
+      {if $pages}
+      <p id="pages" class="text-c" style="text-align: center;">
+        {$pages}
+      </p>
+      {/if}
+      <p>
+        <strong>相关热词搜索：</strong>{loop $keywords $keyword} <a href="{APP_PATH}tag_lists_{urlencode($keyword)}_1.html" class="blue">{$keyword}</a> | {/loop}
+      </p>
+      <p class="f14" style="text-align: left;">
+        <strong>上一篇：</strong>
+        <a href="{$previous_page[url]}" title="{$previous_page[title]}">
+          {$previous_page[title]}
+        </a><br />
+        <strong>下一篇：</strong>
+        <a href="{$next_page[url]}" title="{$next_page[title]}">{$next_page[title]}</a>
+      </p>
+      <div class="bk15"></div>
+      <div class="bshare-custom icon-medium" style="height: 33px; margin: 5px 0; "><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到豆瓣" class="bshare-douban"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+    </div>
+    <div style="height: 10px; clear: both;"></div>
+    <div class="comment">
+      {if $allow_comment && module_exists('comment')}
+      <iframe src="{APP_PATH}index.php?m=comment&c=index&a=init&commentid={id_encode("content_$catid",$id,$siteid)}&iframe=1" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no">
+      </iframe>
+      {/if}
+    </div>
+  </div>
+
+  {template "content" , "sidebar"}
+
+  <div class="hr_6"></div>
+  <!--尾部-->      
+
+  <script type="text/javascript">
+  $(function(){
+    $('.Article .content img').LoadImage(true, 550, 660,'{IMG_PATH}s_nopic.gif');    
+    $("#font .da").click(function(){
+      $("#main .Article .content p").css("font-size","15px");
+      $("#main .Article .content").css("font-size","15px");
+    })
+
+    $("#font .zhong").click(function(){
+      $("#main .Article .content p").css("font-size","14px");
+      $("#main .Article .content").css("font-size","14px");
+    })
+
+    $("#font .xiao").click(function(){
+      $("#main .Article .content p").css("font-size","13px");
+      $("#main .Article .content").css("font-size","13px");
+    })
+  });
+  </script>
+  {template "content","footer_my"}

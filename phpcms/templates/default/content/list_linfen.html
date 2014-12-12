@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0025)http://www.sdnews.com.cn/ -->
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+  <HEAD>
+    <LINK rel=stylesheet type=text/css href="{CSS_PATH}css_linfen/style.css" />
+    <LINK rel=stylesheet type=text/css href="{CSS_PATH}css_linfen/rwindow.css" />
+    <link href="{CSS_PATH}css_linfen/body.css" rel="stylesheet" type="text/css" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>
+    <STYLE>#headline .col2 H2 {
+    	FONT-SIZE: 40px
+    }
+    </STYLE>
+
+    <SCRIPT language=JavaScript type=text/javascript>
+    	//切换
+    	function tabchange(tabid,tabNumber,totaltab){
+    		for(var j=1;j<=totaltab;j++){
+    			if (j != tabNumber)
+    			{
+    				document.getElementById(tabid+ "_title" + j).className= tabid+"_normal";
+    				document.getElementById(tabid+ "_content" + j).className= "hiddencontent";
+    			}
+    			else
+    			{
+    			   document.getElementById(tabid+ "_title" + j).className= tabid+"_active";
+    			   document.getElementById(tabid+ "_content" + j).className= "activecontent";
+    			}			
+    		}
+    	}
+    </SCRIPT>
+
+    <SCRIPT type=text/javascript src="{JS_PATH}js_linfen/s.js"></SCRIPT>
+    <SCRIPT type=text/javascript src="{JS_PATH}js_linfen/jquery-1.4.min.js"></SCRIPT>
+    <SCRIPT type=text/javascript src="{JS_PATH}js_linfen/float.js"></SCRIPT>
+  </HEAD>
+<BODY>
+<div style="height:27px;background:#CC0001;border-bottom:1px solid #EC9A9C;">
+    <div class="c fff" style="background:transparent;border-color:#CC0001;">
+      <div style="padding:0px 10px;">
+        <div style="float:left;width:240px;padding-top:1px;">
+          <form id="search_form" method="get" action="/index.php" target="_blank">
+              <input type="hidden" name="m" value="search">
+              <input type="hidden" name="c" value="index">
+              <input type="hidden" name="a" value="init">
+              <input type="hidden" name="typeid" value="1" id="typeid">
+              <input type="hidden" name="siteid" value="1" id="siteid">         
+              <input  class="swap_value text" type="text" name="q" id="q" />
+              <input class="submit button" type="submit" value="搜索" style="background:transparent;color:#fff;border:none;cursor:pointer;"/>
+            </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="head" style="width:960px; height:100px; margin:0px auto;" class="c">
+    <div id="hleft1" style="float:left; width:150px; height:100px; ">
+      <span style="margin-top:18px; margin-left:2px; width:146px; height:56px; display:block;">
+        <a href="{siteurl($siteid)}">
+          <img src="{IMG_PATH}images_linfen/logo.jpg" width="146" height="62">
+        </a>
+      </span>
+    </div>
+    <div id="hleft2" style="float:left;width:700px; height:100px; ">
+      <div style="width:616px; height:20px;color:#c00;letter-spacing:5px; float:right;clear:both;"></div>
+      <div style="clear:both; width:auto; height:1px;"></div>
+      <div id="menu1" style="float:left;width:700px; height:45px; clear:both;">
+        <div style="float:left;width:638px; height:45px; color:#000; letter-spacing:2px; clear:both;">
+          <div>
+            <a href="http://www.china.com.cn">中国网首页</a> | 
+            {pc:content action="category" catid="155" num="14" siteid="$siteid" order="listorder ASC"}
+              <?php $category = $data ;?>  
+              {loop $data $r} 
+                {if $n==8}
+                  </div>
+                  <div>
+                    <a href="{siteurl($siteid)}" title="中国城市">中国城市网</a> | 
+                {/if}         
+                <a href="{$r[url]}" title="{$r[catname]}">
+                  {$r[catname]}
+                </a> | 
+              {/loop}
+            {/pc}
+          </div>
+        </div>
+        <div style="float:left;"> 
+          <div style="margin-top:3px;">
+            <a href="/index.php?m=content&c=index&a=lists&catid=3"><img src="{IMG_PATH}images_linfen/lianxi.jpg"  width="57" height="15" border="0"></a>
+            <div style="clear:both; height:2px;"></div>
+            <a href="/index.php?m=content&c=index&a=lists&catid=186"><img src="{IMG_PATH}images_linfen/chaxun.jpg" width="57" height="15" border="0"></a>
+          </div>
+        </div>
+      </div>
+      <div id="menu2" style="border-top:1px solid #d0d0d0; font-size:12px; clear:both;">
+        <a href={$category[170][url]} style="color:#F00;">辖区:</a>
+        <a href={$category[170][url]} > 尧都区</a>| 
+        <a href={$category[170][url]} >侯马</a>| 
+        <a href={$category[170][url]} >霍州</a>| 
+        <a href={$category[170][url]} >洪洞</a>| 
+        <a href={$category[170][url]} >翼城</a>| 
+        <a href={$category[170][url]} >汾西</a>| 
+        <a href={$category[170][url]} >隰县</a>|
+        <a href={$category[170][url]} >安泽</a>|
+        <a href={$category[170][url]} >永和</a>|
+        <a href={$category[170][url]} >古县</a>|
+        <a href={$category[170][url]} >浮山</a>|
+        <a href={$category[170][url]} >曲沃</a>|
+        <a href={$category[170][url]} >襄汾</a>|
+        <a href={$category[170][url]} >吉县</a>|
+        <a href={$category[170][url]} >乡宁</a>|
+        <a href={$category[170][url]} >大宁</a>|
+        <a href={$category[170][url]} >蒲县</a>
+      </div>
+    </div>
+    <div id="hleft3" style="float:left;width:110px; height:100px;">
+      <div style="width:111px; height:70px; margin-top:18px;">
+        <img src="{IMG_PATH}images_linfen/right-log.jpg" width="98" height="55">
+      </div>
+    </div>
+  </div>
+  <div id=main_ad3 style="width:960px; height:180px; background-color:#CCC;">
+    <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=35"></script>
+  </div>
+  <DIV id="liebiao1" style="width:960px; height:auto; margin:0px auto; background-color: #CC0001; color:#FFF; text-align:left; ">
+    &nbsp;栏目导航：<a href="{siteurl($siteid)}" title="中国城市">中国城市</a><span> > </span>{catpos($catid)} 列表
+  </DIV>
+<DIV id="liebiao2" style="width:960px; height:auto; margin:0px auto; padding-top:8px;background-color:#FFF;">
+  <div id="liebiaoleft" style="width:615px; height:auto; float:left;">
+
+<div id="liebiaonei">
+  {pc:content  action="lists" catid="$catid" order="updatetime DESC" page="$page" num="48"}
+    <ul class="list lh24 f14">
+    {loop $data $r}
+      <li>
+      ▪ <a href="{$r[url]}" target="_blank"{title_style($r[style])}>{str_cut($r[title],70)}</a>
+        <span class="rt">
+          {date('Y-m-d H:i:s',$r[inputtime])}
+        </span>
+      </li>
+    {/loop}
+    </ul>
+  {/pc}
+</div>
+<div width="100%" id="autopage" style="padding-top:10px;">
+<center><div id="pages" class="text-c">{$pages}</div></center>
+
+<br/>
+<br/>
+</div>
+</div>
+
+
+
+<div id="liebiaoright" style="width:330px; height:auto; float:left;">
+<div style="width:320px; height:235px;  border: 1px solid #CCC; margin-left:7px;">
+<div style="width:320px; height:30px; background-image:url({IMG_PATH}images_linfen/liebiaotiao.gif); background-repeat:no-repeat; text-align:left; color:#CC0001; text-indent:28px; margin-left:0px; margin-top:10px;">
+  <strong>聚焦临汾</strong>
+</div>
+<ul style="text-align: left; margin-left: 20px;">
+    {pc:content  action="hits" catid="157" num="10" order="views DESC" cache="3600"}
+      {loop $data $r}
+        <li>
+          <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+            {if $r[article_bac] == ""}{str_cut($r[title],60,'')}{else}{$r[article_bac]}{/if}
+          </a>
+        </li>
+      {/loop}
+    {/pc}
+  </ul>
+</div>
+<div style="width:320px; height:255px;  border: 1px solid #CCC; margin-left:7px; margin-top:10px;">
+<script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=34"></script>
+</div>
+<div style="width:320px; height:235px;  border: 1px solid #CCC; margin-left:7px;margin-top:10px;">
+  <div style="width:320px; height:30px; background-image:url({IMG_PATH}images_linfen/liebiaotiao.gif); background-repeat:no-repeat; text-align:left; color:#CC0001; text-indent:28px; margin-left:0px; margin-top:10px;"> <strong>热点新闻</strong></div>
+  <ul style="text-align: left; margin-left: 20px;">
+    {pc:content  action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+      {loop $data $r}
+        <li>
+          <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+            {if $r[article_bac] == ""}{str_cut($r[title],60,'')}{else}{$r[article_bac]}{/if}
+          </a>
+        </li>
+      {/loop}
+    {/pc}
+  </ul>
+</div>
+<div style="width:320px; height:auto;  border: 1px solid #CCC; margin-left:7px; margin-top:10px;">
+  <div style="width:320px; height:30px; background-image:url({IMG_PATH}images_linfen/liebiaotiao.gif); background-repeat:no-repeat; text-align:left; color:#CC0001; text-indent:28px; margin-left:0px; margin-top:10px;"> <strong>最新图文</strong></div>
+  <div id="newtu">
+    <ul>
+    {pc:content  action="position" posid="12" thumb="1" order="listorder DESC" num="4"}
+      {loop $data $r}
+      <li>
+        <a href="{$r[url]}" title="{$r[title]}" target="blank">
+          <img src="{thumb($r[thumb],117,87)}" title="{$r[title]}" width="117" height="87">
+        </a>
+        <span style="display:block;">
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </span>
+      </li>
+      {/loop}
+    {/pc}
+    </ul>
+  </div>
+</div>
+
+</div>
+
+
+<div style="width:960px; height:15px; margin:0px auto; clear:both;"></div>
+</DIV>
+<DIV class='bk10'></DIV>
+<DIV id='footer'>
+  <DIV class='top'>
+    版权所有 © 中国互联网新闻中心 北京华盛骄阳文化传媒有限公司  电子邮件: chinacity@china.org.cn<br/> 
+    电话：010-58610672  京ICP证 040089号 网络传播视听节目许可证号:0105123<br/> 
+    <a href="http://www.china.com.cn/">关于中国网</a> | 
+    <a href="http://city.china.com.cn/index.php?m=content&c=index&a=lists&catid=2" title="关于中国城市">关于中国城市</a> | 法律顾问：
+    <a href="http://www.yuecheng.com/" rel="nofollow">北京岳成律师事务所</a> | 
+    <a href="http://city.china.com.cn/index.php?m=content&c=index&a=lists&catid=2" title="中国城市站广告刊登">刊登广告</a> | 
+    <a href="http://city.china.com.cn/index.php?m=content&c=rss&siteid=1" title="中国城市站内地图">本站地图</a>
+    <a href="{$CATEGORYS[111]['url']}" title="中国城市精彩回顾">中国城市精彩回顾</a>
+  </DIV>
+</DIV>{tjcode()}{php echo runhook('glogal_footer')}
+</BODY>
+</HTML>

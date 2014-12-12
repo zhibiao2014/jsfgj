@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+  </title>
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+  <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+  <link href="{CSS_PATH}xwxq/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/index.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/list_show.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}xwxq/common.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+  .Article{
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .Article .bts{
+    text-align: left;
+    padding-left: 10px;
+    line-height: 24px;
+  }
+
+  .Article #font{
+    float: right;
+    padding-right: 30px;
+    line-height: 24px;
+  }
+
+  .Article #font a{
+    cursor: pointer;
+  }
+
+  .Article .title{
+    color: #333;
+    font-size: 24px;
+    text-align: left;
+    line-height: 24px;
+    font-weight: bold;
+    padding: 20px 0;  
+    margin-top: 5px;
+  }
+
+  .Article .ms{
+    color: #777;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto 20px auto;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .Article .ms a{
+    color: #777; 
+  }
+
+  .Article img{
+    width: 550px;
+  }
+
+  .Article .content{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .Article .content p{
+    height: auto;
+    padding:8px 0;
+  }
+
+  .Article .content,.Article .content div, .Article .content p{
+    font-size: 14px;
+    color: #333;
+    word-wrap:break-word;
+    line-height:23px;
+  }
+
+  .Article .content_bottom{
+    text-align: left;
+    padding-top: 10px;
+  }
+
+  .Article .content_bottom span{
+    font-size: 13px;
+  }
+
+  .Article .f14{
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px dotted #c3d4e7;
+    border-bottom: 1px dotted #c3d4e7;
+    line-height: 22px;
+  }
+
+  .Article-Tool img{
+    height: 16px;
+    width: 16px;
+    vertical-align: bottom;
+  }
+
+  .Article .content img{
+    display: block;
+    margin: 0 auto;
+  }
+  body {
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+  }
+  .content_recommend ul li {
+    height: auto;
+  }
+  #pages a.a1{
+    width: auto;
+    padding: 0 3px;
+  }
+  </style>
+</head>
+<body>
+  <div id="header" class="header">
+    <div class="top">
+      <div class="wp">
+        <div class="top-right">
+          <a href="{$CATEGORYS[191][url]}">English</a>
+          <a href="{$CATEGORYS[199][url]}">Japanese</a>
+          <a href="{$CATEGORYS[200][url]}">Korean</a>
+          <!-- <a href="http://weibo.com/xuweixinqu?topnav=1&amp;topsug=1">徐圩微博</a> -->
+        </div>
+        <!-- <div style="height:30px;line-height: 30px;font-size: 12px;color: #276fa3;">欢迎来到徐圩新区网站！</div> -->
+      </div>
+    </div>
+    <div class="wp">
+      <div>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="1000" height="231">
+          <param name="movie" value="{IMG_PATH}xwxq/en_top.swf">
+          <param name="quality" value="high">
+          <param name="wmode" value="transparent">
+          <embed src="{IMG_PATH}xwxq/en_top.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent" width="1000" height="231" />
+        </object>
+      </div>
+      <div class="tools">
+        <div class="time"> 
+          <?php 
+// $words = array('日','一','二','三','四','五','六');
+          echo date("l").", ".date("M d,Y");
+          ?>
+        </div>
+<!-- <div class="weather">
+<iframe src="http://cache.xixik.com.cn/5/lianyungang/" width="200" height="30" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" scrolling="no"></iframe>
+</div> -->
+</div>
+<div class="navmenu" id="navmenu">
+  <ul>
+    {pc:content action="category" catid="191" num="25" siteid="$siteid" order="listorder ASC"}
+    <li><a href="{$CATEGORYS[191][url]}" class="bold">Home</a></li>
+    {loop $data $r}
+    <li>
+      <a href="{$r[url]}" class="bold">
+        {$r[catname]}
+      </a>
+    </li>
+    {/loop}
+    {/pc}
+  </ul>
+</div>
+</div>
+</div>
+<div class="clear height10"></div>
+<div id="middle" class="wp middle">
+  <div>
+    <div id="important_news" class="float">
+      <div class="news_list box">
+        <div class="Article">
+          <div class="bts float">
+            <a href="{siteurl($siteid)}">CHINA CITY</a>
+            <span> > <a href="{$CATEGORYS[191][url]}">xuwei new area</a> > <a href="{$CAT[url]}">{$CAT[catname]}</a> > content </span> 
+          </div>
+          <div id="font">Font:&nbsp;&nbsp;&nbsp;
+            <a class="da">large</a>&nbsp;&nbsp;&nbsp;
+            <a class="zhong">middle</a>&nbsp;&nbsp;&nbsp;
+            <a class="xiao">small</a>
+          </div>
+          <h1 class="title clear">{$title}</h1>
+          <div class="clear"></div>
+          <div class="ms">
+            <a href="{siteurl($siteid)}">
+              city.china.com.cn&nbsp;&nbsp;&nbsp;
+            </a> 
+            Time：{$inputtime}&nbsp;&nbsp;&nbsp;
+            Editor：{$editor}&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="content" style="text-align: left;">
+            {if $allow_visitor==1}
+            <?php if($modelid == '11' ){ ?>
+            <div class="playcode" style="text-align: center; margin-bottom: 20px;">
+              {pc:get sql="SELECT video FROM v9_online_player_data where id = $id" return="data"}  
+              <?php
+              preg_match("/'url'[\s]=>[\s]'(.*?)',(.*)/",$data[0][video],$match);
+              $path = $match[1];
+              ?>
+              {/pc}
+              <script type="text/javascript" src="{APP_PATH}statics/player/flv/swfobject.js"></script>
+              <div id="player2"> 
+              </div>
+              <script type="text/javascript"> 
+              var so = new SWFObject('/statics/player/flv/player.swf','mpl','530','380','8');
+              so.addParam('allowfullscreen','true');
+              so.addParam('wmode','transparent');
+              so.addVariable('menu',false);
+              so.addParam('allowscriptaccess','always');
+              so.addVariable('autostart','true');
+              so.addVariable("showdigits","total");
+              so.addVariable('frontcolor','FFFFFF');
+              so.addVariable('lightcolor','');
+              so.addVariable('logo.file','/statics/images/v9/logo.jpg');
+              so.addVariable('screencolor','000000');
+              so.addVariable('file','<?php echo $path;?>');
+              so.addVariable('skin','/statics/player/flv/stormtrooper.zip');
+              so.addVariable('thumbsinplaylist',false);
+              so.write('player2');
+              </script>
+            </div>
+            <?php } ?>
+            {$content}          
+            {/if}
+            <div class="content_bottom">
+              <span>Source:&nbsp;&nbsp;{$copyfrom}</span>
+            </div>
+          </div>
+          {if $pages}
+          <p id="pages" class="text-c" style="text-align: center;">
+            {$pages}
+          </p>
+          {/if}
+          <p class="f14" style="text-align: left;">
+            <strong>Previous：</strong>
+            <a href="{$previous_page[url]}">
+              <?php echo (($previous_page[title] == "第一页") ? "first page" : $previous_page[title]); ?>
+            </a>
+            <br />
+            <strong>Next：</strong>
+            <a href="{$next_page[url]}">
+              <?php echo (($next_page[title] == "最后一页") ? "last page" : $next_page[title]); ?>
+            </a>
+          </p>
+          <div class="bk15"></div>
+          <div class="bshare-custom icon-medium"><div class="bsPromo bsPromo2"></div>SHARE &nbsp;&nbsp;&nbsp;<a title="分享到Facebook" class="bshare-facebook" href="javascript:void(0);"></a><a title="分享到Twitter" class="bshare-twitter" href="javascript:void(0);"></a><a title="分享到MSN" class="bshare-msn" href="javascript:void(0);"></a><a title="分享到Google+" class="bshare-gplus" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count" style="float: none;">16.4K</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=3&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+          <div class="hr_6"></div>
+        </div>
+      </div>
+    </div>
+    <div class="content_recommend float">
+      <div class="col-auto">
+        <div class="box">
+          <div>
+            <h2 class="float" style="color: red;">Hot Rankings</h2>
+          </div>
+          <div class="clear"></div>
+          <ul class="content digg">
+            {pc:content  action="hits" catid="191" num="5"}
+            {loop $data $r}
+            <li>
+              <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+                {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+              </a>
+            </li>
+            {/loop}
+            {/pc}
+          </ul>
+        </div>
+      </div>
+      <div class="hr_6"></div>
+      <div class="col-auto">
+        <div class="box">
+          <div>
+            <h2 class="float" style="color: red;">Editor Recommend</h2>
+          </div>
+          <div class="hr_6"></div>
+          {pc:content  action="position" posid="19" thumb="1" order="listorder DESC" num="4"}
+          {loop $data $r}
+          <div class="img_text float">
+            <div>
+              <a href="{$r[url]}" title="{$r[title]}" target="blank">
+                <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+              </a>
+            </div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              {str_cut($r[title],30)}
+            </a>
+          </div>
+          {/loop}
+          {/pc}
+        </div>
+      </div>
+    </div>
+    <div class="hr_6"></div>
+    <!--尾部-->
+    <script type="text/javascript">
+    $(function(){
+      $("#pages .a1").each(function(index, element){
+        if (this.text == "上一页") {
+          $(this).text("previous page");
+        } else if (this.text == "下一页") {
+          $(this).text("next page");
+        }
+      })
+      $("#font .da").click(function(){
+        $(".Article .content p").css("font-size","15px");
+        $(".Article .content").css("font-size","15px");
+      })
+
+      $("#font .zhong").click(function(){
+        $(".Article .content p").css("font-size","14px");
+        $(".Article .content").css("font-size","14px");
+      })
+
+      $("#font .xiao").click(function(){
+        $(".Article .content p").css("font-size","13px");
+        $(".Article .content").css("font-size","13px");
+      })
+
+      $(".content_recommend .recommend span.qiye").click(function(){
+        $(".content_recommend .recommend .kaifaqu_liebiao").css("display","none");
+        $(".content_recommend .recommend .qiye_liebiao").css("display","block");
+      });
+      $(".content_recommend .recommend span.kaifaqu").click(function(){
+        $(".content_recommend .recommend .qiye_liebiao").css("display","none");
+        $(".content_recommend .recommend .kaifaqu_liebiao").css("display","block");
+      });
+    })
+</script>
+</div>
+<div class="clear height10"></div>
+</div>
+<div class="clear"></div>
+<div id="footer" class="footer wp">
+  <div style="height:60px;">
+    <p style="margin-top:20px; text-align:center;">Copyright © <a href="http://city.china.com.cn/">city.china.com.cn</a> All Rights Reserved </p>
+    <p style="margin-top:20px; text-align:center;">E-mail: chinacity@china.org.cn Tel：010-58610672 京ICP证 040089号</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+  </title>
+  <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/content.css" rel="stylesheet" type="text/css" />  
+  <style type="text/css">
+  .currentj {color:red;width:80px;height:25px;border:1px solid #f00;}
+  .playera a{padding-right:5px;}
+  #player2{text-align:center; width: 670px;}
+  .content_recommend .recommend span {cursor: pointer;}
+  </style>
+  {template "content","header_one"}
+  <!--头部 end-->  
+  <div class="hr_6"></div>
+
+    <!-- <div id="ad" class="clear">
+  </div> -->
+  
+  <div class="hr_6"></div>
+  <div id="main">
+    <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=42"></script>
+    <script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      if(getcookie('gvod') == {$id}) $('#gvod').hide();
+      if(getcookie('qvod') == {$id}) $('#qvod').hide();
+      if(getcookie('flv') == {$id}) $('#flv').hide();
+    });
+    </script>
+    <div class="Article">        
+      <div class="bts float">
+        <a href="{siteurl($siteid)}">中国城市</a>
+        <span> > {catpos($catid)} 正文</span> 
+      </div>
+      <div id="font">
+        <span>字号</span>
+        <a class="da">大</a>
+        <a class="zhong">中</a>
+        <a class="xiao">小</a>
+      </div>
+      <h1 class="title clear">{$title}</h1>
+      <div class="ms">
+        <a href="{siteurl($siteid)}" title="中国城市">中国城市网</a>
+        <span>city.china.com.cn</span>
+        <span>时间：{$inputtime}</span>
+        <span>责任编辑：{$editor}</span>
+      </div>
+      <div class="content" style="text-align: left;">
+        {if $allow_visitor==1}
+        <div class="playcode">
+          {pc:get sql="SELECT video FROM v9_online_player_data where id = $id" return="data"}  
+          <?php
+          preg_match("/'url'[\s]=>[\s]'(.*?)',(.*)/",$data[0][video],$match);
+          $path = $match[1];
+          ?>
+          {/pc}
+          <script type="text/javascript" src="{APP_PATH}statics/player/flv/swfobject.js"></script>
+          <div id="player2"> 
+          </div>
+          <script type="text/javascript"> 
+          var so = new SWFObject('{APP_PATH}statics/player/flv/player.swf','mpl','530','380','8');
+          so.addParam('allowfullscreen','true');
+          so.addParam('wmode','transparent');
+          so.addVariable('menu',false);
+          so.addParam('allowscriptaccess','always');
+          so.addVariable('autostart','true');
+          so.addVariable("showdigits","total");
+          so.addVariable('frontcolor','FFFFFF');
+          so.addVariable('lightcolor','');
+          so.addVariable('logo.file','{APP_PATH}statics/images/v9/logo.jpg');
+          so.addVariable('screencolor','000000');
+          so.addVariable('file','<?php echo $path;?>');
+          so.addVariable('skin','{APP_PATH}statics/player/flv/stormtrooper.zip');
+          so.addVariable('thumbsinplaylist',false);
+          so.write('player2');
+          </script>
+        </div>
+        {$content}
+        <!--内容关联投票-->
+        {if $voteid}
+        <script language="javascript" src="{APP_PATH}index.php?m=vote&c=index&a=show&action=js&subjectid={$voteid}&type=2">
+        </script>
+        {/if}    
+        {else}
+        <CENTER>
+          <a href="{APP_PATH}index.php?m=content&c=readpoint&allow_visitor={$allow_visitor}">
+            <font color="red">
+              阅读此信息需要您支付
+              <B><I>{$readpoint} {if $paytype}元{else}点{/if}</I></B>，点击这里支付
+            </font>
+          </a>
+        </CENTER>
+        {/if}
+      </div>
+
+      <style type="text/css">
+      .playera a{padding-right:5px;}
+      .dislist {display:none;}
+      </style>
+      <script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function(){   
+        if(getcookie('gvod') == {$id}) $('#gvod').hide();
+        if(getcookie('qvod') == {$id}) $('#qvod').hide();
+        if(getcookie('flv') == {$id}) $('#flv').hide();
+      });
+      </script>
+        <!-- <fieldset>
+          <legend class="f14">FLV分集地址 <a href="javascript:void(0);" onclick="$('#flv').show();setcookie('flv',null,30);" title="显示flv分集地址"> + </a> &nbsp; <a href="javascript:void(0);" onclick="$('#flv').hide();setcookie('flv',{$id},30);" title="隐藏flv分集地址"> - </a> </legend><ul class="list blue row-2 playera">
+          <div id="flv">
+            <ul>
+            <?php foreach (string2array($video) as $key => $value) { ?>
+              <li style="float: left; list-style: none; margin-right: 10px;"><a href="<?php echo $value['url']; ?>"><?php echo $value['alt']; ?></a></li>
+            <?php } ?>
+            </ul>
+          </div>
+        </ul>
+      </fieldset> -->
+      {if $titles}
+      <fieldset>
+        <legend class="f14">本文导航</legend>
+        <ul class="list blue row-2">
+          {loop $titles $r}
+          <li>{$n}、<a href="{$r[url]}">{$r[title]}</a></li>
+          {/loop}
+        </ul>
+      </fieldset>
+      {/if}
+      <div id="pages" class="text-c">
+        {$pages}
+      </div>
+      <p class="f14" style="text-align: left;">
+        <strong>上一篇：</strong>
+        <a href="{$previous_page[url]}">
+          {$previous_page[title]}
+        </a><br />
+        <strong>下一篇：</strong>
+        <a href="{$next_page[url]}">{$next_page[title]}</a>
+      </p>
+      <div class="bk15"></div>
+      <div class="bshare-custom icon-medium" style="height: 33px; margin: 5px 0; "><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到豆瓣" class="bshare-douban"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+    </div>
+    <div style="height: 10px; clear: both;"></div>
+    <div class="comment">
+      {if $allow_comment && module_exists('comment')}
+      <iframe src="{APP_PATH}index.php?m=comment&c=index&a=init&commentid={id_encode("content_$catid",$id,$siteid)}&iframe=1" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no">
+      </iframe>
+      {/if}
+    </div>   
+  </div>
+  <div class="content_recommend float">
+    <div class="recommend">
+      <div>
+        <h2 class="float">城市推介</h2>
+      </div>
+      <div class="clear"></div>
+      {pc:content  action="position" posid="15" thumb="1" order="listorder DESC" num="2"}
+      {loop $data $r}
+      <div class="img_text float">
+        <div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+          </a>
+        </div>
+        <a href="{$r[url]}" title="{$r[title]}" target="blank">
+          {str_cut($r[title],30)}
+        </a>
+      </div>
+      {/loop}
+      {/pc}
+    </div>
+    <div class="hr_6"></div>
+    <div class="col-auto">
+      <div class="box">
+        <div>
+          <h1 class="float" style="color: red;">热点排行</h1>
+        </div>
+        <div class="clear"></div>
+        <ul class="content digg">
+          {pc:content  action="hits" catid="9" day="5" num="5"}
+          {loop $data $r}
+          <li>
+            <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+              {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+          {/loop}
+          {/pc}
+        </ul>
+      </div>
+    </div>
+    <div class="hr_6"></div>
+    <div class="recommend toggle">
+      <div>
+        <h2 class="float"><span class="qiye">城市企业|</span><span class="kaifaqu">开发区</span></h2>
+        <img src="{IMG_PATH}images/more_icon.jpg" class="more" />
+      </div>
+      <div class="clear"></div>
+      <div class="qiye_liebiao">
+        {pc:content  action="position" posid="16" catid="18" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc}
+        <div class="travel list clear">
+          <ul>
+            {pc:content  action="position" posid="16" order="listorder DESC" num="5"}
+            {loop $data $r}
+            <li>
+              <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+                ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+              </a>
+            </li>
+            {/loop}
+            {/pc}
+          </ul>
+        </div>
+      </div>
+      <div class="kaifaqu_liebiao" style="display: none;">
+        {pc:content  action="position" posid="16" catid="44" thumb="1" order="listorder DESC" num="2"}
+        {loop $data $r}
+        <div class="img_text float">
+          <div>
+            <a href="{$r[url]}" title="{$r[title]}" target="blank">
+              <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+            </a>
+          </div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            {str_cut($r[title],30)}
+          </a>
+        </div>
+        {/loop}
+        {/pc}
+        <div class="travel list clear">
+          <ul>
+            {pc:content  action="position" posid="16" order="listorder DESC" num="5"}
+            {loop $data $r}
+            <li>
+              <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+                ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+              </a>
+            </li>
+            {/loop}
+            {/pc}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="hr_6"></div>
+    <div class="recommend">
+      <div>
+        <h2 class="float">城市旅游</h2>
+        <a href="/index.php?m=content&c=index&a=lists&catid=14" target="blank"><img src="{IMG_PATH}images/more_icon.jpg" class="more" /></a>
+      </div>
+      <div class="clear"></div>
+      {pc:content  action="position" posid="17" thumb="1" order="listorder DESC" num="2"}
+      {loop $data $r}
+      <div class="img_text float">
+        <div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+          </a>
+        </div>
+        <a href="{$r[url]}" title="{$r[title]}" target="blank">
+          {str_cut($r[title],30)}
+        </a>
+      </div>
+      {/loop}
+      {/pc}
+      <div class="travel list clear">
+        <ul>
+          {pc:content  action="position" posid="17" order="listorder DESC" num="5"}
+          {loop $data $r}
+          <li>
+            <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+              ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+          {/loop}
+          {/pc}
+        </ul>
+      </div>
+    </div>
+    <div class="hr_6"></div>
+    <div class="recommend">
+      <div>
+        <h2 class="float">城市文化</h2>
+        <a href="/index.php?m=content&c=index&a=lists&catid=15" target="blank"><img src="{IMG_PATH}images/more_icon.jpg" class="more" /></a>
+      </div>
+      <div class="clear"></div> 
+      {pc:content  action="position" posid="18" thumb="1" order="listorder DESC" num="2"}
+      {loop $data $r}
+      <div class="img_text float">
+        <div>
+          <a href="{$r[url]}" title="{$r[title]}" target="blank">
+            <img src="{thumb($r[thumb],130,100)}" title="{$r[title]}" width="130" height="100">
+          </a>
+        </div>
+        <a href="{$r[url]}" title="{$r[title]}" target="blank">
+          {str_cut($r[title],30)}
+        </a>
+      </div>
+      {/loop}
+      {/pc} 
+      <div class="travel list clear">
+        <ul>
+          {pc:content  action="position" posid="18" order="listorder DESC" num="5"}
+          {loop $data $r}
+          <li>
+            <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+              ▪ {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+          {/loop}
+          {/pc}
+        </ul>
+      </div>
+    </div>
+    <div class="hr_6"></div>
+    <div class="col-auto">
+      <div class="box">
+        <div>
+          <h1 class="float" style="color: red;">编辑推荐</h1>
+        </div>
+        <div class="clear"></div>
+        <ul class="content digg">
+          {pc:content  action="position" posid="19" thumb="1" order="listorder DESC" num="5"}
+          {loop $data $r}
+          <li>
+            <a href="{$r[url]}" target="_blank" title="{$r[title]}">
+              {if $r[article_bac] == ""}{str_cut($r[title],50,'')}{else}{$r[article_bac]}{/if}
+            </a>
+          </li>
+          {/loop}
+          {/pc}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="hr_6"></div>
+  <!--尾部-->      
+  <script type="text/javascript">
+  $(function(){
+    $('#Article .content img').LoadImage(true, 660, 660,'{IMG_PATH}s_nopic.gif');    
+  })
+  $("#font .da").click(function(){
+    $("#main .Article .content p").css("font-size","15px");
+  })
+
+  $("#font .zhong").click(function(){
+    $("#main .Article .content p").css("font-size","14px");
+  })
+
+  $("#font .xiao").click(function(){
+    $("#main .Article .content p").css("font-size","13px");
+  })
+  </script>
+
+  <script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+  {template "content","footer_my"}

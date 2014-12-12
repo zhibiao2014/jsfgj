@@ -1,0 +1,430 @@
+
+/***** 首页 *****/
+/***** 中部  *****/
+
+#content .article_summary{
+  text-align: left;
+}
+
+
+#content .channel-slide .title p{
+  padding: 0 10px;
+}
+
+
+#content h1.title a{
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #005790;
+  height: 28px;
+  line-height: 28px;
+}
+
+#content #page1_content .local_news{
+  height: 340px;
+  width: 735px;
+  border:1px solid #D8D8D8;
+}
+
+#content #page1_content .special_focus{
+  width: 355px;
+  height: 340px;
+  padding: 0 5px;
+  border:1px solid #D8D8D8;
+}
+#content #page1_content .special_focus .article .article_image{
+  width: 335px;
+  height: 230px;
+  margin: 0 auto; 
+}
+#content #page1_content .special_focus .article .fg_line{ 
+  padding: 5px 0 0 0;
+}
+
+#content #page1_content .special_focus .article .article_summary{
+  text-align: center;
+  width: 335px;
+  height: 68px;
+  margin: 0 auto;
+}
+
+#content #page1_content .special_focus .article .article_summary .title{
+  color: #005790;
+}
+
+#content #page1_content .special_focus .article .article_summary p{
+  text-align: left;
+}
+
+#content #page1_content .information{
+  height: 340px;
+  width: 340px;
+  padding: 0 5px;
+  margin: 0 9px;
+  border: 1px solid #D8D8D8;
+}
+
+#content #page1_content .information .host_news_list{
+  height: 160px;
+  padding: 0 20px 0 10px;
+}
+#content #page1_content .information .host_news_list .article_title{
+  height: 33px;
+  line-height: 33px;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+}
+#content #page1_content .information .host_news_list .article_summary{
+  height: 44px;
+  line-height: 22px;
+}
+#content #page1_content .information .news_list{
+  height: 132px;
+  margin: 5px 10px 0 10px;
+}
+#content #page1_content .information .news_list ul li{ 
+  color: D8D8D8; 
+  list-style: none;
+  margin-right: 10px;
+}
+
+#content #page1_content .information .news_list ul li a{
+  font-size: 13px;
+  height: 27px;
+  line-height: 27px;
+  display: block;
+}
+
+
+#content #page1_content .exposure{
+  float: right;
+  height: 340px;
+  width: 229px;
+  padding: 0 5px; 
+  border:1px solid #D8D8D8;
+}
+
+#content #page1_content .exposure .article{
+  margin-left: 5px;
+}
+
+#content #page1_content .exposure .article_summary{
+  text-align: center;
+  width: 220px;
+  height: 30px;
+  overflow: hidden;
+  word-break:break-all; 
+}
+#content #page1_content .exposure .article_summary a{
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #004A80;
+}
+
+#page1_content .list ul li {
+  list-style: none;
+}
+
+#page1_content .exposure .list ul li a{
+  height: 27px;
+  line-height: 27px;
+}
+
+#page1_content .exposure .list{  
+  height: 132px;
+  padding: 5px 10px 0 10px;
+}
+
+/**
+#content #page1_content .exposure{
+  float: right;
+  height: 340px;
+  width: 225px;
+  padding: 0 5px; 
+  border:1px solid #D8D8D8;
+}
+
+#content #page1_content .exposure .exposure_news{
+  width: 215px;
+  padding: 0 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content #page1_content .exposure .article_title a{
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #005790;
+}
+
+#content #page1_content .exposure .article_summary{
+  width: 210px;
+  height: 60px;
+  text-align: left;
+  overflow: hidden;
+  word-break:break-all; 
+}
+
+#content #page1_content .exposure ul li{ 
+  line-height: 20px;
+  margin-left: 20px;
+}
+**/
+      
+#page2_content .low_coal{
+  width: 544px; 
+  border: 1px solid #D8D8D8;
+}
+
+#page2_content .low_coal .article{
+  width: 175px;
+  height: 280px;
+  padding: 10px 10px 0 15px;
+}
+
+#page2_content .low_coal .article .article_image{
+  width: 155px;
+  height: 165px;
+  padding: 0 10px 10px 10px;
+}
+
+#page2_content .low_coal .article .article_summary{ 
+  width: 175px;
+  height: 90px;
+}
+
+#page2_content .low_coal .article .article_summary p{
+  height: 66px;
+  line-height: 22px;
+}
+#page2_content .low_coal .list{
+  padding-left: 20px;
+}
+
+#page2_content .low_coal ul li{
+  line-height: 27px;
+  height: 27px;
+}
+
+#page2_content .low_coal ul li a{
+  font-size: 14px;
+  display: block;
+}
+
+#page2_content .economy_source {
+  width: 422px;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  border: 1px solid #D8D8D8;
+}
+#page2_content .economy_source ul{
+  width: 422px; 
+}
+#page2_content .economy_source ul li{
+  float: left; 
+  text-align: center;
+  height: 142px;
+  width: 195px;
+  margin-left: 10px;
+  list-style: none;
+}
+
+#page2_content .economy_source ul li  .article_image{
+  width: 195px;
+  height: 120px;
+}
+
+#page2_content .economy_source ul li a{
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+}
+
+*html #page2_content .economy_source ul li{
+  margin-left: 5px;
+  height: 150px;
+}
+
+#page2_content .eco-travel{
+  margin-left: 10px;
+}
+
+#page2_content .environment,#page2_content .eco-travel{
+  width: 483px;
+  height: 250px;
+  border: 1px solid #D8D8D8;
+}
+
+#page2_content .environment .article,#page2_content .eco-travel .article{ 
+  margin-top: 10px;
+  width: 160px;
+}
+
+
+#page2_content .environment .article,#page2_content .eco-travel .article  a{
+  display: block;
+  width: 160px;
+  height: 20px;
+  text-align: center;
+} 
+
+#page2_content .environment .article .article_image,#page2_content .eco-travel  .article .article_image{
+  margin: 0 auto;
+  text-align: center;
+  height: 170px; 
+  margin-bottom: 5px;
+}
+
+#page2_content .environment .article,#page2_content .eco-travel .article{ 
+  text-align: center;
+}
+
+#page2_content .environment .list,#page2_content .eco-travel .list{
+  width: 310px;
+  height: 200px;
+}
+
+#page2_content .environment .list ul li,#page2_content .eco-travel .list ul li{
+  height: 27px;
+  line-height: 27px;
+}
+
+#page2_content .environment .list ul li a,#page2_content .eco-travel .list ul li a{
+  font-size: 14px;
+}
+
+#page2_content .project{
+  margin-left: 10px;
+}
+#page2_content .reporter,#page2_content .project{
+  width: 483px;
+  height: 275px;
+  border: 1px solid #D8D8D8;
+}
+
+#page2_content .reporter .article{
+  padding: 10px;
+  width: 220px;
+}
+
+#page2_content .project .article{
+  padding-left: 10px;  
+  width: 110px;
+}
+
+#page2_content .reporter .article .article_image{
+  margin: 0 auto;
+  text-align: center;
+  height: 130px;
+  width: 200px;
+}
+
+#page2_content .project .article .article_image{
+  margin: 0 auto;
+  text-align: center;
+  height: 130px;
+  width: 105px;
+}
+
+#page2_content .project .article .article_image img{
+  float: left;
+  width: 105px;
+  height: 125px;
+  margin-right: 5px;
+}
+
+#page2_content .project .article .title{
+  display: block;
+  width: 105px;
+  height: 20px;
+  overflow: hidden;
+}
+
+#page2_content .reporter .article,#page2_content .project .article{ 
+  text-align: center;
+}
+
+#page2_content .reporter .list,#page2_content .project .list{
+  padding-left: 20px;
+  width: 200px;
+  height: 160px;
+}
+
+#page2_content .reporter .list ul li,#page2_content .project .list ul li{
+  height: 20px;
+  line-height: 20px;
+}
+
+#page2_content .zoology{
+  width: 978px;
+  height: 270px;
+  border: 1px solid #D8D8D8;
+  /*background: #D9CDAA;*/
+}
+
+#page2_content .zoology .zoology_image{
+  width: 965px;
+  overflow:hidden;
+  position:relative;
+  margin:0 auto;
+  height: 150px;
+}
+
+#page2_content .zoology .zoology_image .scorll{
+  height: 150px;
+  position: absolute;
+  margin-left: 0px;  
+}
+
+#page2_content .zoology .zoology_image .scorll td{
+  width: 195px;
+  padding: 0 5px;
+  float: left;
+  list-style-type: none;
+}
+
+#page2_content .zoology .scorll td a{
+  display: block;
+  width: 180px; 
+  background: #D8D8D8;
+  text-align: center;
+} 
+
+#page2_content .zoology ul{
+  margin-left: 12px;
+}
+ 
+#page2_content .zoology ul li{
+  width: 180px;
+  padding: 0 5px;
+}
+
+#page2_content .zoology ul li .image{
+  width: 180px;
+  height: 125px;
+}
+
+#page2_content .zoology ul li span{
+  display: block;
+  width: 180px; 
+  background: #D8D8D8;
+  text-align: center;
+} 
+
+#page2_content .zoology .zoology_link ul li{
+  float: left;
+  width: 160px;
+  margin-left: 20px;
+}
+
+*html #page2_content .zoology .zoology_link ul li{
+  width: 180px;
+  padding: 0 5px;
+  margin: 0;
+}

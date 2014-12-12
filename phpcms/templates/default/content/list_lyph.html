@@ -1,0 +1,388 @@
+<?php
+$tags_string = file_get_contents(PHPCMS_PATH.'tags.txt');
+$content = json_decode($tags_string);
+$tags = $content->rankTags;
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+  </title>   
+  <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+  <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+  <link href="{CSS_PATH}stylesheets/colorbox.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+  <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+  <script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+  <style type="text/css">
+  #select_strip {
+    border: 1px solid #e6e7e7;
+  }
+  #select_strip .item {
+    padding: 10px 0 8px 0;
+    width: 980px;
+    line-height: 22px;
+    font-size: 12px;
+  }
+  #select_strip .title{
+    padding: 0 20px;
+    color: #277ad1;
+  }
+  #select_strip .item ul li{
+    list-style: none;
+    float: left;
+    padding: 0 10px;
+    height: 22px;
+    line-height: 22px;
+    background: url("{IMG_PATH}line.jpg") no-repeat right center;
+  }
+  #select_strip .item ul li span{
+    cursor: pointer;
+    color: #777;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 2px;
+  }
+  #select_strip .item ul li span.all{
+    color: #333;
+  }
+  #select_strip .item ul li span#all{
+    color: #333;
+    background: none;
+  }
+  #select_strip .item ul li span:hover{
+    text-decoration: underline;
+  }
+  #select_strip .item ul li span.selected{
+    background-color: #73b2ff;
+    color: #FFF;
+  }
+  #goods {
+    width: 1000px;
+  }
+  #goods .single_goods a{
+    text-decoration: none;
+  }
+  #goods .single_goods {
+    border: 4px solid #e6e7e7;
+    position: relative;
+    width: 220px;
+    padding: 15px 5px;
+    margin: 0 10px 11px 0;
+  }
+  #goods .single_goods:hover {
+    border-color: #b0020e;
+  }
+  #goods .thumb {
+    width: 200px;
+    margin: 0 auto;
+    padding-bottom: 12px;
+  }
+  #goods .thumb img{
+    width: 200px;
+  }
+  #goods .product_from {
+    position: absolute;
+    width: 81px;
+    height: 28px;
+    padding-top: 5px;
+    background: url("{IMG_PATH}images/product_bg.png") 10px top no-repeat;
+    right: -6px;
+    top: 8px;
+    line-height: 23px;
+    text-align: center;
+  }
+  #goods .product_from span{
+    color: #FFF;
+    font-size: 12px;
+    padding-left: 8px;
+    font-family: 宋体;
+  }
+  #goods .single_goods h3.title{
+    padding-left: 5px;
+    font-size: 12px;
+    color: #277ad1;
+    line-height: 22px;
+  }
+  #goods .single_goods p.list_description{
+    font-size: 12px;
+    line-height: 22px;
+    padding: 12px 5px 20px 5px;
+    height: auto;
+    color: #777;
+  }
+  .single_goods .operate .like{
+    padding: 0 10px 0 5px;
+    font-size: 12px;
+    display: block;
+    float: left;
+  }
+
+  .single_goods .operate .read_more {
+    background: url("{IMG_PATH}images/read_more.png") left center no-repeat;
+    width: 58px;
+    height: 20px;
+    display: block;
+    float: right;
+  }
+  .single_goods .operate span {
+    cursor: pointer;
+  }
+  .single_goods .operate .good {
+    padding-top: 3px;
+    background: url("{IMG_PATH}images/good.png") left 3px no-repeat;
+  }
+  .single_goods .operate .bad {
+    padding-top: 3px;
+    background: url("{IMG_PATH}images/bad.png") left 3px no-repeat;
+  }
+  #goods .single_goods .operate .good:hover {
+    background: url("{IMG_PATH}images/good_selected.png") left 3px no-repeat;
+  }
+  #goods .single_goods:hover  .operate .bad:hover {
+    background: url("{IMG_PATH}images/bad_selected.png") left 3px no-repeat;
+  }
+  #goods .single_goods:hover  .operate .read_more:hover {
+    background: url("{IMG_PATH}images/read_more_selected.png") left center no-repeat;
+  }
+  #infscr-loading {
+    position: absolute;
+    bottom: 0;
+    left: 450px;
+    width: 100px;
+    height: 30px;
+  }
+  .loading {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="content"> 
+      <!--头部 -->
+      <div id="header">
+        <div class="row dingbu">
+          <div class="logo">
+            <a href="{siteurl($siteid)}" class="active"><img src="{IMG_PATH}images/logo.jpg" /></a>
+          </div>
+          <div class="header-middle">
+            <div class="sign">
+              <div class="log">
+                <a href="http://www.china.com.cn/fuwu/guanyuwomen.htm" target="blank">关于中国网</a><span>&nbsp;|&nbsp;</span> 
+                <a href="http://city.china.com.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=2&amp;pc_hash=MnLwI3" target="blank">关于中国城市</a>
+              </div>  
+            </div>
+            <div class="sokuang">
+              <form id="search_form" method="get" action="http://www.city-china.com.cn/index.php" target="_blank">
+                <input type="hidden" name="m" value="search">
+                <input type="hidden" name="c" value="index">
+                <input type="hidden" name="a" value="init">
+                <input type="hidden" name="typeid" value="1" id="typeid">
+                <input type="hidden" name="siteid" value="1" id="siteid">         
+                <input  class="swap_value text" type="text" name="q" id="q" value="搜索新闻" />
+                <input class="submit button" type="submit" value="" />
+              </form> 
+            </div>
+          </div>
+          <div class="chinaweb_logo">
+            <a href="http://www.china.com.cn/" target="blank" class="active">
+              <img src="{IMG_PATH}images/chinaweb_logo_100_69.png" width="120px"/>
+            </a>
+          </div>
+        </div>
+        <div class="row clear menu">
+          <map id="nav">
+            {pc:content action="category" catid="0" num="14" siteid="$siteid" order="listorder ASC"}
+            <ul>
+              <li>
+                <a href="{siteurl($siteid)}" class="active" title="中国城市">中国城市</a>
+              </li>
+              {loop $data $r}
+              {if $n==14}
+              <li>
+                <a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}</a>
+              </li>
+              {/if}
+              {if $n!=14}
+              <li class="buttons">
+                <a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}</a>
+              </li>
+              {/if}
+              {/loop}
+            </ul>
+            {/pc}
+          </map>
+        </div>
+        <div class="row clear kuaixun">
+          <span class="kx" style="float: left;">快讯:</span>
+          <div style="height: 20px; line-height: 20px; padding-top: 1px; width: 930px; overflow:hidden; position:relative;">
+            <ul id="kuaixun" style="position: absolute; list-style: none; width: 9999px;">
+              {pc:content  action="position" posid="20" order="id desc" num="10"}
+              {loop $data $k $v}
+              <li style="float: left;margin-left: 10px;">
+                <a href="{$v[url]}">{$v[title]} ● </a>
+              </li>
+              {/loop}
+              {/pc}
+            </ul>
+          </div>
+        </div>        
+      </div>
+      <div class="main photo-channel">
+        <div class="hr_6"></div>
+        <div class="crumbs">
+          <a href="{siteurl($siteid)}" title="中国城市">中国城市</a><span> > {catpos($catid)} 列表 </span> 
+        </div>
+        <?php if (is_array($tags)) { ?>
+        <div id="select_strip">
+          <div class="item border_bottom">
+            <span class="title float">标签</span>
+            <ul>
+              <li><span data-id="" class="selected">全部</span></li>
+              <?php foreach ($tags as $key => $tag) { ?>
+              <li><span data-id="<?php echo $tag->id; ?>"><?php echo $tag->tagName; ?></span></li>
+              <?php } ?>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear" style="height: 15px;"></div>
+        <?php } ?>
+        <div id="goods">
+        </div>
+        <div class="loading"></div>
+      </div>
+      <!--尾部 end-->
+    </div>
+    <div class="navigation" style="display: none;">1</div>
+    <script type="text/javascript" src="{JS_PATH}/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}/jquery.infinitescroll.js"></script>
+    <script type="text/javascript" src="{JS_PATH}/jquery.lazyLoad.js"></script>
+    <script type="text/javascript" src="{JS_PATH}/jquery.colorbox-min.js"></script>
+    <script type="text/javascript">
+    function ScrollAction(listObj, listElem, speed, isSeries) {
+      var pos, left, anileft, width;
+      var id = '';
+      pos = listObj.position(); 
+      left = pos.left;
+      anileft = left;
+      width = listObj.width();
+      var scrollUp = function() {
+        anileft--;
+        if(!isSeries) {
+          if(anileft == -width) {
+            listObj.css({'left': left});
+            anileft = left;
+          };
+        } else {
+          if(anileft == -listObj.children().eq(0).width()) {
+            var firstItem = '<' + listElem +' style="float:left; margin-left: 10px;">' + listObj.children().eq(0).html() + '</' + listElem +'>';
+            listObj.children().eq(0).remove();
+            listObj.append(firstItem);
+            anileft = 10;
+          };
+        };
+        listObj.css({'left': anileft + 'px'});
+      };
+
+      var hover = function(id) {
+        listObj.hover(function() {
+          clearInterval(id);
+        }, function() {
+          id = setInterval(scrollUp, speed);
+        });
+      };
+
+      this.start = function() {
+        id = setInterval(scrollUp, speed);
+        hover(id);
+      };
+    };
+
+    function load_data() {
+      $container = $('#goods');
+      $page_num = $(".navigation").text();
+      $arrayid = $("#select_strip ul li .selected").data("id");
+      $data = { "arrayid" : $arrayid, "page" : $page_num, "num": 20 };
+      $(".loading").html("<img src='{IMG_PATH}loading.gif' />").show();
+      $.ajax({
+        url: "travel_rank.php",
+        type: "get",
+        data: $data,
+        success: function(msg){
+          if (msg == "complete") {
+            $(".loading").text("已全部加载").show();
+          } else {
+            $(msg).filter("div.single_goods").each(function(i, val) {
+              var $newElems = $(val).css({ opacity: 0 });
+              $newElems.animate({ opacity: 1 });
+              $("#goods").append($newElems);
+              $container.masonry( 'appended', $newElems, true );
+            })
+            $page_num = $(msg).filter(".navigation").text();
+            $(".navigation").text($page_num);
+            $container.imagesLoaded( function() {
+              $container.masonry('reload');
+            });
+            $(".loading").hide();
+            $(window).bind("scroll", window_scroll_listener);
+          }
+        }
+      })
+    }
+
+    function window_scroll_listener() {
+      $document_height = $(document).height();
+      $screen_height = $(window).height();
+      $offset_top = $(window).scrollTop();
+      if ($document_height - $screen_height - $offset_top < 350 ) {
+        $(window).unbind("scroll");
+        load_data();
+      };
+    }
+
+    $(document).ready(function(){
+      $container = $('#goods');
+      $container.masonry({
+        itemSelector : '.single_goods'
+      });
+      load_data();
+      $(".good, .bad").live("click",function(){
+        vote(this);
+      });
+      $(".picbig").each(function(i){
+        var cur = $(this).find('.img-wrap').eq(0);
+        var w = cur.width();
+        var h = cur.height();
+        $(this).find('.img-wrap img').LoadImage(true, w, h,'{IMG_PATH}msg_img/loading.gif');
+      });
+      var sa = new ScrollAction($('#kuaixun'), 'li', 30, true);
+      sa.start();
+
+      $("#select_strip ul li span").click(function(){
+        $("#select_strip ul li span").removeClass("selected");
+        $(this).addClass("selected");
+        $("#goods").html("").css("height: 0;");
+        $container.masonry('reload');
+        $(".navigation").text(1);
+        load_data();
+      })
+
+      $.get("travel_tag.php");
+      $.get("recommend_rank.php");
+    });
+    </script>
+  </body>
+  </html>

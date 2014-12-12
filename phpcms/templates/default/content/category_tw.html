@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      {if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}
+    </title>   
+    <link href="{CSS_PATH}default.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/forms.css" rel="stylesheet" type="text/css"/>
+    <link href="{CSS_PATH}stylesheets/grid.css" rel="stylesheet" type="text/css" />
+    <link href="{CSS_PATH}stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <style>
+      .sub_cat ul{
+        list-style: none;
+      }
+      .sub_cat ul li{
+        width: 470px;
+        height: 330px;
+        float: left;
+        margin: 5px;
+      }
+      .sub_cat ul li .title{
+        height: 30px;
+        line-heigh: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+      }
+    </style>
+    {template "content","header_one"}
+    <div class="main photo-channel">
+      <div class="crumbs">
+        <a href="{siteurl($siteid)}" title="中国城市">中国城市</a><span> > {catpos($catid)} 栏目</span> 
+      </div>
+      <div class="bk10"></div>
+      <div class="sub_cat">
+      {pc:content  action="category" siteid="$siteid" catid="$catid" order="listorder ASC"  num="25"}
+        <ul>
+          {loop $data $r}
+          <li>
+            <div>
+              <a href="{$r[url]}" target="_blank">
+                <img src="{thumb($r[image],470,300)}" width="470" height="300px" alt="{$r[catname]}"/>
+              </a>
+            </div>
+            <a href="{$r[url]}" target="_blank" class="title">
+              {$r[catname]}
+            </a>
+          </li>
+          {/loop}
+        </ul>
+      {/pc}
+      </div>
+    </div>
+{template "content","footer_my"}

@@ -1,0 +1,38 @@
+{template "content","header_page"}
+<div id="content">
+    <div class="col-left left-nav">
+    <h1>关于我们</h1>
+    <ul class="content">
+      {loop $arrchild_arr $cid}
+        <li{if $catid==$cid} class="cur"{/if}><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
+      {/loop}
+    </ul>
+    <div class="bottom"></div>
+  </div>
+  <div class="col-auto">
+    <img src="{IMG_PATH}v9/about_ad.png" width="659" height="171" />
+    <h1 class="title">{$title}</h1>
+      <div class="content">
+        <div style="height: 90px;">
+        <h1 style="color: #f60; display: block; font-size: 18px; text-align: center; height: 40px; line-height: 40px;">城市频道工作人员查询</h1>
+          <form action="#" method="get" id="search_employer" onsubmit="return tijiao(this)" style="margin: 0 auto; display: block; width: 280px;">
+            <label for="username" style="color: #005790; vertical-align: middle">姓名或ID：</label>
+            <input type="text" name="username" id="username" />
+            <input type="submit" value="查询" class="search" name="search" />
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function tijiao(this_){
+    var name = $("#username").val();
+    if($.trim(name).length == 0){
+      alert("输入不能为空");
+      return false;
+    }
+    window.open("/index.php?m=content&c=index&a=lists&catid=145&username="+name, 'newwindow', 'height=200, width=400, top=100, left=100, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no');
+    return false;
+  }
+</script>
+{template "content","footer_my"}

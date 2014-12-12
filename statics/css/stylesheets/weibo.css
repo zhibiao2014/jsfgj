@@ -1,0 +1,63 @@
+﻿
+/***** 首页 *****/
+/***** 中部  *****/
+
+*html img{
+  display: block;
+}
+
+.weibo{
+  width: 978px;
+  padding-top: 10px;
+  border: 1px solid #D8D8D8;
+}
+
+.weibo ul{
+  margin: 5px 15px;
+}
+
+.weibo .weibo_img ul .first{
+  width: 14px;
+  height: 120px;
+  padding: 0 10px;
+}
+
+.weibo .weibo_img ul .first div{
+  margin-top: 20px;
+  height: 80px;
+  width: 14px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.weibo .weibo_img ul .last{
+  clear: both;
+  float: right;
+  margin-right: 10px;
+}
+
+.weibo .weibo_img ul .last a{
+  text-align: right;
+  height: 24px;
+  line-height: 24px;
+  background: none;
+}
+
+.weibo ul li{
+  float: left;
+  width: 115px;
+  padding-left: 15px;
+  list-style-type: none;
+}
+
+.weibo ul li .image{
+  width: 115px;
+  height: 100px;
+}
+
+.weibo ul li a{
+  display: block;
+  width: 115px; 
+  background: #D8D8D8;
+  text-align: center;
+} 

@@ -1,0 +1,195 @@
+/***** 基础类 *****/
+body {
+  font-family: 宋体;
+  font-size: 12px;
+  color: black;
+  line-height: 20px;
+}
+.clear{clear:both}
+.hr_6 {
+  height: 6px;
+  font-size: 1px;
+  line-height: 1px;
+  clear: both;
+}
+
+/* Layout */
+#header {
+  width: 100%;
+}
+
+#content {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#content .row{
+  width: 980px;
+}
+
+.wrapper {
+  background-image: url("../../images/images/body_bg.jpg");
+  background-repeat: repeat-x; 
+  }
+ 
+#header .dingbu {
+  height: 84px;
+}
+
+#header .row .logo {
+  float: left;
+} 
+
+#header .row .header-middle{
+  float: left;   
+  width: 545px;
+  height: 74px;
+  margin: 0 10px 0 150px;
+} 
+
+#header .row .header-middle .sign {
+  margin: 10px 0 5px 0; 
+  float: right;
+}
+
+#header .row .header-middle .sign a{
+  color: #DDD;
+}
+
+#header .row .sokuang {
+  float: right;
+  background-color: #dfdfdf;
+  width: 545px;
+  height: 35px; 
+}
+
+#header .row .sokuang form{
+  width: 545px;
+  height: 35px; 
+  padding-left: 4px;
+}
+
+#header .row .sokuang form .swap_value {
+  vertical-align: middle;
+  padding: 0;
+  margin: 4px 0;
+  width: 390px;
+  height: 25px; 
+  line-height: 25px;
+  padding-left: 35px;
+  background-image: url("../../images/images/fangdajing.jpg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+#header .row .sokuang form .submit{
+  vertical-align: middle;
+  width: 101px;
+  height: 25px; 
+  line-height: 25px;
+  padding: 0;
+  border: none;
+  background-image: url("../../images/images/sosuo_icon.jpg");
+}
+
+#header .row .chinaweb_logo {
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+
+#header .menu{
+  background-image: url("../../images/images/menu02_bg.jpg");
+  background-repeat: no-repeat;
+  height: 35px;
+}
+
+#header .menu .active {
+  background: url("../../iamges/images/3jiao.jpg") no-repeat 50% 100%;
+  background-color: #ffffff;
+  height: 35px;
+  color: #1d2e60;
+  display: block;
+  float: left;
+}
+#header .menu ul li{
+  color: #ffffff;
+  display: inline;
+  float: left;
+}
+#header .menu ul li.buttons{
+  background: url(../../images/images/menu_fenge_line.jpg) no-repeat right;
+  }
+  #header .menu ul li a{
+  color: #ffffff;  
+  }
+#header .menu ul li span{
+  padding: 0 12px;
+  padding-top: 10px;
+  line-height: 35px;
+  height: 35px;
+}
+
+#header .kuaixun {
+  padding-top: 5px;
+  height: 31px;
+}
+
+#header .kuaixun .kx {
+  color: #ff9900; 
+  font-size: 14px;
+  height: 22px;
+  line-height: 22px;
+}
+
+
+/***** 尾部  *****/
+#links {
+  width: 980px;
+  margin: 12px auto;
+  background: #F1F1F1;
+  padding: 10px 0px;
+}
+
+div {
+  display: block;
+}
+
+#links h1 {
+  width: 890px;
+  height: 23px;
+  float: left;
+  margin: 8px 0px 0px 30px;
+  display: inline;
+  font-size: 14px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+body {
+  font-family: 宋体;
+  font-size: 12px;
+  color: black;
+  line-height: 20px;
+}
+
+#links p {
+  width: 890px;
+  float: left;
+  margin-left: 30px;
+  display: inline;
+  line-height: 180%;
+}
+
+#links p a {
+  padding: 0px 5px;
+}
+
+#footer {
+  width: 980px;
+  clear: both;
+  text-align: center;
+  line-height: 165%;
+}

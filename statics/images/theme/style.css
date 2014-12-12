@@ -1,0 +1,115 @@
+/* 中国城市专题页 */
+#tjcs { border:1px solid #dcdcdc;margin-right:10px;}
+body{ margin:0px; padding:0px; }
+.box1 { border: 1px solid #dddddd;margin-left:10px; }
+.box2 {border: 1px solid #dee798;}
+.box3 {border: 1px solid #c0c7d1; width:970px;margin:10px;}
+.box4 {border: 1px solid #dcdcdc;padding:10px;}
+.text1{
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 22px;
+	color: #45703a;
+	text-decoration: none;
+	padding:10px;
+}
+.text1 a:link{
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 22px;
+	color: #45703a;
+	text-decoration: none;
+	padding:10px;
+	}
+	
+.text1 a:visited{
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 22px;
+	color: #45703a;
+	text-decoration: none;
+	padding:10px;
+	}
+	
+.text1 a:hover{
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 22px;
+	color: #45703a;
+	text-decoration: none;
+	padding:10px;
+	}
+	
+.text2 {
+	font-family: "新宋体";
+	font-size: 18px;
+	line-height: 22px;
+	color: #000000;
+	text-decoration: none;
+	padding:10px;
+	font-weight: bold;
+}
+.text2 a:link{
+	font-family: "新宋体";	font-size: 18px;
+	line-height: 22px;
+	color: #000000;
+	text-decoration: none;
+	padding:10px;
+	font-weight: bold;
+}
+.text2 a:visited{
+	font-family: "新宋体";	font-size: 18px;
+	line-height: 22px;
+	color: #000000;
+	text-decoration: none;
+	padding:10px;
+	font-weight: bold;
+}
+.text2 a:hover{
+	font-family: "新宋体";	font-size: 18px;
+	line-height: 22px;
+	color: #000000;
+	text-decoration: none;
+	padding:10px;
+	font-weight: bold;
+}
+.text3 { font-family: "宋体";
+	font-size: 14px;
+	line-height: 22px;
+	color: #45703a;
+	text-decoration: none;
+	margin:10px;
+	}
+/*宋体12号深灰色*/
+.citytext4{
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #474940;
+	text-decoration: none;
+	}
+.citytext4 a:link {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #474940;
+	text-decoration: none;
+	}
+.citytext4 a:visited{
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #474940;
+	text-decoration: none;
+	}
+.citytext4 a:hover {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 150%;
+	color: #474940;
+	text-decoration: none;
+	}
+
